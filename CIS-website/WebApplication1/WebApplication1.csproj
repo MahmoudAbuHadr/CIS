@@ -113,7 +113,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="account\AccountCredentials.cs" />
+    <Compile Include="scripts\AccountCredentials.cs" />
     <Compile Include="account\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -143,6 +143,8 @@
     <Compile Include="account\signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="scripts\AccountDAO.cs" />
+    <Compile Include="scripts\AccountDAOinterface.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
