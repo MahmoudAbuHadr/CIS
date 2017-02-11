@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="WebApplication1.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signup.aspx.cs" Inherits="WebApplication1.signup" %>
 
 <!DOCTYPE html>
 
@@ -13,39 +13,68 @@
   
   <link rel="stylesheet" type="text/css" href="../css/StyleSheet1.css"/>
   <script type="text/javascript" src="../javascript/JavaScript1.js"></script>
+
+
+        <!-- footer -->
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"/>
+
 </head>
-<body>
-    <form id="form1" runat="server">
-    <div class="container-fluid">
-        <nav class="navbar navbar-default">
-        <div class="row">
-            <div class="col-xs-3 navlinks" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="../home.aspx">Home</a></div>
-            <div class="col-xs-6 navlinks"></div>
-            <div class="col-xs-1 navlinks" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="#about">About</a></div>
-            <div class="col-xs-1 navlinks" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="signup.aspx">Sign Up</a></div>
-            <div class="col-xs-1 navlinks" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="login.aspx">Login</a></div>
+<body class="container container-fluid">
+<div id ="wrapper">    
+
+    <div id="header">    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="../home.aspx">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-left">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search"/>
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                </div>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="signup.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
         </div>
-        </nav>
+    </nav>
     </div>
-   
-        <asp:Label ID="LabelName" runat="server" Text="Name"  style="top: 260px; left: 420px; position: absolute; height: 16px; width: 35px; right: 766px;" Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-        <asp:TextBox ID="TextBoxName" runat="server"   style="position: absolute; top: 260px; left: 640px;"></asp:TextBox>
+    <div id="contnent">
+        <form runat="server">
+            <asp:Label ID="LabelSignupName" runat="server" Text="Name"  style="top: 260px; left: 420px; position: absolute; height: 16px; width: 35px; right: 766px;" Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
+            <asp:TextBox ID="TextBoxSignupName" runat="server"   style="position: absolute; top: 260px; left: 640px;"></asp:TextBox>
 
-        <asp:Label ID="LabelMobile" runat="server" Text="Mobile" style="top: 360px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-        <asp:TextBox ID="TextBoxMobile" runat="server" style="position: absolute; top: 360px; left: 640px;"></asp:TextBox>
+            <asp:Label ID="LabelSignupMobile" runat="server" Text="Mobile" style="top: 360px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
+            <asp:TextBox ID="TextBoxSignupMobile" runat="server" style="position: absolute; top: 360px; left: 640px;"></asp:TextBox>
 
-        <asp:Label ID="LabelEmail" runat="server" Text="Email" style="top: 460px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-        <asp:TextBox ID="TextBoxEmail" runat="server" style="position: absolute; top: 460px; left: 640px;"></asp:TextBox>
+            <asp:Label ID="LabelSignupEmail" runat="server" Text="Email" style="top: 460px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
+            <asp:TextBox ID="TextBoxSignupEmail" runat="server" style="position: absolute; top: 460px; left: 640px;"></asp:TextBox>
 
-        <asp:Label ID="LabelPassword" runat="server" Text="Password" style="top: 560px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-        <asp:TextBox ID="TextBoxPassword" runat="server" style="position: absolute; top: 560px; left: 640px;"></asp:TextBox>
+            <asp:Label ID="LabelSignupPassword" runat="server" Text="Password" style="top: 560px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
+            <asp:TextBox ID="TextBoxSignupPassword" runat="server" style="position: absolute; top: 560px; left: 640px;"></asp:TextBox>
+ 
+            <asp:Button ID="ButtonSignupSubmit" runat="server" style="position: absolute; top: 660px; left: 740px;" Text="Submit" Font-Size="Large" />   
+          
+        </form>
+    </div>
+    <div id="footer"></div>
 
-        
-        
-        <asp:Button ID="Button1" runat="server" style="position: absolute; top: 660px; left: 740px;" Text="Submit" Font-Size="Large" />
-
-        
-        
-    </form>
+</div>
 </body>
 </html>

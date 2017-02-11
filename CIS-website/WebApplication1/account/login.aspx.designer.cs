@@ -13,48 +13,39 @@ namespace WebApplication1 {
     public partial class login {
         
         /// <summary>
-        /// form1 control.
+        /// LabelLoginMobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label LabelLoginMobile;
         
         /// <summary>
-        /// LabelMobile control.
+        /// LabelLoginPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMobile;
+        protected global::System.Web.UI.WebControls.Label LabelLoginPassword;
         
         /// <summary>
-        /// LabelPassword control.
+        /// TextBoxLoginPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPassword;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxLoginPassword;
         
         /// <summary>
-        /// TextBoxPassword control.
+        /// TextBoxLoginMobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxPassword;
-        
-        /// <summary>
-        /// TextBoxMobile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxMobile;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxLoginMobile;
     }
 }

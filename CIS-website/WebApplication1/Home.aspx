@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="WebApplication1.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="WebApplication1.home" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -13,27 +13,51 @@
 
   <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css"/>
   <script type="text/javascript" src="javascript/JavaScript1.js"></script>
+
+        <!-- footer -->
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"/>
+
 </head>
 
 
 <body>
+ <div id="wrapper">
+     <div id="header">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
 
-<div class="container-fluid">
-    <nav class="navbar navbar-default">
-        <div class="row">
-            <div class="col-xs-3 navlinks" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="home.aspx">Home</div>
-            <div class="col-xs-6 navlinks"></div>
-            <div class="col-xs-1 navlinks" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="#about">About</a></div>
-            <div class="col-xs-1 navlinks" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="./account/signup.aspx">Sign Up</a></div>
-            <div class="col-xs-1 navlinks" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="./account/login.aspx">Login</a></div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-left">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search"/>
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                </div>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="./account/signup.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="./account/login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
         </div>
-</nav>
-
-</div>
-
-
-
-
-
+    </nav>
+         </div>
+     <div id="container"></div>
+     <div id="footer"></div>
+     </div>
+    
 </body>
 </html>

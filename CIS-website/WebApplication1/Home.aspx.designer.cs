@@ -10,6 +10,6 @@
 namespace WebApplication1 {
     
     
-    public partial class WebForm1 {
+    public partial class home {
     }
 }
