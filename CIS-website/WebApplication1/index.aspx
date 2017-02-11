@@ -16,7 +16,7 @@
     <div class="container-fluid">
         <nav class="navbar navbar-default">
         <div class="row">
-            <div class="col-xs-3" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="../home.aspx">Home</a></div>
+            <div class="col-xs-3" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="home.aspx">Home</a></div>
             <div class="col-xs-6"></div>
             <div class="col-xs-1" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"></div>
             <div class="col-xs-1" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"></div>
