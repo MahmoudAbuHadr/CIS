@@ -24,21 +24,25 @@
         </div>
         </nav>
     </div>
-        <p>
-            &nbsp;</p>
    
         <asp:Label ID="LabelName" runat="server" Text="Name"  style="top: 260px; left: 420px; position: absolute; height: 16px; width: 35px; right: 766px;" Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
         <asp:TextBox ID="TextBoxName" runat="server"   style="position: absolute; top: 260px; left: 640px;"></asp:TextBox>
 
+        <asp:Label ID="LabelMobile" runat="server" Text="Mobile" style="top: 360px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
+        <asp:TextBox ID="TextBoxMobile" runat="server" style="position: absolute; top: 360px; left: 640px;"></asp:TextBox>
 
-        <asp:Label ID="LabelPassword" runat="server" Text="Password" style="top: 360px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-        <asp:TextBox ID="TextBoxPassword" runat="server" style="position: absolute; top: 360px; left: 640px;"></asp:TextBox>
+        <asp:Label ID="LabelEmail" runat="server" Text="Email" style="top: 460px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
+        <asp:TextBox ID="TextBoxEmail" runat="server" style="position: absolute; top: 460px; left: 640px;"></asp:TextBox>
 
-        <asp:Label ID="LabelGender" runat="server" Text="Gender" style="top: 460px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-        <asp:RadioButton ID="RadioButtonGenderMale" name="Gender" value="Male" runat="server" style="top: 460px; left: 558px; position: absolute; height: 20px; width: 125px" Text="Male" />
-        <asp:RadioButton ID="RadioButtonGenderFemale" name="Gender" value="Female" runat="server" style="top: 460px; left: 708px; position: absolute; height: 20px; width: 125px" Text="Female" />
+        <asp:Label ID="LabelPassword" runat="server" Text="Password" style="top: 560px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
+        <asp:TextBox ID="TextBoxPassword" runat="server" style="position: absolute; top: 560px; left: 640px;"></asp:TextBox>
+
         
-    
+        
+        <asp:Button ID="Button1" runat="server" style="position: absolute; top: 660px; left: 740px;" Text="Submit" Font-Size="Large" />
+
+        
+        
     </form>
 </body>
 </html>
