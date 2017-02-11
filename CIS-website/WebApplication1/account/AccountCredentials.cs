@@ -26,8 +26,8 @@ namespace WebApplication1.account
         public string getEmail() { return email; }
         public void setassword(string Password) { password = Password; }
         public string getpassword() { return password; }
-        public void setId(int Id) { id = Id; }
-        public int getId() { return id; }
+        public void setID(int Id) { id = Id; }
+        public int getID() { return id; }
 
 
     }    
