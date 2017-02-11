@@ -10,12 +10,54 @@ namespace WebApplication1.scripts
     {
         public AccountCredentials getAccountById(int id)
         {
-            throw new NotImplementedException();
+            AccountCredentials acc = new AccountCredentials();
+            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CSI; Integrated Security=SSPI";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            myConnection.Open();
+            SqlCommand myCommand = new SqlCommand();
+
+            myCommand.CommandText = "Select * from Accounts where ID = '" + id + "';";
+            myCommand.Connection = myConnection;
+            SqlDataReader reader = myCommand.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                acc.setID(reader.GetInt32(reader.GetOrdinal("ID")));
+                acc.setPhoneNumber( Convert.ToString(reader[1]));
+                acc.setEmail( Convert.ToString(reader[2]));
+                acc.setPassword( Convert.ToString(reader[3]));
+                acc.setFName(Convert.ToString(reader[4]));
+                acc.setLName(Convert.ToString(reader[5]));
+
+            }
+
+            reader.Close();
+            myConnection.Close();
+
+            return acc;
         }
 
         public int getIdByPhoneNumber(string phoneNumber)
         {
-            throw new NotImplementedException();
+            int id=-1; 
+            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CSI; Integrated Security=SSPI";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            myConnection.Open();
+            SqlCommand myCommand = new SqlCommand();
+
+            myCommand.CommandText = "Select ID from Accounts where PNumber = '" + phoneNumber + "';";
+            myCommand.Connection = myConnection;
+            SqlDataReader reader = myCommand.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                     id = reader.GetInt32(reader.GetOrdinal("ID"));
+            }
+            
+            reader.Close();
+            myConnection.Close();
+           
+            return id; // if id returned is -1 then this phonenumber isn't regestered 
         }
 
         public void insertAccount(AccountCredentials acc)
