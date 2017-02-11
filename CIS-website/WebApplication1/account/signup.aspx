@@ -19,8 +19,8 @@
             <div class="col-xs-3" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="../home.aspx">Home</a></div>
             <div class="col-xs-6"></div>
             <div class="col-xs-1" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="#about">About</a></div>
-            <div class="col-xs-1" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="#signup">Sign Up</a></div>
-            <div class="col-xs-1" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="../login.aspx">Login</a></div>
+            <div class="col-xs-1" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="signup.aspx">Sign Up</a></div>
+            <div class="col-xs-1" style="font-size: large; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-style: normal; color: #000000"><a href="login.aspx">Login</a></div>
         </div>
         </nav>
     </div>
