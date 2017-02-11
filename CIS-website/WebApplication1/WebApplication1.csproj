@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="account\login.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="javascript\JavaScript1.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -110,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="account\signup.aspx" />
+    <Content Include="css\StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
