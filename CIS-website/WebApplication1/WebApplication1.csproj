@@ -111,7 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="account\signup.aspx" />
-    <Content Include="css\StyleSheet1.css" />
+    <Content Include="account\css\StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

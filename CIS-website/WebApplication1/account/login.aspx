@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <link rel="stylesheet" type="text/css" href="../css/StyleSheet1.css"/ media="screen">
+  <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css"/ media="screen">
   <script type="text/javascript" src="../javascript/JavaScript1.js"></script>
 
         <!-- footer -->
@@ -22,7 +22,7 @@
 
 </head>
 <body>
- <div id="wrapper">
+ <div id="wrapper" class="container container-fluid">
 
     <div id="header">   
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -56,13 +56,13 @@
     </nav>
          </div>
      
-     <div id="container" class="container container-fluid" style="margin-top:100px;">
+     <div id="container">
         <form runat="server" class="form-horizontal">
             
             <div class="form-group">
                 <label id="LabelLoginMobile" class="control-label col-sm-2" for="TextboxLoginMobile">Mobile:</label>
                 <div class="col-sm-10">
-                    <input id="TextboxLoginMobile" type="number" class="form-control" placeholder="Enter Your Mobile"/>
+                    <input id="TextboxLoginMobile" type="tel" class="form-control" placeholder="Enter Your Mobile"/>
                 </div>
             </div>
             <div class="form-group">
@@ -81,7 +81,7 @@
 
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button id="ButtonLoginSubmit" type="submit" class="btn btn-default">Submit</button>
+                    <asp:Button runat="server" id="ButtonLoginSubmit" type="submit" class="btn btn-default" Text="Submit"/>
                 </div>
             </div>
        </form>
@@ -90,6 +90,7 @@
      <div id="footer"></div>
 
  </div>
-
+   
+   
 </body>
 </html>

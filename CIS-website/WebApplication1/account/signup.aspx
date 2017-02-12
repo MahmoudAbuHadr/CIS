@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <link rel="stylesheet" type="text/css" href="../css/StyleSheet1.css"/>
+  <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css"/>
   <script type="text/javascript" src="../javascript/JavaScript1.js"></script>
 
 
@@ -21,8 +21,8 @@
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"/>
 
 </head>
-<body class="container container-fluid">
-<div id ="wrapper">    
+<body>
+<div id ="wrapper" class="container container-fluid">    
 
     <div id="header">    
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -55,20 +55,20 @@
         </div>
     </nav>
     </div>
-     <div id="container" class="container container-fluid" style="margin-top:100px;">
+     <div id="container">
         <form runat="server" class="form-horizontal">
 
             <div class="form-group">
                 <label id="LabelSignupFirstname" class="control-label col-sm-2" for="TextboxSignupFirstname">First Name:</label>
                 <div class="col-sm-10">
-                    <input id="TextboxSignupFirstname" type="number" class="form-control" placeholder="Enter Your First Name"/>
+                    <input id="TextboxSignupFirstname" type="text" class="form-control" placeholder="Enter Your First Name"/>
                 </div>
             </div>
 
             <div class="form-group">
                 <label id="LabelSignupLastname" class="control-label col-sm-2" for="TextboxSignupLastname">Last Name:</label>
                 <div class="col-sm-10">
-                    <input id="TextboxSignupLastname" type="number" class="form-control" placeholder="Enter Your Last Name"/>
+                    <input id="TextboxSignupLastname" type="text" class="form-control" placeholder="Enter Your Last Name"/>
                 </div>
             </div>
 
@@ -83,7 +83,7 @@
             <div class="form-group">
                 <label id="LabelSignupMobile" class="control-label col-sm-2" for="TextboxSignupMobile">Mobile:</label>
                 <div class="col-sm-10">
-                    <input id="TextboxSignupMobile" type="number" class="form-control" placeholder="Enter Your Mobile"/>
+                    <input id="TextboxSignupMobile" type="tel" class="form-control" placeholder="Enter Your Mobile"/>
                 </div>
             </div>
 
@@ -97,7 +97,7 @@
 
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button id="ButtonSignupSubmit" type="submit" class="btn btn-default">Submit</button>
+                    <asp:Button runat="server" id="ButtonSignupSubmit" type="submit" class="btn btn-default" Text="Submit"/>
                 </div>
             </div>
        </form>
