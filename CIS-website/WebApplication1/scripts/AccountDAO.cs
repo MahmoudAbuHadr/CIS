@@ -11,7 +11,7 @@ namespace WebApplication1.scripts
         public AccountCredentials getAccountById(int id)
         {
             AccountCredentials acc = new AccountCredentials();
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CSI; Integrated Security=SSPI";
+            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
@@ -40,7 +40,7 @@ namespace WebApplication1.scripts
         public int getIdByPhoneNumber(string phoneNumber)
         {
             int id=-1; 
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CSI; Integrated Security=SSPI";
+            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
@@ -51,7 +51,8 @@ namespace WebApplication1.scripts
 
             if (reader.HasRows)
             {
-                     id = reader.GetInt32(reader.GetOrdinal("ID"));
+                reader.Read();
+                id = reader.GetInt32(0);
             }
             
             reader.Close();

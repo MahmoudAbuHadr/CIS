@@ -13,5 +13,29 @@ namespace WebApplication1
         {
 
         }
+
+        protected void ButtonSignupSubmit_Click(object sender, EventArgs e)
+        {
+            string fName = this.TextboxSignupFirstname.Text;
+            string lName = this.TextboxSignupLastname.Text;
+            string email = this.TextboxSignupLastname.Text;
+            string password = this.TextboxSignupPassword.Text;
+            string phone = this.TextboxSignupMobile.Text;
+            WebApplication1.scripts.AccountCredentials acc = new scripts.AccountCredentials();
+            acc.setFName(fName);
+            acc.setLName(lName);
+            acc.setEmail(email);
+            acc.setPassword(password);
+            acc.setPhoneNumber(phone);
+            WebApplication1.scripts.AccountDAO dao = new scripts.AccountDAO();
+            if (dao.getIdByPhoneNumber(phone) == -1) {
+                dao.insertAccount(acc);
+                //should redirect to home page
+            }
+            else {
+                ///unhandeled 
+            }
+
+        }
     }
 }
