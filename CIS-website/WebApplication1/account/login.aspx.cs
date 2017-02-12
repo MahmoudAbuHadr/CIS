@@ -23,26 +23,24 @@ namespace WebApplication1
             int id = dao.getIdByPhoneNumber(phone);
             if (id == -1)
             {
-                //show error message (not registerd)
+                //not regestierd
+                Response.Redirect(Page.ResolveClientUrl("www.google.com"));
             }
             else
             {
                 acc = dao.getAccountById(id);
                 if (acc.getPassword() != password)
                 {
-                    //show error message(wrong password)
+                    //wrong password
+                    Response.Redirect(Page.ResolveClientUrl("www.facebook.com"));
                 }
                 else
                 {
-                    //access granted dierict to home
+                    //access granted
+                    Response.Redirect(Page.ResolveClientUrl("www.wikipedia.com"));
                 }
 
             }
-
-
-
-
-
         }
     }
 }
