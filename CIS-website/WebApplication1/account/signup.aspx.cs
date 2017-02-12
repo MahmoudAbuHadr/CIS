@@ -18,7 +18,7 @@ namespace WebApplication1
         {
             string fName = this.TextboxSignupFirstname.Text;
             string lName = this.TextboxSignupLastname.Text;
-            string email = this.TextboxSignupLastname.Text;
+            string email = this.TextboxSignupEmail.Text;
             string password = this.TextboxSignupPassword.Text;
             string phone = this.TextboxSignupMobile.Text;
             WebApplication1.scripts.AccountCredentials acc = new scripts.AccountCredentials();

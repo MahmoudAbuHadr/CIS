@@ -19,9 +19,9 @@ namespace WebApplication1.scripts
             myCommand.CommandText = "Select * from Accounts where ID = '" + id + "';";
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
-
             if (reader.HasRows)
             {
+                reader.Read();
                 acc.setID(reader.GetInt32(reader.GetOrdinal("ID")));
                 acc.setPhoneNumber( Convert.ToString(reader[1]));
                 acc.setEmail( Convert.ToString(reader[2]));
