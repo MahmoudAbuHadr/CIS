@@ -52,6 +52,7 @@
                 <li><a href="signup.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
+            
         </div>
     </nav>
     </div>
@@ -61,14 +62,15 @@
             <div class="form-group">
                 <label id="LabelSignupFirstname" class="control-label col-sm-2" for="TextboxSignupFirstname">First Name:</label>
                 <div class="col-sm-10">
-                    <input id="TextboxSignupFirstname" type="text" class="form-control" placeholder="Enter Your First Name"/>
+                    <asp:TextBox runat="server" id="TextboxSignupFirstname" type="text" class="form-control" placeholder="Enter Your First Name"/>
                 </div>
             </div>
+            
 
             <div class="form-group">
                 <label id="LabelSignupLastname" class="control-label col-sm-2" for="TextboxSignupLastname">Last Name:</label>
                 <div class="col-sm-10">
-                    <input id="TextboxSignupLastname" type="text" class="form-control" placeholder="Enter Your Last Name"/>
+                    <asp:TextBox runat="server" id="TextboxSignupLastname" type="text" class="form-control" placeholder="Enter Your Last Name"/>
                 </div>
             </div>
 
@@ -76,21 +78,21 @@
              <div class="form-group">
                 <label id="LabelSignupEmail" class="control-label col-sm-2" for="TextboxSignupEmail">Email:</label>
                 <div class="col-sm-10">
-                    <input id="TextboxSignupEmail" type="email" class="form-control" placeholder="Enter Your Email"/>
+                    <asp:TextBox runat="server" id="TextboxSignupEmail" type="email" class="form-control" placeholder="Enter Your Email"/>
                 </div>
             </div>
                                                
             <div class="form-group">
                 <label id="LabelSignupMobile" class="control-label col-sm-2" for="TextboxSignupMobile">Mobile:</label>
                 <div class="col-sm-10">
-                    <input id="TextboxSignupMobile" type="tel" class="form-control" placeholder="Enter Your Mobile"/>
+                    <asp:TextBox runat="server" id="TextboxSignupMobile" type="tel" class="form-control" placeholder="Enter Your Mobile"/>
                 </div>
             </div>
 
             <div class="form-group">
                 <label id="LabelSignupPassword" class="control-label col-sm-2" for="TextboxSignupPassword">Password:</label>
                 <div class="col-sm-10"> 
-                    <input id="TextboxSignupPassword" type="password" class="form-control" placeholder="Enter Your Password"/>
+                    <asp:TextBox runat="server" id="TextboxSignupPassword" type="password" class="form-control" placeholder="Enter Your Password"/>
                 </div>
             </div>
 

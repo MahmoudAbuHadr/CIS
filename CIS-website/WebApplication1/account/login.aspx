@@ -62,19 +62,19 @@
             <div class="form-group">
                 <label id="LabelLoginMobile" class="control-label col-sm-2" for="TextboxLoginMobile">Mobile:</label>
                 <div class="col-sm-10">
-                    <input id="TextboxLoginMobile" type="tel" class="form-control" placeholder="Enter Your Mobile"/>
+                    <asp:TextBox runat="server" id="TextboxLoginMobile" type="tel" class="form-control" placeholder="Enter Your Mobile"/>
                 </div>
             </div>
             <div class="form-group">
                 <label id="LabelLoginPassword" class="control-label col-sm-2" for="TextboxLoginPassword">Password:</label>
                 <div class="col-sm-10"> 
-                    <input id="TextboxLoginPassword" type="password" class="form-control" placeholder="Enter Your Password"/>
+                    <asp:TextBox runat="server" id="TextboxLoginPassword" type="password" class="form-control" placeholder="Enter Your Password"/>
                 </div>
             </div>
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
                     <div class="checkbox">
-                        <label><input id="CheckboxLoginRememberme" type="checkbox"/> Remember me</label>
+                        <label><asp:TextBox runat="server" id="CheckboxLoginRememberme" type="checkbox"/> Remember me</label>
                     </div>
                 </div>
             </div>

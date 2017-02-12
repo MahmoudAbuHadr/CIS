@@ -13,6 +13,51 @@ namespace WebApplication1 {
     public partial class signup {
         
         /// <summary>
+        /// TextboxSignupFirstname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxSignupFirstname;
+        
+        /// <summary>
+        /// TextboxSignupLastname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxSignupLastname;
+        
+        /// <summary>
+        /// TextboxSignupEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxSignupEmail;
+        
+        /// <summary>
+        /// TextboxSignupMobile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxSignupMobile;
+        
+        /// <summary>
+        /// TextboxSignupPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxSignupPassword;
+        
+        /// <summary>
         /// ButtonSignupSubmit control.
         /// </summary>
         /// <remarks>
