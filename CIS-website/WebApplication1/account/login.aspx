@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <link rel="stylesheet" type="text/css" href="../css/StyleSheet1.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/StyleSheet1.css"/ media="screen">
   <script type="text/javascript" src="../javascript/JavaScript1.js"></script>
 
         <!-- footer -->
@@ -24,7 +24,7 @@
 <body>
  <div id="wrapper">
 
-     <div id="header">   
+    <div id="header">   
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -55,15 +55,38 @@
         </div>
     </nav>
          </div>
-     <div id="container">
-        <form runat="server">
-            <asp:Label ID="LabelLoginMobile" runat="server" Text="Mobile"  style="top: 260px; left: 420px; position: absolute; height: 16px; width: 35px; right: 764px;" Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-            <asp:Label ID="LabelLoginPassword" runat="server" Text="Password" style="top: 350px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-            <asp:TextBox ID="TextBoxLoginPassword" runat="server" style="position: absolute; top: 350px; left: 640px;"></asp:TextBox>
-            <asp:TextBox ID="TextBoxLoginMobile" runat="server"   style="position: absolute; top: 260px; left: 640px;"></asp:TextBox>
+     
+     <div id="container" class="container container-fluid" style="margin-top:100px;">
+        <form runat="server" class="form-horizontal">
             
-        </form>
+            <div class="form-group">
+                <label id="LabelLoginMobile" class="control-label col-sm-2" for="TextboxLoginMobile">Mobile:</label>
+                <div class="col-sm-10">
+                    <input id="TextboxLoginMobile" type="number" class="form-control" placeholder="Enter Your Mobile"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label id="LabelLoginPassword" class="control-label col-sm-2" for="TextboxLoginPassword">Password:</label>
+                <div class="col-sm-10"> 
+                    <input id="TextboxLoginPassword" type="password" class="form-control" placeholder="Enter Your Password"/>
+                </div>
+            </div>
+            <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input id="CheckboxLoginRememberme" type="checkbox"/> Remember me</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button id="ButtonLoginSubmit" type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+       </form>
     </div>
+
      <div id="footer"></div>
 
  </div>

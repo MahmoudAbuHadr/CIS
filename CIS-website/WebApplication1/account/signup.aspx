@@ -55,24 +55,54 @@
         </div>
     </nav>
     </div>
-    <div id="contnent">
-        <form runat="server">
-            <asp:Label ID="LabelSignupName" runat="server" Text="Name"  style="top: 260px; left: 420px; position: absolute; height: 16px; width: 35px; right: 766px;" Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-            <asp:TextBox ID="TextBoxSignupName" runat="server"   style="position: absolute; top: 260px; left: 640px;"></asp:TextBox>
+     <div id="container" class="container container-fluid" style="margin-top:100px;">
+        <form runat="server" class="form-horizontal">
 
-            <asp:Label ID="LabelSignupMobile" runat="server" Text="Mobile" style="top: 360px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-            <asp:TextBox ID="TextBoxSignupMobile" runat="server" style="position: absolute; top: 360px; left: 640px;"></asp:TextBox>
+            <div class="form-group">
+                <label id="LabelSignupFirstname" class="control-label col-sm-2" for="TextboxSignupFirstname">First Name:</label>
+                <div class="col-sm-10">
+                    <input id="TextboxSignupFirstname" type="number" class="form-control" placeholder="Enter Your First Name"/>
+                </div>
+            </div>
 
-            <asp:Label ID="LabelSignupEmail" runat="server" Text="Email" style="top: 460px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-            <asp:TextBox ID="TextBoxSignupEmail" runat="server" style="position: absolute; top: 460px; left: 640px;"></asp:TextBox>
+            <div class="form-group">
+                <label id="LabelSignupLastname" class="control-label col-sm-2" for="TextboxSignupLastname">Last Name:</label>
+                <div class="col-sm-10">
+                    <input id="TextboxSignupLastname" type="number" class="form-control" placeholder="Enter Your Last Name"/>
+                </div>
+            </div>
 
-            <asp:Label ID="LabelSignupPassword" runat="server" Text="Password" style="top: 560px; left: 420px; position: absolute; height: 15px; width: 35px"  Font-Bold="True" Font-Size="Large" Font-Underline="True"></asp:Label>
-            <asp:TextBox ID="TextBoxSignupPassword" runat="server" style="position: absolute; top: 560px; left: 640px;"></asp:TextBox>
- 
-            <asp:Button ID="ButtonSignupSubmit" runat="server" style="position: absolute; top: 660px; left: 740px;" Text="Submit" Font-Size="Large" />   
-          
-        </form>
+
+             <div class="form-group">
+                <label id="LabelSignupEmail" class="control-label col-sm-2" for="TextboxSignupEmail">Email:</label>
+                <div class="col-sm-10">
+                    <input id="TextboxSignupEmail" type="email" class="form-control" placeholder="Enter Your Email"/>
+                </div>
+            </div>
+                                               
+            <div class="form-group">
+                <label id="LabelSignupMobile" class="control-label col-sm-2" for="TextboxSignupMobile">Mobile:</label>
+                <div class="col-sm-10">
+                    <input id="TextboxSignupMobile" type="number" class="form-control" placeholder="Enter Your Mobile"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label id="LabelSignupPassword" class="control-label col-sm-2" for="TextboxSignupPassword">Password:</label>
+                <div class="col-sm-10"> 
+                    <input id="TextboxSignupPassword" type="password" class="form-control" placeholder="Enter Your Password"/>
+                </div>
+            </div>
+
+
+            <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button id="ButtonSignupSubmit" type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+       </form>
     </div>
+
     <div id="footer"></div>
 
 </div>
