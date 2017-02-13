@@ -112,10 +112,8 @@
   <ItemGroup>
     <Content Include="account\signup.aspx" />
     <Content Include="account\css\StyleSheet1.css" />
-    <Content Include="users\book\book.aspx" />
-    <Content Include="users\book\book.js" />
-    <Content Include="users\patientHistory\patientHistory.aspx" />
-    <Content Include="users\patientHistory\patientHistory.js" />
+    <Content Include="users\book.aspx" />
+    <Content Include="users\book.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -151,23 +149,6 @@
     </Compile>
     <Compile Include="scripts\AccountDAO.cs" />
     <Compile Include="scripts\AccountDAOinterface.cs" />
-    <Compile Include="users\book\book.aspx.cs">
-      <DependentUpon>book.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="users\book\book.aspx.designer.cs">
-      <DependentUpon>book.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="users\patientHistory\patientHistory.aspx.cs">
-      <DependentUpon>patientHistory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="users\patientHistory\patientHistory.aspx.designer.cs">
-      <DependentUpon>patientHistory.aspx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="doctor\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
