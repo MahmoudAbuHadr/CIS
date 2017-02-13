@@ -12,7 +12,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css"/>
   <script type="text/javascript" src="book.js"></script>
 
 
@@ -34,7 +33,7 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <li><a href="home.aspx">Home</a></li>
+                <li><a href="../home.aspx">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
@@ -51,8 +50,9 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="./account/login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                <li><a href="./account/signup.aspx"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+                <li><a href="../../account/signup.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="../../account/login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
             </ul>
         </div>
     </nav>
@@ -75,15 +75,15 @@
                     <asp:TextBox runat="server" id="TextboxBookTime" type="time" class="form-control"/>
                 </div>
             </div>
-                     <!--
+                     
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                        <label><asp:TextBox runat="server" id="CheckboxLoginRememberme" type="checkbox"/> Remember me</label>
+                    <div class="p">
+                        <p>Available Times Are:</p>
                     </div>
                 </div>
             </div>
-           -->
+          
            <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
                     <asp:Button runat="server" id="ButtonBookSubmit" type="submit" class="btn btn-default" Text="Submit"/>
