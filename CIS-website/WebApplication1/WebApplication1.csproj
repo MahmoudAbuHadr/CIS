@@ -95,6 +95,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="account\login.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.aspx" />
     <Content Include="javascript\JavaScript1.js" />
     <Content Include="packages.config" />
@@ -102,6 +107,20 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="home.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-1.9.1.js" />
+    <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,8 +131,10 @@
   <ItemGroup>
     <Content Include="account\signup.aspx" />
     <Content Include="account\css\StyleSheet1.css" />
-    <Content Include="users\book.aspx" />
-    <Content Include="users\book.js" />
+    <Content Include="users\book\book.aspx" />
+    <Content Include="users\book\book.js" />
+    <Content Include="users\patientHistory\patientHistory.aspx" />
+    <Content Include="users\patientHistory\patientHistory.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +170,23 @@
     </Compile>
     <Compile Include="scripts\AccountDAO.cs" />
     <Compile Include="scripts\AccountDAOinterface.cs" />
+    <Compile Include="scripts\Appointment.cs" />
+    <Compile Include="scripts\AppointmentDAO.cs" />
+    <Compile Include="scripts\appointmentDAOinterface.cs" />
+    <Compile Include="users\book\book.aspx.cs">
+      <DependentUpon>book.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\book\book.aspx.designer.cs">
+      <DependentUpon>book.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\patientHistory\patientHistory.aspx.cs">
+      <DependentUpon>patientHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\patientHistory\patientHistory.aspx.designer.cs">
+      <DependentUpon>patientHistory.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -161,7 +199,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53893</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
