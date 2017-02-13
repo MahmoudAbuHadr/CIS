@@ -13,13 +13,40 @@ namespace WebApplication1.users {
     public partial class patientHistory {
         
         /// <summary>
-        /// TextboxBookDate control.
+        /// TextboxPatientHistoryFirstname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextboxBookDate;
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryFirstname;
+        
+        /// <summary>
+        /// RequiredFieldValidatorTextboxPatientHistoryFirstname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxPatientHistoryFirstname;
+        
+        /// <summary>
+        /// TextboxPatientHistoryMobile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryMobile;
+        
+        /// <summary>
+        /// RequiredFieldValidatorTextboxPatientHistoryMobile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxPatientHistoryMobile;
         
         /// <summary>
         /// TextboxBookDate control.

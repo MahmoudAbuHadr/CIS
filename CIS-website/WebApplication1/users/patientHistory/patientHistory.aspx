@@ -63,19 +63,38 @@
              <form runat="server" class="form-horizontal">
 
                        <!-- General Information-->
-					<h1 style= "color:#858585") >1- General Information</font></h1>
+					<h1 style= "color:#858585") >1- General Information</h1>
 					<br>
                 <div class="target">
+
             <div class="form-group">
-                <label id="LabelBookDate" class="control-label col-sm-2" for="TextboxBookDate">Date:</label>
+                <label id="LabelPatientHistoryFirstname" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">Fitst Name:</label>
                 <div class="col-sm-10">
-                    <asp:TextBox runat="server" id="TextboxBookDate" type="date" class="form-control"/>
+                    <asp:TextBox runat="server" id="TextboxPatientHistoryFirstname" type="text" class="form-control"/>
+                    
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxPatientHistoryFirstname" runat="server"
+                        ControlToValidate="TextboxPatientHistoryFirstname"
+                        ErrorMessage="First Name is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                
                 </div>
             </div>
-					<label for="fullName" class="grid_3 omega">*Full Name:</label>
-					<input type="text" name="FullName" id="fullName" width: 200px; margin-left: 0px; style="height:30px" required><br><br>
-					<label for="phone" class="grid_3 omega">*Phone Number:</label>
-					<input type="text" name="PhoneNumber" id="phoneNumber" width: 200px; margin-left: 0px; style="height:30px" required><br><br>
+
+            <div class="form-group">
+                <label id="LabelPatientHistoryMobile" class="control-label col-sm-2" for="TextboxPatientHistoryMobile">Mobile:</label>
+                <div class="col-sm-10">
+                    <asp:TextBox runat="server" id="TextboxPatientHistoryMobile" type="tel" class="form-control"/>
+                    
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxPatientHistoryMobile" runat="server"
+                        ControlToValidate="TextboxPatientHistoryMobile"
+                        ErrorMessage="Mobile is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                
+                </div>
+            </div>
+
 					<!-- Gender -->
                     <label for="gender" class="grid_3 omega">*Gender:</label>
 					<input type="radio" value="Male" name="Gender" id="gender" width: 400px; margin-left: 0px; style="height:30px" required>Male
