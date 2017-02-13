@@ -71,16 +71,16 @@
                 <label id="LabelPatientHistoryFirstname" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">Fitst Name:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxPatientHistoryFirstname" type="text" class="form-control"/>
-                    
-                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxPatientHistoryFirstname" runat="server"
+                 <!--   
+                    <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
                         ControlToValidate="TextboxPatientHistoryFirstname"
                         ErrorMessage="First Name is a Required Field."
                         ForeColor="Red">
                     </asp:RequiredFieldValidator>
-                
+               --> 
                 </div>
             </div>
-
+                    <!--
             <div class="form-group">
                 <label id="LabelPatientHistoryMobile" class="control-label col-sm-2" for="TextboxPatientHistoryMobile">Mobile:</label>
                 <div class="col-sm-10">
@@ -94,7 +94,7 @@
                 
                 </div>
             </div>
-
+                    -->
 					<!-- Gender -->
                     <label for="gender" class="grid_3 omega">*Gender:</label>
 					<input type="radio" value="Male" name="Gender" id="gender" width: 400px; margin-left: 0px; style="height:30px" required>Male
