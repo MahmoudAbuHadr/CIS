@@ -112,6 +112,8 @@
   <ItemGroup>
     <Content Include="account\signup.aspx" />
     <Content Include="account\css\StyleSheet1.css" />
+    <Content Include="users\book.aspx" />
+    <Content Include="users\book.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -147,9 +149,6 @@
     </Compile>
     <Compile Include="scripts\AccountDAO.cs" />
     <Compile Include="scripts\AccountDAOinterface.cs" />
-    <Compile Include="scripts\Appointment.cs" />
-    <Compile Include="scripts\AppointmentDAO.cs" />
-    <Compile Include="scripts\AppointmentDAOinterface.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
