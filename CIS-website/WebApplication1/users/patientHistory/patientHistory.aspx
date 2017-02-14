@@ -51,8 +51,8 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../../account/signup.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="../../account/login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="../bill/bill.aspx"><span class="glyphicon glyphicon-euro"></span> Bill</a></li>
+                <li><a href="../book/book.aspx"><span class="glyphicon glyphicon-book"></span> Book</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
             </ul>
         </div>
@@ -62,10 +62,8 @@
         <div id="container" style="margin-top:100px;">
              <form runat="server" class="form-horizontal">
 
-                       <!-- General Information-->
-					<h1 style= "color:#858585") >1- General Information</h1>
-					<br>
-                <div class="target">
+        <!-- General Information-->
+		<h1 style= "color:#858585") >1- General Information</h1>
 
             <div class="form-group">
                 <label id="LabelPatientHistoryFirstname" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">First Name:</label>
@@ -112,55 +110,41 @@
                 </div>
             </div>
 
-                    <asp:RadioButton ID="RadioButton1" runat="server" />              
-					<!-- Gender -->
-					<input type="radio" value="Male" name="Gender" id="gender" width: 400px; margin-left: 0px; style="height:30px" required>Male
-                    <input type="radio" value="Female" name="Gender" id="gender" width: 400px; margin-left: 0px; style="height:30px">Female<br><br>
-                    <!-- Birthday -->
-                    <label for="birthday" class="grid_3 omega">*Birthday:</label>
-					<input type="date" name="Birthday" id="birthday" width: 200px; margin-left: 0px; style="height:30px" required><br><br>
-                    <!-- Height -->
-                    <label for="height" class="grid_3 omega">Height:</label>
-					<input type="number" name="Height" id="height" width: 200px; margin-left: 0px; style="height:30px">  cm<br><br>
-					<!-- Weight -->
-                    <label for="weight" class="grid_3 omega">Weight:</label>
-					<input type="number" name="Weight" id="weight" width: 200px; margin-left: 0px; style="height:30px">  kgm<br><br>
-                    <!-- <input type="radio" name="gender" value="Male" id="male"><label for="male">Male</label><br>
-					<input type="radio" name="gender" value="Female" id="female"><label for="female">Female</label><br> -->
-                </div>
-                    <span id="healthRiskAssessment"></span>
-				<br>
-              
-          <!--  
             <div class="form-group">
-                <label id="LabelBookDate" class="control-label col-sm-2" for="TextboxBookDate">Date:</label>
+                <label id="LabelPatientHistoryBirthday" class="control-label col-sm-2" for="TextboxPatientHistoryBirthday">Birthday:</label>
                 <div class="col-sm-10">
-                    <asp:TextBox runat="server" id="TextboxBookDate" type="date" class="form-control"/>
-                </div>
-            </div>
+                <asp:TextBox runat="server" id="TextboxPatientHistoryBirthday" type="date" class="form-control"/>
 
-                 
-            <div class="form-group">
-                <label id="LabelBookTime" class="control-label col-sm-2" for="TextboxBookTime">Time:</label>
-                <div class="col-sm-10"> 
-                    <asp:TextBox runat="server" id="TextboxBookTime" type="time" class="form-control"/>
+                    <asp:RequiredFieldValidator id="RequiredFieldTextboxPatientHistoryBirthday" runat="server"
+                        ControlToValidate="TextboxPatientHistoryBirthday"
+                        ErrorMessage="Birthday is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
-                     
-            <div class="form-group"> 
-                <div class="col-sm-offset-2 col-sm-10">
-                    <div class="p">
-                        <p>Available Times Are:</p>
-                    </div>
+                  
+             <div class="form-group">
+                <label id="LabelPatientHistoryHeight" class="control-label col-sm-2" for="TextboxPatientHistoryBirthday">Height:</label>
+                <div class="col-sm-9">
+                <asp:TextBox runat="server" id="TextboxPatientHistoryHeight" type="number" class="form-control"/>
                 </div>
-            </div>
-          -->
-           <div class="form-group"> 
-                <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit"/>
+
+                <div class="col-sm-1">
+                    <p> Cm</p>                           
+                </div>              
+             </div>
+                              
+             <div class="form-group">
+                <label id="LabelPatientHistoryWeight" class="control-label col-sm-2" for="TextboxPatientHistoryWeight">Weight:</label>
+                <div class="col-sm-9">
+                <asp:TextBox runat="server" id="TextboxPatientHistoryWeight" type="number" class="form-control"/>
                 </div>
-            </div>
-                 
+                <div class="col-sm-1">
+                    <p> Kg</p>
+                 </div>  
+                </div>
+
+
        </form>
 
 

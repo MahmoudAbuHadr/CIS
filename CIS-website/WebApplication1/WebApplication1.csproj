@@ -131,6 +131,7 @@
   <ItemGroup>
     <Content Include="account\signup.aspx" />
     <Content Include="account\css\StyleSheet1.css" />
+    <Content Include="users\bill\bill.aspx" />
     <Content Include="users\book\book.aspx" />
     <Content Include="users\book\book.js" />
     <Content Include="users\patientHistory\patientHistory.aspx" />
@@ -173,6 +174,13 @@
     <Compile Include="scripts\Appointment.cs" />
     <Compile Include="scripts\AppointmentDAO.cs" />
     <Compile Include="scripts\appointmentDAOinterface.cs" />
+    <Compile Include="users\bill\bill.aspx.cs">
+      <DependentUpon>bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\bill\bill.aspx.designer.cs">
+      <DependentUpon>bill.aspx</DependentUpon>
+    </Compile>
     <Compile Include="users\book\book.aspx.cs">
       <DependentUpon>book.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
