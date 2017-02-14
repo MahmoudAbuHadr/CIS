@@ -63,6 +63,13 @@
                 <label id="LabelSignupFirstname" class="control-label col-sm-2" for="TextboxSignupFirstname">First Name:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxSignupFirstname" type="text" class="form-control" placeholder="Enter Your First Name"/>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxSignupFirstname" runat="server"
+                        ControlToValidate="TextboxSignupFirstname"
+                        ErrorMessage="First Name is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
             
@@ -71,7 +78,15 @@
                 <label id="LabelSignupLastname" class="control-label col-sm-2" for="TextboxSignupLastname">Last Name:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxSignupLastname" type="text" class="form-control" placeholder="Enter Your Last Name"/>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxSignupLastname" runat="server"
+                        ControlToValidate="TextboxSignupLastname"
+                        ErrorMessage="Last Name is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 </div>
+
             </div>
 
 
@@ -79,6 +94,14 @@
                 <label id="LabelSignupEmail" class="control-label col-sm-2" for="TextboxSignupEmail">Email:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxSignupEmail" type="email" class="form-control" placeholder="Enter Your Email"/>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxSignupEmail" runat="server"
+                        ControlToValidate="TextboxSignupEmail"
+                        ErrorMessage="Email is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                 
                 </div>
             </div>
                                                
@@ -86,6 +109,14 @@
                 <label id="LabelSignupMobile" class="control-label col-sm-2" for="TextboxSignupMobile">Mobile:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxSignupMobile" type="tel" class="form-control" placeholder="Enter Your Mobile"/>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxSignupMobile" runat="server"
+                        ControlToValidate="TextboxSignupMobile"
+                        ErrorMessage="Mobile is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                  
                 </div>
             </div>
 
@@ -93,6 +124,13 @@
                 <label id="LabelSignupPassword" class="control-label col-sm-2" for="TextboxSignupPassword">Password:</label>
                 <div class="col-sm-10"> 
                     <asp:TextBox runat="server" id="TextboxSignupPassword" type="password" class="form-control" placeholder="Enter Your Password"/>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxSignupPassword" runat="server"
+                        ControlToValidate="TextboxSignupPassword"
+                        ErrorMessage="Password is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
 

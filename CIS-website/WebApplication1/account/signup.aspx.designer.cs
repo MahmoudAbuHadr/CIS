@@ -22,6 +22,15 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox TextboxSignupFirstname;
         
         /// <summary>
+        /// RequiredFieldValidatorTextboxSignupFirstname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxSignupFirstname;
+        
+        /// <summary>
         /// TextboxSignupLastname control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextboxSignupLastname;
+        
+        /// <summary>
+        /// RequiredFieldValidatorTextboxSignupLastname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxSignupLastname;
         
         /// <summary>
         /// TextboxSignupEmail control.
@@ -40,6 +58,15 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox TextboxSignupEmail;
         
         /// <summary>
+        /// RequiredFieldValidatorTextboxSignupEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxSignupEmail;
+        
+        /// <summary>
         /// TextboxSignupMobile control.
         /// </summary>
         /// <remarks>
@@ -49,6 +76,15 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox TextboxSignupMobile;
         
         /// <summary>
+        /// RequiredFieldValidatorTextboxSignupMobile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxSignupMobile;
+        
+        /// <summary>
         /// TextboxSignupPassword control.
         /// </summary>
         /// <remarks>
@@ -56,6 +92,15 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextboxSignupPassword;
+        
+        /// <summary>
+        /// RequiredFieldValidatorTextboxSignupPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxSignupPassword;
         
         /// <summary>
         /// ButtonSignupSubmit control.

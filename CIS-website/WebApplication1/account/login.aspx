@@ -63,14 +63,34 @@
                 <label id="LabelLoginMobile" class="control-label col-sm-2" for="TextboxLoginMobile">Mobile:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxLoginMobile" type="tel" class="form-control" placeholder="Enter Your Mobile"/>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxLoginMobile" runat="server"
+                        ControlToValidate="TextboxLoginMobile"
+                        ErrorMessage="Mobile is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
+
+
+
             <div class="form-group">
                 <label id="LabelLoginPassword" class="control-label col-sm-2" for="TextboxLoginPassword">Password:</label>
                 <div class="col-sm-10"> 
                     <asp:TextBox runat="server" id="TextboxLoginPassword" type="password" class="form-control" placeholder="Enter Your Password"/>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxLoginPassword" runat="server"
+                        ControlToValidate="TextboxLoginPassword"
+                        ErrorMessage="Password is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                    
                 </div>
+
             </div>
+
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
                     <div class="checkbox">

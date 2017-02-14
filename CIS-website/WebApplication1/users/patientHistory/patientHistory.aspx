@@ -34,7 +34,7 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <li><a href="../home.aspx">Home</a></li>
+                <li><a href="../../home.aspx">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
@@ -68,19 +68,19 @@
                 <div class="target">
 
             <div class="form-group">
-                <label id="LabelPatientHistoryFirstname" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">Fitst Name:</label>
+                <label id="LabelPatientHistoryFirstname" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">First Name:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxPatientHistoryFirstname" type="text" class="form-control"/>
-                 <!--   
+                   
                     <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
                         ControlToValidate="TextboxPatientHistoryFirstname"
                         ErrorMessage="First Name is a Required Field."
                         ForeColor="Red">
                     </asp:RequiredFieldValidator>
-               --> 
+               
                 </div>
             </div>
-                    <!--
+                   
             <div class="form-group">
                 <label id="LabelPatientHistoryMobile" class="control-label col-sm-2" for="TextboxPatientHistoryMobile">Mobile:</label>
                 <div class="col-sm-10">
@@ -94,9 +94,26 @@
                 
                 </div>
             </div>
-                    -->
+
+            <div class="form-group">
+                <label id="LabelPatientHistoryGender" class="control-label col-sm-2" for="TextboxPatientHistoryMobile">Gender:</label>
+                <div class="col-sm-10">
+                    <asp:RadioButtonList ID="RadioButtonListPatientHistoryGender" runat="server" RepeatDirection="Horizontal" RepeatLayout="Table">
+                            <asp:ListItem Text="Male" Value="Male" />
+                            <asp:ListItem Text="Female" Value="Female" />
+                    </asp:RadioButtonList>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorRadioButtonListGender" runat="server"
+                        ControlToValidate="RadioButtonListPatientHistoryGender"
+                        ErrorMessage="Gender is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                </div>
+            </div>
+
+                    <asp:RadioButton ID="RadioButton1" runat="server" />              
 					<!-- Gender -->
-                    <label for="gender" class="grid_3 omega">*Gender:</label>
 					<input type="radio" value="Male" name="Gender" id="gender" width: 400px; margin-left: 0px; style="height:30px" required>Male
                     <input type="radio" value="Female" name="Gender" id="gender" width: 400px; margin-left: 0px; style="height:30px">Female<br><br>
                     <!-- Birthday -->
@@ -112,7 +129,6 @@
 					<input type="radio" name="gender" value="Female" id="female"><label for="female">Female</label><br> -->
                 </div>
                     <span id="healthRiskAssessment"></span>
-				</fieldset>
 				<br>
               
           <!--  
@@ -138,13 +154,13 @@
                     </div>
                 </div>
             </div>
-          
+          -->
            <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonBookSubmit" type="submit" class="btn btn-default" Text="Submit"/>
+                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit"/>
                 </div>
             </div>
-            -->     
+                 
        </form>
 
 

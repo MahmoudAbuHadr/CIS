@@ -49,6 +49,33 @@ namespace WebApplication1.users {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxPatientHistoryMobile;
         
         /// <summary>
+        /// RadioButtonListPatientHistoryGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonListPatientHistoryGender;
+        
+        /// <summary>
+        /// RequiredFieldValidatorRadioButtonListGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorRadioButtonListGender;
+        
+        /// <summary>
+        /// RadioButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        
+        /// <summary>
         /// TextboxBookDate control.
         /// </summary>
         /// <remarks>
@@ -67,12 +94,12 @@ namespace WebApplication1.users {
         protected global::System.Web.UI.WebControls.TextBox TextboxBookTime;
         
         /// <summary>
-        /// ButtonBookSubmit control.
+        /// ButtonPatientHistorySubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonBookSubmit;
+        protected global::System.Web.UI.WebControls.Button ButtonPatientHistorySubmit;
     }
 }
