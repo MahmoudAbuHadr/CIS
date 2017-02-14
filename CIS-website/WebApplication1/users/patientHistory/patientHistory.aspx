@@ -78,7 +78,21 @@
                
                 </div>
             </div>
+
+            <div class="form-group">
+                <label id="LabelPatientHistoryLastname" class="control-label col-sm-2" for="TextboxPatientHistoryLastname">First Name:</label>
+                <div class="col-sm-10">
+                    <asp:TextBox runat="server" id="TextboxPatientHistoryLastname" type="text" class="form-control"/>
                    
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorPatientHistoryLastname" runat="server"
+                        ControlToValidate="TextboxPatientHistoryLastname"
+                        ErrorMessage="Last Name is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+               
+                </div>
+            </div>
+                               
             <div class="form-group">
                 <label id="LabelPatientHistoryMobile" class="control-label col-sm-2" for="TextboxPatientHistoryMobile">Mobile:</label>
                 <div class="col-sm-10">
@@ -144,6 +158,18 @@
                  </div>  
                 </div>
 
+
+<!-- General Information-->
+		<h1 style= "color:#858585") >1- Patient History</h1>
+
+            <div class="form-group">
+                <label id="" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">First Name:</label>
+                <div class="col-sm-10">
+                    <asp:TextBox runat="server" id="Textbox1" type="text" class="form-control"/>
+                   
+               
+                </div>
+            </div>
 
        </form>
 
