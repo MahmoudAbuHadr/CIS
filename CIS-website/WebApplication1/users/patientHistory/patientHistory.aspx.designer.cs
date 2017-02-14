@@ -31,6 +31,24 @@ namespace WebApplication1.users {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
+        /// TextboxPatientHistoryLastname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryLastname;
+        
+        /// <summary>
+        /// RequiredFieldValidatorPatientHistoryLastname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPatientHistoryLastname;
+        
+        /// <summary>
         /// TextboxPatientHistoryMobile control.
         /// </summary>
         /// <remarks>
@@ -101,5 +119,14 @@ namespace WebApplication1.users {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryWeight;
+        
+        /// <summary>
+        /// Textbox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Textbox1;
     }
 }
