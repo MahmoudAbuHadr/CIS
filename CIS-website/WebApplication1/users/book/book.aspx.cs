@@ -14,5 +14,22 @@ namespace WebApplication1.users
 
         }
 
+        protected void ButtonBookSubmit_Click(object sender, EventArgs e)
+        {
+            string day = this.TextboxBookDate.Text;
+            string time = this.TextboxBookTime.Text;
+            int id =Convert.ToInt32(Request.QueryString["id"]);
+            //needed : check if this is booked 
+            WebApplication1.scripts.AppointmentDAO dao = new scripts.AppointmentDAO();
+            WebApplication1.scripts.Appointment app = new scripts.Appointment();
+            app.setDay(day);
+            app.setTime(time);
+            app.setId(id);
+            dao.setAppointment(app);
+
+
+
+
+        }
     }
 }

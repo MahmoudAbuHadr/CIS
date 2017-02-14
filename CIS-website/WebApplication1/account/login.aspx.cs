@@ -37,37 +37,18 @@ namespace WebApplication1
                 else
                 {
                     //access granted
-                    string day="11/02/2016"; string time="08:30";
-                    WebApplication1.scripts.Appointment app = new scripts.Appointment();
-                    app.setId(id);
-                    app.setTime(time);
-                    app.setDay(day);
-                    WebApplication1.scripts.AppointmentDAO D = new scripts.AppointmentDAO();
-                    D.setAppointment(app);
-                     day = "11/02/2016";
-                     time = "09:30";
-                      id = 2;
-                    app.setId(id);
-                    app.setTime(time);
-                    app.setDay(day);
-                    D.setAppointment(app);
-
-
-                    List<WebApplication1.scripts.Appointment> list = new List<scripts.Appointment>();
-                    list = D.searchByDay(day);
-                    if (list.Count == 2) {
-                        Response.Redirect(Page.ResolveClientUrl("yesBitch"));
-
-                    }
-
-
-
-
+                    Response.Redirect(Page.ResolveClientUrl("../users/book/book.aspx?id="+id));
 
 
                 }
 
+
+
+
+
+
+            }
+
             }
         }
     }
-}
