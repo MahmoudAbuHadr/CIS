@@ -7,6 +7,7 @@ namespace WebApplication1.scripts
 {
     public class personalData
     {
+        int id;
         string firstName;
         string lastName;
         string mobile;
@@ -15,26 +16,31 @@ namespace WebApplication1.scripts
         float height;
         float weight;
 
-        void setFname(string fname) { firstName = fname;      }
-        string getFname() { return firstName; }
 
-        void setLname(string lname) { lastName = lname; }
-        string getLname() { return lastName; }
+        public void setId(int  Id) { id = Id; }
+        public string getId() { return id; }
 
-        void setMobile(string mobileNum) { mobile = mobileNum; }
-        string getMobile() { return mobile; }
 
-        void setGender(string gen) { gender = gen; }
-        string getGender() { return gender; }
+        public void setFname(string fname) { firstName = fname;      }
+        public string getFname() { return firstName; }
 
-        void setBirthday(string birth) { birthday = birth; }
-        string getBirthday() { return birthday; }
+        public void setLname(string lname) { lastName = lname; }
+        public string getLname() { return lastName; }
 
-        void setHeight(float height2) { height = height2; }
-        float getHeight() { return height; }
+        public void setMobile(string mobileNum) { mobile = mobileNum; }
+        public string getMobile() { return mobile; }
 
-        void setWeight(float weight2) { weight = weight2; }
-        float getWeight() { return weight; }
+        public void setGender(string gen) { gender = gen; }
+        public string getGender() { return gender; }
+
+        public void setBirthday(string birth) { birthday = birth; }
+        public string getBirthday() { return birthday; }
+
+        public void setHeight(float height2) { height = height2; }
+        public float getHeight() { return height; }
+
+        public void setWeight(float weight2) { weight = weight2; }
+        public float getWeight() { return weight; }
 
     }
 }
