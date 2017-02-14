@@ -67,39 +67,39 @@ namespace WebApplication1.users {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorRadioButtonListGender;
         
         /// <summary>
-        /// RadioButton1 control.
+        /// TextboxPatientHistoryBirthday control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryBirthday;
         
         /// <summary>
-        /// TextboxBookDate control.
+        /// RequiredFieldTextboxPatientHistoryBirthday control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextboxBookDate;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldTextboxPatientHistoryBirthday;
         
         /// <summary>
-        /// TextboxBookTime control.
+        /// TextboxPatientHistoryHeight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextboxBookTime;
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryHeight;
         
         /// <summary>
-        /// ButtonPatientHistorySubmit control.
+        /// TextboxPatientHistoryWeight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonPatientHistorySubmit;
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryWeight;
     }
 }

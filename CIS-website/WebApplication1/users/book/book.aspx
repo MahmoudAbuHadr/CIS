@@ -50,8 +50,8 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../../account/signup.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="../../account/login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="../bill/bill.aspx"><span class="glyphicon glyphicon-euro"></span> Bill</a></li>
+                <li><a href="../patientHistory/patientHistory.aspx"><span class="glyphicon glyphicon-folder-close"></span> Patient History</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
             </ul>
         </div>
