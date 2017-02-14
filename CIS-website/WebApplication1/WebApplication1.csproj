@@ -175,6 +175,8 @@
     <Compile Include="scripts\AppointmentDAO.cs" />
     <Compile Include="scripts\appointmentDAOinterface.cs" />
     <Compile Include="scripts\personalData.cs" />
+    <Compile Include="scripts\personalDataDAO.cs" />
+    <Compile Include="scripts\personalDataDAOinterface.cs" />
     <Compile Include="users\bill\bill.aspx.cs">
       <DependentUpon>bill.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

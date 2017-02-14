@@ -28,6 +28,13 @@ namespace WebApplication1.scripts
         string getGender() { return gender; }
 
         void setBirthday(string birth) { birthday = birth; }
-        string get() { return firstName; }
+        string getBirthday() { return birthday; }
+
+        void setHeight(float height2) { height = height2; }
+        float getHeight() { return height; }
+
+        void setWeight(float weight2) { weight = weight2; }
+        float getWeight() { return weight; }
+
     }
 }
