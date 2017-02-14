@@ -30,10 +30,10 @@ namespace WebApplication1
             WebApplication1.scripts.AccountDAO dao = new scripts.AccountDAO();
             if (dao.getIdByPhoneNumber(phone) == -1) {
                 dao.insertAccount(acc);
-                //should redirect to home page
+                //should redirect to login page
             }
             else {
-                ///unhandeled 
+                //redirect to book  
             }
 
         }

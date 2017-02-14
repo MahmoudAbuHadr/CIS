@@ -22,10 +22,31 @@ namespace WebApplication1.users
             //needed : check if this is booked 
             WebApplication1.scripts.AppointmentDAO dao = new scripts.AppointmentDAO();
             WebApplication1.scripts.Appointment app = new scripts.Appointment();
-            app.setDay(day);
-            app.setTime(time);
-            app.setId(id);
-            dao.setAppointment(app);
+            List<WebApplication1.scripts.Appointment> list = new List<scripts.Appointment>();
+            list = dao.searchByDay(day);
+            bool booked = false;
+            for (int i = 0; i < list.Count; i++) {
+                if (list[i].getTime() == time) { booked = true; }
+            }
+
+            if (!booked) {
+
+                app.setDay(day);
+                app.setTime(time);
+                app.setId(id);
+                dao.setAppointment(app);
+            }
+            else
+            {
+                ClientScriptManager cs = Page.ClientScript;
+                Type cstype = this.GetType();
+
+                String alert = "alert('this time is booked');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
+                
+
+
+            }
 
 
 
