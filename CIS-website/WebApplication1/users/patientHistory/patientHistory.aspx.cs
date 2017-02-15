@@ -20,9 +20,9 @@ namespace WebApplication1.users
 
         protected void ButtonPatientHistorySubmit_Click(object sender, EventArgs e)
         {
-            if(CheckboxPatientHistoryAgree.Checked == true)
-            {
+            
                 int id = (int)Session["id"];
+                id = 1;
                 string fname = this.TextboxPatientHistoryFirstname.Text;
                 string lname = this.TextboxPatientHistoryLastname.Text;
                 string mobile = this.TextboxPatientHistoryMobile.Text;
@@ -43,7 +43,7 @@ namespace WebApplication1.users
                 data.setWeight(weight);
 
                 dataDao.insertData(data);
-                /*
+                
                 List<bool> diseases = new List<bool>();
                 int index = 0;
                 foreach (ListItem i in CheckBoxListDisease.Items)
@@ -60,17 +60,9 @@ namespace WebApplication1.users
                 }
                 WebApplication1.scripts.diseases dis = new WebApplication1.scripts.diseases(id, diseases[0], diseases[1], diseases[2], diseases[3], diseases[4], diseases[5], diseases[6], diseases[7], diseases[8], diseases[9], diseases[10] );
 WebApplication1.scripts.diseasesDAO dieseasesDao = new WebApplication1.scripts.diseasesDAO();
-dieseasesDao.insertDiseases(dis);  */   
+dieseasesDao.insertDiseases(dis);     
 
-            }
-            else
-            {
-                ClientScriptManager cs = Page.ClientScript;
-                Type cstype = this.GetType();
-
-                String alert = "alert('you can't submit without agreeing ');";
-                cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
-            }
+           
         }
 
         protected void ButtonAddDrug_Click(object sender, EventArgs e)
