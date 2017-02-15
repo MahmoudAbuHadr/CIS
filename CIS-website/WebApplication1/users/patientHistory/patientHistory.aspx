@@ -159,14 +159,18 @@
                 </div>
 
 
-<!-- General Information-->
+        <!-- Medical History-->
 		<h1 style= "color:#858585") >1- Patient History</h1>
 
             <div class="form-group">
-                <label id="" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">First Name:</label>
-                <div class="col-sm-10">
-                    <asp:TextBox runat="server" id="Textbox1" type="text" class="form-control"/>
-                   
+                <div class="col-sm-12">
+                    <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+                        <asp:ListItem runat="server" Text="Hepatitis" Value="Hepatitis"></asp:ListItem>
+                        <asp:ListItem runat="server" Text="Rheumatism" Value="Rheumatism"></asp:ListItem>
+                        <asp:ListItem runat="server" Text="STD" Value="STD"></asp:ListItem>
+                        <asp:ListItem runat="server" Text="" Value=""></asp:ListItem>
+                        <asp:ListItem runat="server" Text="" Value=""></asp:ListItem>
+                    </asp:CheckBoxList>
                
                 </div>
             </div>
