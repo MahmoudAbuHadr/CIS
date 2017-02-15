@@ -5,13 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication1
+namespace WebApplication1.account
 {
-    public partial class home : System.Web.UI.Page
+    public partial class signout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["id"] = 0;
+            Session.Abandon();
+            Response.Redirect(Page.ResolveClientUrl("../index.aspx"));
         }
     }
 }

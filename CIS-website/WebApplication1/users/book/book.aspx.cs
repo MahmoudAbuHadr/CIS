@@ -11,14 +11,16 @@ namespace WebApplication1.users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if ((int)Session["id"] == 0) {
+                Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
+            }
         }
 
         protected void ButtonBookSubmit_Click(object sender, EventArgs e)
         {
             string day = this.TextboxBookDate.Text;
             string time = this.TextboxBookTime.Text;
-            int id =Convert.ToInt32(Request.QueryString["id"]);
+            int id = (int)Session["id"];
             //needed : check if this is booked 
             WebApplication1.scripts.AppointmentDAO dao = new scripts.AppointmentDAO();
             WebApplication1.scripts.Appointment app = new scripts.Appointment();
@@ -35,6 +37,7 @@ namespace WebApplication1.users
                 app.setTime(time);
                 app.setId(id);
                 dao.setAppointment(app);
+                //after booking should redirect him to somewhere else 
             }
             else
             {

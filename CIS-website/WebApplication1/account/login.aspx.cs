@@ -11,7 +11,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if ((int)Session["id"] != 0) { Response.Redirect(Page.ResolveClientUrl("../users/book/book.aspx")); }
         }
 
         protected void ButtonLoginSubmit_Click(object sender, EventArgs e)
@@ -24,20 +24,30 @@ namespace WebApplication1
             if (id == -1)
             {
                 //not regestierd
-                Response.Redirect(Page.ResolveClientUrl("www.google.com"));
+                ClientScriptManager cs = Page.ClientScript;
+                Type cstype = this.GetType();
+
+                String alert = "alert('this phone number is not registered');";
+                cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
             }
             else
             {
+                //phone number exist 
                 acc = dao.getAccountById(id);
                 if (acc.getPassword() != password)
                 {
                     //wrong password
-                    Response.Redirect(Page.ResolveClientUrl("www.facebook.com"));
+                    ClientScriptManager cs = Page.ClientScript;
+                    Type cstype = this.GetType();
+
+                    String alert = "alert('wrong password');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
                 }
                 else
                 {
                     //access granted
-                    Response.Redirect(Page.ResolveClientUrl("../users/book/book.aspx?id="+id));
+                    Session["id"] = id;
+                    Response.Redirect(Page.ResolveClientUrl("../users/book/book.aspx"));
 
 
                 }

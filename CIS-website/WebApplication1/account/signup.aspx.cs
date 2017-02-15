@@ -11,7 +11,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if ((int)Session["id"] != 0) { Response.Redirect(Page.ResolveClientUrl("../users/book/book.aspx")); }
         }
 
         protected void ButtonSignupSubmit_Click(object sender, EventArgs e)
@@ -30,10 +30,21 @@ namespace WebApplication1
             WebApplication1.scripts.AccountDAO dao = new scripts.AccountDAO();
             if (dao.getIdByPhoneNumber(phone) == -1) {
                 dao.insertAccount(acc);
-                //should redirect to login page
+
+                ClientScriptManager cs = Page.ClientScript;
+                Type cstype = this.GetType();
+
+                String alert = "alert('registeration completed');";
+                cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
+                Response.Redirect(Page.ResolveClientUrl("login.aspx"));
+
             }
             else {
-                //redirect to book  
+                ClientScriptManager cs = Page.ClientScript;
+                Type cstype = this.GetType();
+
+                String alert = "alert('this phone number is already registered ');";
+                cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
             }
 
         }

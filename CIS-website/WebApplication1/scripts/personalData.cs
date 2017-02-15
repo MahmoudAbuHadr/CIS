@@ -18,7 +18,7 @@ namespace WebApplication1.scripts
 
 
         public void setId(int  Id) { id = Id; }
-        public string getId() { return id; }
+        public int getId() { return id; }
 
 
         public void setFname(string fname) { firstName = fname;      }
