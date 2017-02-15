@@ -56,7 +56,7 @@ namespace WebApplication1.users
                     }
                     index++;
                 }
-WebApplication1.scripts.diseases dis = new WebApplication1.scripts.diseases(id,diseases[0],diseases[1],diseases[2],diseases[3],diseases[4]);
+                WebApplication1.scripts.diseases dis = new WebApplication1.scripts.diseases(id, diseases[0], diseases[1], diseases[2], diseases[3], diseases[4], diseases[5], diseases[6], diseases[7], diseases[8], diseases[9], diseases[10] );
 WebApplication1.scripts.diseasesDAO dieseasesDao = new WebApplication1.scripts.diseasesDAO();
 dieseasesDao.insertDiseases(dis);     
 
