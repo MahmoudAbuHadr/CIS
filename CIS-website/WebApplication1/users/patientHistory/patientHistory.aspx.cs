@@ -44,7 +44,7 @@ namespace WebApplication1.users
                 dataDao.insertData(data);
                 List<bool> diseases = new List<bool>();
                 int index = 0;
-                foreach (ListItem i in CheckBoxList1.Items)
+                foreach (ListItem i in CheckBoxListDisease.Items)
                 {
                     if (i.Selected == true)
                     {

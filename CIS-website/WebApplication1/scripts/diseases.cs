@@ -8,21 +8,38 @@ namespace WebApplication1.scripts
     public class diseases
     {
         int id;
+        bool anemia;
+        bool asthma;
+        bool epilipsy;
+        bool depression;
+        bool diabetes;
+        bool diarrhea;
+        bool heartAttack;
         bool hepatitis;
         bool rheumatism;
+        bool scarletFever;
         bool std;
-        bool heartAttack;
-        bool depression;
+        
 
         public diseases() { }
-       public diseases(int ID , bool Hepatitis ,bool Rheumatism , bool Std , bool HeartAttack , bool Depression)
+       public diseases(int ID , bool Anemia ,bool Asthma , bool Epi , bool Depression , bool diab,
+                       bool Diarrhea , bool HeartAttack ,bool Hepatitis , bool Rheuma , bool Scarlet ,bool STD)
+           
         {
             id = ID;
             hepatitis = Hepatitis;
-            rheumatism = Rheumatism;
-            std = Std;
+            std = STD;
             heartAttack = HeartAttack;
             depression = Depression;
+            anemia = Anemia;
+            epilipsy = Epi;
+            diabetes = diab;
+            diarrhea = Diarrhea;
+            heartAttack = HeartAttack;
+            hepatitis = Hepatitis;
+            rheumatism = Rheuma;
+            scarletFever = Scarlet;
+
         }
 
        public  void setId(int ID) { id = ID; }
