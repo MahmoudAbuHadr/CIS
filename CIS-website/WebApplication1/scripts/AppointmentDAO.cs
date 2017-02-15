@@ -10,7 +10,7 @@ namespace WebApplication1.scripts
     {
         public List<Appointment> searchByDay(string day)
         {
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             List<Appointment> myList = new List<Appointment>();
@@ -42,7 +42,7 @@ namespace WebApplication1.scripts
 
         public void setAppointment(Appointment appoint)
         {
-            string connectionString = @"Data Source= NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();

@@ -11,7 +11,7 @@ namespace WebApplication1.users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CheckboxPatientHistoryAgree.Checked = true;
+            CheckboxPatientHistoryAgree.Checked = false;
             if ((int)Session["id"] == 0)
             {
                 Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
@@ -50,7 +50,7 @@ namespace WebApplication1.users
                 ClientScriptManager cs = Page.ClientScript;
                 Type cstype = this.GetType();
 
-                String alert = "alert('you must agree');";
+                String alert = "alert('you can't submit without agreeing ');";
                 cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
             }
         }

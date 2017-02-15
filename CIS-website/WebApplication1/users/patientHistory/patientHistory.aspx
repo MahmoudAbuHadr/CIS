@@ -53,10 +53,10 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../bill/bill.aspx"><span class="glyphicon glyphicon-euro"></span> Bill</a></li>
                 <li><a href="../book/book.aspx"><span class="glyphicon glyphicon-book"></span> Book</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+                <li><a href="../../account/signout.aspx"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> 
             </div>
 
         <div id="container" style="margin-top:100px;">

@@ -11,7 +11,7 @@ namespace WebApplication1.scripts
         public AccountCredentials getAccountById(int id)
         {
             AccountCredentials acc = new AccountCredentials();
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
@@ -40,7 +40,7 @@ namespace WebApplication1.scripts
         public int getIdByPhoneNumber(string phoneNumber)
         {
             int id=-1; 
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
@@ -63,7 +63,7 @@ namespace WebApplication1.scripts
 
         public void insertAccount(AccountCredentials acc)
         {
-            string connectionString = @"Data Source= NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();
@@ -76,7 +76,7 @@ namespace WebApplication1.scripts
 
         public void updateAccount(AccountCredentials acc)
         {
-            string connectionString = @"Data Source= NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();
