@@ -11,7 +11,19 @@ namespace WebApplication1.users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            CheckboxPatientHistoryAgree.Checked = true;
+        }
 
+        protected void ButtonPatientHistorySubmit_Click(object sender, EventArgs e)
+        {
+            if(CheckboxPatientHistoryAgree.Checked == true)
+            {
+                //unhandled store the information in the database
+            }
+            else
+            {
+
+            }
         }
     }
 }

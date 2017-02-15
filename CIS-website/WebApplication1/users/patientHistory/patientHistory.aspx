@@ -80,7 +80,7 @@
             </div>
 
             <div class="form-group">
-                <label id="LabelPatientHistoryLastname" class="control-label col-sm-2" for="TextboxPatientHistoryLastname">First Name:</label>
+                <label id="LabelPatientHistoryLastname" class="control-label col-sm-2" for="TextboxPatientHistoryLastname">Last Name:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxPatientHistoryLastname" type="text" class="form-control"/>
                    
@@ -146,8 +146,9 @@
                 <div class="col-sm-1">
                     <p> Cm</p>                           
                 </div>              
-             </div>
+             </div><br/>
                               
+
              <div class="form-group">
                 <label id="LabelPatientHistoryWeight" class="control-label col-sm-2" for="TextboxPatientHistoryWeight">Weight:</label>
                 <div class="col-sm-9">
@@ -158,20 +159,36 @@
                  </div>  
                 </div>
 
-
+                 <br/><br/>
         <!-- Medical History-->
-		<h1 style= "color:#858585") >1- Patient History</h1>
+		<h1 style= "color:#858585") >2- Patient History</h1>
 
             <div class="form-group">
                 <div class="col-sm-12">
+
+                <label id="LabelPatientHistoryDisease" class="control-label col-sm-2" for="CheckBoxList1">Disease:</label>
+
                     <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
-                        <asp:ListItem runat="server" Text="Hepatitis" Value="Hepatitis"></asp:ListItem>
-                        <asp:ListItem runat="server" Text="Rheumatism" Value="Rheumatism"></asp:ListItem>
-                        <asp:ListItem runat="server" Text="STD" Value="STD"></asp:ListItem>
-                        <asp:ListItem runat="server" Text="" Value=""></asp:ListItem>
-                        <asp:ListItem runat="server" Text="" Value=""></asp:ListItem>
+                        <asp:ListItem runat="server" class="col-sm-12" Text="Hepatitis" Value="Hepatitis"></asp:ListItem>
+                        <asp:ListItem runat="server" class="col-sm-12" Text="Rheumatism" Value="Rheumatism"></asp:ListItem>
+                        <asp:ListItem runat="server" class="col-sm-12" Text="STD" Value="STD"></asp:ListItem>
+                        <asp:ListItem runat="server" class="col-sm-12" Text="Heart Attack" Value="Heart Attack"></asp:ListItem>
+                        <asp:ListItem runat="server" class="col-sm-12" Text="Depression" Value="Depression"></asp:ListItem>
                     </asp:CheckBoxList>
-               
+                </div>
+            </div>
+
+           <div class="form-group">
+               <div class="col-sm-offset-2 col-sm-10">
+	      			<p> To the best of my knowledge, the questions on this form have been accurately answered. I understand that providing incorrect information can be dangerous to my patient's health. It is my responsibility to inform the office of any changes in medical status.</p><br>
+	      			<input type="checkbox" runat="server" Text="I Agree" Value="Agree" ID="CheckboxPatientHistoryAgree" required/>
+                    <asp:Label ID="LabelAgree" runat="server" Text="I Agree"></asp:Label>
+                   </div>
+      		  </div>
+
+           <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonPatientHistorySubmit_Click"/>
                 </div>
             </div>
 
