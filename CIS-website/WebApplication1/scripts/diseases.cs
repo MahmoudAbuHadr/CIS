@@ -45,6 +45,24 @@ namespace WebApplication1.scripts
        public  void setId(int ID) { id = ID; }
        public int getId() { return id; }
 
+        public void setAnemia(bool anem) { anemia = anem; }
+        public bool getAnemia() { return anemia; }
+
+        public void setAsthma(bool asth) { asthma = asth; }
+        public bool getAsthma() { return asthma; }
+
+        public void setEpilipsy(bool epi) { epilipsy = epi; }
+        public bool getEpilipsy() { return epilipsy; }
+
+        public void setDiabetes(bool diab) { diabetes = diab; }
+        public bool getDiabetes() { return diabetes; }
+
+        public void setDiarrhea(bool diar) { diarrhea = diar; }
+        public bool getDiarrhea() { return diarrhea; }
+
+        public void SetScarletFever(bool scarlet) { scarletFever = scarlet; }
+        public bool getScarletFever() { return scarletFever; }
+
         public void setHepatitis(bool hep) { hepatitis = hep; }
         public bool getHepatitis() { return hepatitis; }
 
