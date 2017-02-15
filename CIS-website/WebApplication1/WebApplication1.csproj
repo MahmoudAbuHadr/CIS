@@ -136,7 +136,6 @@
     <Content Include="users\book\book.aspx" />
     <Content Include="users\book\book.js" />
     <Content Include="users\patientHistory\patientHistory.aspx" />
-    <Content Include="users\patientHistory\patientHistory.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

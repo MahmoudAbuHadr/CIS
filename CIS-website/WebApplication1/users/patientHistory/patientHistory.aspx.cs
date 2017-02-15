@@ -11,8 +11,8 @@ namespace WebApplication1.users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CheckboxPatientHistoryAgree.Checked = false;
-            if ((int)Session["id"] == 0)
+           CheckboxPatientHistoryAgree.Checked = false;
+           if ((int)Session["id"] == 0)
             {
                 Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
             }
@@ -54,5 +54,24 @@ namespace WebApplication1.users
                 cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
             }
         }
+
+        protected void ButtonAddDrug_Click(object sender, EventArgs e)
+        {
+            string drug = TextboxAddDrug.Text;
+            BulletedListDrug.Items.Add(drug);
+        }
+
+        protected void ButtonAddSurgery_Click(object sender, EventArgs e)
+        {
+            string surgery = TextboxAddSurgery.Text;
+            BulletedListSurgery.Items.Add(surgery);
+        }
+
+        protected void ButtonDiseaseOther_Click(object sender, EventArgs e)
+        {
+            string otherDisease = TextboxDiseaseOther.Text;
+            BulletedListDisease.Items.Add(otherDisease);
+        }
+
     }
 }
