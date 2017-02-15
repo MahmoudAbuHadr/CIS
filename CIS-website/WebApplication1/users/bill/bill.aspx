@@ -11,9 +11,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css"/>
-  <script type="text/javascript" src="javascript/JavaScript1.js"></script>
-
         <!-- footer -->
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
@@ -32,7 +29,7 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
@@ -51,12 +48,40 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../book/book.aspx"><span class="glyphicon glyphicon-book"></span> Book</a></li>
                 <li><a href="../patientHistory/patientHistory.aspx"><span class="glyphicon glyphicon-folder-close"></span> Patient History</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>            
+                <li><a href="../../account/signout.aspx""><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>            
             </ul>
         </div>
     </nav>
          </div>
-     <div id="container"></div>
+
+     <div id="container" style="margin-top:100px;">
+         <form runat="server" class="form-horizontal">
+         <div class="form-group">
+
+         <div class="col-sm-12">
+         <asp:Table ID="Table1" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
+            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="OliveDrab" Font-Bold="true">
+                <asp:TableHeaderCell>Bill Numbrer</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Date</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Value</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Paid</asp:TableHeaderCell>
+            </asp:TableHeaderRow>
+
+            <asp:TableRow ID="TableRow1" runat="server" BackColor="OrangeRed">
+                <asp:TableCell>ay hary</asp:TableCell>
+                <asp:TableCell>ay hary</asp:TableCell>
+                <asp:TableCell>ay hary</asp:TableCell>
+                <asp:TableCell>ay hary</asp:TableCell>
+            </asp:TableRow>
+
+         </asp:Table>
+         </div>
+
+        </div>
+        </form>
+     </div>
+
+
      <div id="footer"></div>
      </div>
     
