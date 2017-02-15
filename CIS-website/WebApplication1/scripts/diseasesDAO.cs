@@ -15,7 +15,7 @@ namespace WebApplication1.scripts
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "insert into diseases (id,hepatitis,rheumatism,std,heartAttack,depression) Values ('" + disease.getId().ToString() + "','" + disease.getHepatitis() + "','" + disease.getRheumatism() + "','" + disease.getSTD() + "','" + disease.getHeartAttack() + "','" + disease.getDepression() + "')  ;  ";
+            myCommand.CommandText = "insert into diseases (id,anemia,asthma,epilipsy,depression,diabetes,diarrhea,heartAttack,hepatitis,rheumatism,scarletFever,std) Values ('" + disease.getId().ToString() + "','" + disease.getAnemia() + "','" + disease.getAsthma() + "','" + disease.getEpilipsy() + "','" + disease.getDepression() + "','" + disease.getDiabetes() + "','" + disease.getDiarrhea() + "','" + disease.getHeartAttack() + "','" + disease.getHepatitis() + "'','" + disease.getRheumatism() + "','" + disease.getScarletFever() + "','" + disease.getSTD() + "')  ;  ";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
@@ -36,12 +36,20 @@ namespace WebApplication1.scripts
             if (reader.HasRows)
             {
                 reader.Read();
-                dis.setId (reader.GetInt32(0)); 
-                dis.setHepatitis( Convert.ToBoolean(reader[1]));
-                dis.setRheumatism(Convert.ToBoolean(reader[2]));
-                dis.setStd( Convert.ToBoolean(reader[3]));
-                dis.setHeartAttack( Convert.ToBoolean(reader[4]));
-                dis.setDepression( Convert.ToBoolean(reader[5]));
+                dis.setId (reader.GetInt32(0));
+                dis.setAnemia(Convert.ToBoolean(reader[1]));
+                dis.setAsthma(Convert.ToBoolean(reader[2]));
+                dis.setEpilipsy(Convert.ToBoolean(reader[3]));
+                dis.setDepression(Convert.ToBoolean(reader[4]));
+                dis.setDiabetes(Convert.ToBoolean(reader[5]));
+                dis.setDiarrhea(Convert.ToBoolean(reader[6]));
+                dis.setHeartAttack(Convert.ToBoolean(reader[7]));
+                dis.setHepatitis( Convert.ToBoolean(reader[8]));
+                dis.setRheumatism(Convert.ToBoolean(reader[9]));
+                dis.SetScarletFever(Convert.ToBoolean(reader[10]));
+                dis.setStd( Convert.ToBoolean(reader[11]));
+               
+                
                 
 
             }
@@ -59,7 +67,7 @@ namespace WebApplication1.scripts
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "UPDATE diseases SET ID =" + disease.getId().ToString() + ",hepatitis ='" + disease.getHepatitis() + "',rheumatism ='" + disease.getRheumatism() + "', std ='" + disease.getSTD() + "', heartAttack = '" + disease.getHeartAttack() + "', depression = '" + disease.getDepression() + "' WHERE id = " + disease.getId().ToString() + ";";
+            myCommand.CommandText = "UPDATE diseases SET id =" + disease.getId().ToString() + ",anemia ='" + disease.getAnemia() + "',asthma ='" + disease.getAsthma() + "', epilipsy ='" + disease.getEpilipsy() + "', depression = '" + disease.getDepression() + "',diabetes = '"+ disease.getDiabetes() + "', diarrhea = '" + disease.getDiarrhea() + "', heartAttack = '" + disease.getHeartAttack() + "',hepatitis = '" + disease.getHepatitis() + "', rheumatism = '" + disease.getRheumatism() + "', scarletFever = '" + disease.getScarletFever() + "',std = '" + disease.getSTD() + "' WHERE id = " + disease.getId().ToString() + ";";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();

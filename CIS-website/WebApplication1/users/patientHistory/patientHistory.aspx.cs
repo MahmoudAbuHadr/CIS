@@ -13,9 +13,9 @@ namespace WebApplication1.users
         {
            CheckboxPatientHistoryAgree.Checked = false;
            if ((int)Session["id"] == 0)
-            {
+           {
                 Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
-            }
+           }
         }
 
         protected void ButtonPatientHistorySubmit_Click(object sender, EventArgs e)
