@@ -182,6 +182,9 @@
     <Compile Include="scripts\Appointment.cs" />
     <Compile Include="scripts\AppointmentDAO.cs" />
     <Compile Include="scripts\appointmentDAOinterface.cs" />
+    <Compile Include="scripts\diseases.cs" />
+    <Compile Include="scripts\diseasesDAO.cs" />
+    <Compile Include="scripts\diseasesDAOinterface.cs" />
     <Compile Include="scripts\personalData.cs" />
     <Compile Include="scripts\personalDataDAO.cs" />
     <Compile Include="scripts\personalDataDAOinterface.cs" />
