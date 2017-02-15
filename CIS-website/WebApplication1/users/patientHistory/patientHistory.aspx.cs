@@ -41,8 +41,24 @@ namespace WebApplication1.users
                 data.setBirthday(birthday);
                 data.setHeight(height);
                 data.setWeight(weight);
-
                 dataDao.insertData(data);
+                List<bool> diseases = new List<bool>();
+                int index = 0;
+                foreach (ListItem i in CheckBoxList1.Items)
+                {
+                    if (i.Selected == true)
+                    {
+                        diseases[index] = true;
+                    }
+                    else
+                    {
+                        diseases[index] = false;
+                    }
+                    index++;
+                }
+WebApplication1.scripts.diseases dis = new WebApplication1.scripts.diseases(id,diseases[0],diseases[1],diseases[2],diseases[3],diseases[4]);
+WebApplication1.scripts.diseasesDAO dieseasesDao = new WebApplication1.scripts.diseasesDAO();
+dieseasesDao.insertDiseases(dis);     
 
             }
             else
