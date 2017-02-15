@@ -64,7 +64,7 @@
             <div class="form-group">
                 <label id="LabelBookDate" class="control-label col-sm-2" for="TextboxBookDate">Date:</label>
                 <div class="col-sm-10">
-                    <asp:TextBox runat="server" id="TextboxBookDate" type="date" class="form-control"/>
+                    <asp:TextBox runat="server" id="TextboxBookDate" type="date" class="form-control"  />
                 </div>
             </div>
 
@@ -79,16 +79,24 @@
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
                     <div class="p">
-                        <p>Available Times Are:</p>
+                        <p>booked Times Are:</p>
+                        <ul runat="server" id="tabs"> </ul>
+
                     </div>
                 </div>
             </div>
           
            <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonBookSubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonBookSubmit_Click"/>
+                    <asp:Button runat="server" id="Button2" type="submit" class="btn btn-default" Text="check" OnClick="Button2_Click" />
                 </div>
             </div>
+           <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                    <asp:Button runat="server" id="ButtonBookSubmit" type="submit" class="btn btn-default" Text="Book" OnClick="ButtonBookSubmit_Click"/>
+                </div>
+            </div>
+            
                  
        </form>
 

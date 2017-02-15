@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace WebApplication1.users
@@ -29,6 +30,7 @@ namespace WebApplication1.users
             bool booked = false;
             for (int i = 0; i < list.Count; i++) {
                 if (list[i].getTime() == time) { booked = true; }
+
             }
 
             if (!booked) {
@@ -54,6 +56,30 @@ namespace WebApplication1.users
 
 
 
+        }
+
+        protected void TextboxBookDate_TextChanged(object sender, EventArgs e)
+        {
+            
+            ///it didn't work
+            
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string day = this.TextboxBookDate.Text;
+            WebApplication1.scripts.AppointmentDAO dao = new scripts.AppointmentDAO();
+            WebApplication1.scripts.Appointment app = new scripts.Appointment();
+            List<WebApplication1.scripts.Appointment> list = new List<scripts.Appointment>();
+            list = dao.searchByDay(day);
+            for (int i = 0; i < list.Count; i++)
+            {
+                HtmlGenericControl li = new HtmlGenericControl("li");
+                tabs.Controls.Add(li);
+                HtmlGenericControl paragraph = new HtmlGenericControl("p");
+                paragraph.InnerText = list[i].getTime();
+                li.Controls.Add(paragraph);
+            }
         }
     }
 }
