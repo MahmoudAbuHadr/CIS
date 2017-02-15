@@ -12,17 +12,46 @@ namespace WebApplication1.users
         protected void Page_Load(object sender, EventArgs e)
         {
             CheckboxPatientHistoryAgree.Checked = true;
+            if ((int)Session["id"] == 0)
+            {
+                Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
+            }
         }
 
         protected void ButtonPatientHistorySubmit_Click(object sender, EventArgs e)
         {
             if(CheckboxPatientHistoryAgree.Checked == true)
             {
-                //unhandled store the information in the database
+                int id = (int)Session["id"];
+                string fname = this.TextboxPatientHistoryFirstname.Text;
+                string lname = this.TextboxPatientHistoryLastname.Text;
+                string mobile = this.TextboxPatientHistoryMobile.Text;
+                string gender = this.RadioButtonListPatientHistoryGender.Text;
+                string birthday = this.TextboxPatientHistoryBirthday.Text;
+                float height = float.Parse(this.TextboxPatientHistoryHeight.Text);
+                float weight = float.Parse(this.TextboxPatientHistoryWeight.Text);
+
+                WebApplication1.scripts.personalData data = new scripts.personalData();
+                WebApplication1.scripts.personalDataDAO dataDao = new scripts.personalDataDAO();
+
+                data.setFname(fname);
+                data.setLname(lname);
+                data.setMobile(mobile);
+                data.setGender(gender);
+                data.setBirthday(birthday);
+                data.setHeight(height);
+                data.setWeight(weight);
+
+                dataDao.insertData(data);
+
             }
             else
             {
+                ClientScriptManager cs = Page.ClientScript;
+                Type cstype = this.GetType();
 
+                String alert = "alert('you must agree');";
+                cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
             }
         }
     }
