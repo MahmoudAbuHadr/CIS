@@ -34,14 +34,16 @@ namespace WebApplication1.users
                 WebApplication1.scripts.personalData data = new scripts.personalData();
                 WebApplication1.scripts.personalDataDAO dataDao = new scripts.personalDataDAO();
 
-                data.setFname(fname);
+               data.setFname(fname);
                 data.setLname(lname);
                 data.setMobile(mobile);
                 data.setGender(gender);
                 data.setBirthday(birthday);
                 data.setHeight(height);
                 data.setWeight(weight);
+
                 dataDao.insertData(data);
+                /*
                 List<bool> diseases = new List<bool>();
                 int index = 0;
                 foreach (ListItem i in CheckBoxListDisease.Items)
@@ -58,7 +60,7 @@ namespace WebApplication1.users
                 }
                 WebApplication1.scripts.diseases dis = new WebApplication1.scripts.diseases(id, diseases[0], diseases[1], diseases[2], diseases[3], diseases[4], diseases[5], diseases[6], diseases[7], diseases[8], diseases[9], diseases[10] );
 WebApplication1.scripts.diseasesDAO dieseasesDao = new WebApplication1.scripts.diseasesDAO();
-dieseasesDao.insertDiseases(dis);     
+dieseasesDao.insertDiseases(dis);  */   
 
             }
             else

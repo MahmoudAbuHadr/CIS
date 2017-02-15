@@ -35,10 +35,9 @@ namespace WebApplication1.scripts
             epilipsy = Epi;
             diabetes = diab;
             diarrhea = Diarrhea;
-            heartAttack = HeartAttack;
-            hepatitis = Hepatitis;
             rheumatism = Rheuma;
             scarletFever = Scarlet;
+            asthma = Asthma;
 
         }
 

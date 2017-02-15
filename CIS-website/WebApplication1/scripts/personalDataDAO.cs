@@ -15,7 +15,7 @@ namespace WebApplication1.scripts
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "insert into personalData (id,firstName,lastName,mobile,gender,birthday,height,weight) Values ('" + data.getId().ToString() + "','" + data.getFname() + "','" + data.getLname() + "','" + data.getMobile() + "','" + data.getGender() + "','" + data.getBirthday() + "','" + data.getHeight() + "','" + data.getWeight() + "')  ;  ";
+            myCommand.CommandText = "insert into personalData (id,firstName,lastName,mobile,gender,birthday,height,weight) Values ('" + data.getId().ToString() + "','" + data.getFname() + "','" + data.getLname() + "','" + data.getMobile() + "','" + data.getGender() + "','" + data.getBirthday() + "','" + data.getHeight().ToString() + "','" + data.getWeight().ToString() + "')  ;  ";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
