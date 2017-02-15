@@ -47,14 +47,22 @@ namespace WebApplication1.scripts
             }
 
             reader.Close();
-            myConnection.Close();
+            myConnection.Close();   
             return dis;
 
         }
 
         public void updateDiseases(diseases disease)
         {
-            
-    }
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+
+            myConnection.Open();
+            SqlCommand myCommand = new SqlCommand();
+            myCommand.CommandText = "UPDATE diseases SET ID =" + disease.getId().ToString() + ",hepatitis ='" + disease.getHepatitis() + "',rheumatism ='" + disease.getRheumatism() + "', std ='" + disease.getSTD() + "', heartAttack = '" + disease.getHeartAttack() + "', depression = '" + disease.getDepression() + "' WHERE id = " + disease.getId().ToString() + ";";
+            myCommand.Connection = myConnection;
+            myCommand.ExecuteNonQuery();
+            myConnection.Close();
+        }
     }
 }
