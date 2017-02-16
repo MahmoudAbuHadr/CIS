@@ -10,9 +10,5 @@
     booktime.min = (minvalue);
     booktime.max = (maxvalue);
     booktime.step = (step);
-
-    var bookdate = document.getElementById("TextboxBookDate");
-    bookdate.min = new Date();
-    bookdate.max = "2018-01-01";
            
 });

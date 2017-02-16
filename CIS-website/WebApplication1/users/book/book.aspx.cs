@@ -15,6 +15,8 @@ namespace WebApplication1.users
             if ((int)Session["id"] == 0) {
                 Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
             }
+            TextboxBookDate.Attributes["min"] = DateTime.Now.ToString("yyyy-MM-dd");
+            TextboxBookDate.Attributes["max"] = DateTime.Now.ToString("2018-01-01");
         }
 
         protected void ButtonBookSubmit_Click(object sender, EventArgs e)
