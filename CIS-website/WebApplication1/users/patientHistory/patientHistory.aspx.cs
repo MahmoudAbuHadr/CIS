@@ -69,12 +69,27 @@ dieseasesDao.insertDiseases(dis);
             WebApplication1.scripts.other other = new scripts.other();
             WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
 
+            foreach(ListItem i in BulletedListDisease.Items)
+            {
+                otherDisease = i.Text;
+                other.setOther_dis(otherDisease);
+            }
+
+            foreach (ListItem i in BulletedListDrug.Items)
+            {
+                drug = i.Text;
+                other.setOther_drug(drug);
+            }
+
+            foreach (ListItem i in BulletedListSurgery.Items)
+            {
+                surgery = i.Text;
+                other.setOther_surg(surgery);
+            }
+
             other.setDis_id(id);
             other.setDrug_id(id);            
-            other.setSurg_id(id);
-            other.setOther_dis(otherDisease);
-            other.setOther_drug(drug);
-            other.setOther_surg(surgery);
+            other.setSurg_id(id);                                  
 
             otherDAO.insertOther_dis(other);
             otherDAO.insertOther_drug(other);
