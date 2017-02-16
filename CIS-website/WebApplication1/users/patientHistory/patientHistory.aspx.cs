@@ -9,8 +9,13 @@ namespace WebApplication1.users
 {
     public partial class patientHistory : System.Web.UI.Page
     {
+        string drug;
+        string surgery;
+        string otherDisease;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
            if ((int)Session["id"] == 0)
            {
                 Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
@@ -61,24 +66,37 @@ namespace WebApplication1.users
 WebApplication1.scripts.diseasesDAO dieseasesDao = new WebApplication1.scripts.diseasesDAO();
 dieseasesDao.insertDiseases(dis);
 
+            WebApplication1.scripts.other other = new scripts.other();
+            WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
+
+            other.setDis_id(id);
+            other.setDrug_id(id);            
+            other.setSurg_id(id);
+            other.setOther_dis(otherDisease);
+            other.setOther_drug(drug);
+            other.setOther_surg(surgery);
+
+            otherDAO.insertOther_dis(other);
+            otherDAO.insertOther_drug(other);
+            otherDAO.insertOther_surg(other);
            
         }
 
         protected void ButtonAddDrug_Click(object sender, EventArgs e)
         {
-            string drug = TextboxAddDrug.Text;
+            drug = TextboxAddDrug.Text;
             BulletedListDrug.Items.Add(drug);
         }
 
         protected void ButtonAddSurgery_Click(object sender, EventArgs e)
         {
-            string surgery = TextboxAddSurgery.Text;
+             surgery = TextboxAddSurgery.Text;
             BulletedListSurgery.Items.Add(surgery);
         }
 
         protected void ButtonDiseaseOther_Click(object sender, EventArgs e)
         {
-            string otherDisease = TextboxDiseaseOther.Text;
+             otherDisease = TextboxDiseaseOther.Text;
             BulletedListDisease.Items.Add(otherDisease);
         }
 
