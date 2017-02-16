@@ -10,7 +10,7 @@ namespace WebApplication1.scripts
     {
         public void insertDiseases(diseases disease)
         {
-            string connectionString =@"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString =@"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();
@@ -23,7 +23,7 @@ namespace WebApplication1.scripts
 
         public diseases getDisease(int id)
         {
-            string connectionString =@"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString =@"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             diseases dis = new diseases();
@@ -62,7 +62,7 @@ namespace WebApplication1.scripts
 
         public void updateDiseases(diseases disease)
         {
-            string connectionString =@"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString =@"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();

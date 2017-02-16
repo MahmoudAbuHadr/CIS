@@ -10,7 +10,7 @@ namespace WebApplication1.scripts
     {
         public List<string> getDisByID(int id)
         {
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             List<string> myList = new List<string>();
@@ -39,7 +39,7 @@ namespace WebApplication1.scripts
         public List<string> getDrugByID(int id)
         {
 
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             List<string> myList = new List<string>();
@@ -68,7 +68,7 @@ namespace WebApplication1.scripts
         public List<string> getSurgByID(int id)
         {
 
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             List<string> myList = new List<string>();
@@ -96,7 +96,7 @@ namespace WebApplication1.scripts
 
         public void insertOther_dis(other dis)
         {
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();
@@ -109,7 +109,7 @@ namespace WebApplication1.scripts
 
         public void insertOther_drug(other drug)
         {
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();
@@ -122,7 +122,7 @@ namespace WebApplication1.scripts
 
         public void insertOther_surg(other surg)
         {
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();

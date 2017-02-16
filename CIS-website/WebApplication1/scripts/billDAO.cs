@@ -12,7 +12,7 @@ namespace WebApplication1.scripts
         {
             bill bill = new bill();
             List<bill> bills = new List<bill>();
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
@@ -43,7 +43,7 @@ namespace WebApplication1.scripts
 
         public void insertBill(bill bill)
         {
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();
@@ -56,7 +56,7 @@ namespace WebApplication1.scripts
 
         public void updateBillByID(int id)
         {
-            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             bill bill = new bill();
             myConnection.Open();
