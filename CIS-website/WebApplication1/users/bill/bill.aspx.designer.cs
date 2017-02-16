@@ -10,7 +10,7 @@
 namespace WebApplication1.users.bill {
     
     
-    public partial class bills {
+    public partial class WebForm1 {
         
         /// <summary>
         /// tableBill control.
