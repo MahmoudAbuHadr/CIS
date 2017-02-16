@@ -217,16 +217,7 @@ namespace WebApplication1.users {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox CheckboxPatientHistoryAgree;
-        
-        /// <summary>
-        /// LabelAgree control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelAgree;
+        protected global::System.Web.UI.WebControls.CheckBox CheckboxPatientHistoryAgree;
         
         /// <summary>
         /// ButtonPatientHistorySubmit control.
