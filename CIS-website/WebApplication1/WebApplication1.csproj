@@ -101,13 +101,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="index.aspx" />
+    <Content Include="JavaScript1.js" />
     <Content Include="javascript\JavaScript1.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="home.aspx" />
+    <Content Include="index.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -132,6 +132,7 @@
   <ItemGroup>
     <Content Include="account\signup.aspx" />
     <Content Include="account\css\StyleSheet1.css" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="users\bill\bill.aspx" />
     <Content Include="users\book\book.aspx" />
     <Content Include="users\book\book.js" />
@@ -154,20 +155,13 @@
     <Compile Include="account\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="home.aspx.cs">
-      <DependentUpon>home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="home.aspx.designer.cs">
-      <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="account\signup.aspx.cs">
       <DependentUpon>signup.aspx</DependentUpon>

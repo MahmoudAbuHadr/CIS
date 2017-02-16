@@ -10,6 +10,6 @@
 namespace WebApplication1 {
     
     
-    public partial class index {
+    public partial class home {
     }
 }
