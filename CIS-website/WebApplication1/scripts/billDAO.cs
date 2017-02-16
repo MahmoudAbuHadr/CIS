@@ -20,17 +20,21 @@ namespace WebApplication1.scripts
             myCommand.CommandText = "Select * from bill where id = '" + id + "';";
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
-            if (reader.HasRows)
-            {
-                reader.Read();
-                bill.setID(reader.GetInt32(0));
-                bill.setBillNumber(reader.GetInt32(1));
-                bill.setBDate(Convert.ToString(reader[2]));
-                bill.setValue((reader.GetInt32(3)));
-                bill.setPaid(Convert.ToBoolean(reader[4]));
-                bills.Add(bill);              
-            }
 
+
+            if (reader.HasRows) {
+                while (reader.Read())
+                {
+                    bill.setID(reader.GetInt32(0));
+                    bill.setBillNumber(reader.GetInt32(1));
+                    bill.setBDate(Convert.ToString(reader[2]));
+                    bill.setValue((reader.GetInt32(3)));
+                    bill.setPaid(Convert.ToBoolean(reader[4]));
+                    bills.Add(bill);
+                }
+            }
+                    
+                
             reader.Close();
             myConnection.Close();
 
