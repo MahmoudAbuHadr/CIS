@@ -34,12 +34,24 @@ namespace WebApplication1.users
             }
 
             if (!booked) {
-
+                int fees = 100;
                 app.setDay(day);
                 app.setTime(time);
                 app.setId(id);
                 dao.setAppointment(app);
-                //after booking should redirect him to somewhere else 
+                //after booking the bill inserted to bills table
+                WebApplication1.scripts.bill Bill = new scripts.bill();
+                Bill.setID(id);
+                Bill.setBDate(day);
+                Bill.setValue(fees);
+                Bill.setPaid(false);
+
+                WebApplication1.scripts.billDAO bDao = new scripts.billDAO();
+                bDao.insertBill(Bill);
+
+                //redirect to bills 
+                Response.Redirect(Page.ResolveClientUrl("../bill/bill.aspx"));
+
             }
             else
             {

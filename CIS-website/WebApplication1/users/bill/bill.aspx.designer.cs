@@ -13,12 +13,12 @@ namespace WebApplication1.users.bill {
     public partial class bills {
         
         /// <summary>
-        /// billTable control.
+        /// tableBill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table billTable;
+        protected global::System.Web.UI.WebControls.Table tableBill;
     }
 }

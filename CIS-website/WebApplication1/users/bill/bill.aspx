@@ -59,7 +59,7 @@
          <div class="form-group">
 
          <div class="col-sm-12">
-         <asp:Table ID="billTable" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
+             <asp:Table ID="tableBill" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
             <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="OliveDrab" Font-Bold="true">
                 <asp:TableHeaderCell>Bill Numbrer</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Date</asp:TableHeaderCell>
@@ -70,6 +70,7 @@
            
 
          </asp:Table>
+         
          </div>
 
         </div>
