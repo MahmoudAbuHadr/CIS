@@ -100,6 +100,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="doctor\doctorHome.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="JavaScript1.js" />
     <Content Include="javascript\JavaScript1.js" />
@@ -146,6 +147,13 @@
     </Compile>
     <Compile Include="account\signout.aspx.designer.cs">
       <DependentUpon>signout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor\doctorHome.aspx.cs">
+      <DependentUpon>doctorHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor\doctorHome.aspx.designer.cs">
+      <DependentUpon>doctorHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="scripts\AccountCredentials.cs" />
     <Compile Include="account\login.aspx.cs">
@@ -203,6 +211,7 @@
       <DependentUpon>patientHistory.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
