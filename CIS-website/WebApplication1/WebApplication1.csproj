@@ -183,6 +183,9 @@
     <Compile Include="scripts\Appointment.cs" />
     <Compile Include="scripts\AppointmentDAO.cs" />
     <Compile Include="scripts\appointmentDAOinterface.cs" />
+    <Compile Include="scripts\bill.cs" />
+    <Compile Include="scripts\billDAO.cs" />
+    <Compile Include="scripts\billDAOinterface.cs" />
     <Compile Include="scripts\diseases.cs" />
     <Compile Include="scripts\diseasesDAO.cs" />
     <Compile Include="scripts\diseasesDAOinterface.cs" />
