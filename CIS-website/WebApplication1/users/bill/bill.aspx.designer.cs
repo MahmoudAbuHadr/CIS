@@ -13,21 +13,12 @@ namespace WebApplication1.users.bill {
     public partial class bill {
         
         /// <summary>
-        /// Table1 control.
+        /// billTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Table1;
-        
-        /// <summary>
-        /// TableRow1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow TableRow1;
+        protected global::System.Web.UI.WebControls.Table billTable;
     }
 }
