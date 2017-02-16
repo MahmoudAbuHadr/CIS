@@ -22,7 +22,6 @@ namespace WebApplication1.users
         {
             
                 int id = (int)Session["id"];
-                id = 1;
                 string fname = this.TextboxPatientHistoryFirstname.Text;
                 string lname = this.TextboxPatientHistoryLastname.Text;
                 string mobile = this.TextboxPatientHistoryMobile.Text;
@@ -34,7 +33,8 @@ namespace WebApplication1.users
                 WebApplication1.scripts.personalData data = new scripts.personalData();
                 WebApplication1.scripts.personalDataDAO dataDao = new scripts.personalDataDAO();
 
-               data.setFname(fname);
+                data.setId(id);
+                data.setFname(fname);
                 data.setLname(lname);
                 data.setMobile(mobile);
                 data.setGender(gender);
@@ -43,8 +43,8 @@ namespace WebApplication1.users
                 data.setWeight(weight);
 
                 dataDao.insertData(data);
-                
-                List<bool> diseases = new List<bool>();
+
+               bool[] diseases = new bool[12];
                 int index = 0;
                 foreach (ListItem i in CheckBoxListDisease.Items)
                 {

@@ -15,7 +15,7 @@ namespace WebApplication1.scripts
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "insert into diseases (id,anemia,asthma,epilipsy,depression,diabetes,diarrhea,heartAttack,hepatitis,rheumatism,scarletFever,std) Values ('" + disease.getId().ToString() + "','" + disease.getAnemia() + "','" + disease.getAsthma() + "','" + disease.getEpilipsy() + "','" + disease.getDepression() + "','" + disease.getDiabetes() + "','" + disease.getDiarrhea() + "','" + disease.getHeartAttack() + "','" + disease.getHepatitis() + "'','" + disease.getRheumatism() + "','" + disease.getScarletFever() + "','" + disease.getSTD() + "')  ;  ";
+            myCommand.CommandText = "insert into diseases (id,anemia,asthma,epilipsy,depression,diabetes,diarrhea,heartAttack,hepatitis,rheumatism,scarletFever,std) Values ('" + disease.getId().ToString() + "','" + disease.getAnemia() + "','" + disease.getAsthma() + "','" + disease.getEpilipsy() + "','" + disease.getDepression() + "','" + disease.getDiabetes() + "','" + disease.getDiarrhea() + "','" + disease.getHeartAttack() + "','" + disease.getHepatitis() + "','" + disease.getRheumatism() + "','" + disease.getScarletFever() + "','" + disease.getSTD() + "')  ;  ";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
