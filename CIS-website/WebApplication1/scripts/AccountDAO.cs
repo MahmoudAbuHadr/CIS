@@ -21,7 +21,7 @@ namespace WebApplication1.scripts
             SqlDataReader reader = myCommand.ExecuteReader();
             if (reader.HasRows)
             {
-                reader.Read();
+                while (reader.Read());
                 acc.setID(reader.GetInt32(reader.GetOrdinal("ID")));
                 acc.setPhoneNumber( Convert.ToString(reader[1]));
                 acc.setEmail( Convert.ToString(reader[2]));

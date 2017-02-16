@@ -10,5 +10,6 @@ namespace WebApplication1.scripts
     {
         void insertData(personalData data);
         void updateData(personalData data);
+        personalData getDataByID(int id);
     }
 }

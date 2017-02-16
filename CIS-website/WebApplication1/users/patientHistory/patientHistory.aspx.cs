@@ -12,14 +12,65 @@ namespace WebApplication1.users
         string drug;
         string surgery;
         string otherDisease;
+        int j;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-           if ((int)Session["id"] == 0)
-           {
+
+            if ((int)Session["id"] == 0)
+            {
                 Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
-           }
+            }
+            else
+            {
+                int id = (int)Session["id"];
+                WebApplication1.scripts.personalData data = new scripts.personalData();
+                WebApplication1.scripts.personalDataDAO dataDAO = new scripts.personalDataDAO();
+                WebApplication1.scripts.other other = new scripts.other();
+                WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
+
+                List<string> tempDis = new List<string>();
+                List<string> tempDrug = new List<string>();
+                List<string> tempSurg = new List<string>();
+
+                tempDis = otherDAO.getDisByID(id);
+                tempDrug = otherDAO.getDrugByID(id);
+                tempSurg = otherDAO.getSurgByID(id);
+
+                WebApplication1.scripts.personalData temp = new scripts.personalData();
+                temp = dataDAO.getDataByID(id);
+
+                TextboxPatientHistoryFirstname.Text = temp.getFname();
+                TextboxPatientHistoryLastname.Text  = temp.getLname();
+                TextboxPatientHistoryMobile.Text    = temp.getMobile();
+                TextboxPatientHistoryBirthday.Text  = temp.getBirthday();
+                TextboxPatientHistoryHeight.Text    = Convert.ToString(temp.getHeight());
+                TextboxPatientHistoryWeight.Text    = Convert.ToString(temp.getWeight());
+                string gender = temp.getGender();   
+                            
+                if (gender == "Male")   { RadioButtonListPatientHistoryGenderMale.Selected   = true; }
+                else                    { RadioButtonListPatientHistoryGenderFemale.Selected = true; }
+
+                j = 0;
+                foreach (ListItem i in BulletedListDisease.Items)
+                {                   
+                    i.Text = tempDis[j];
+                    j++;         
+                }
+                j = 0;
+                foreach (ListItem i in BulletedListDrug.Items)
+                {
+                    i.Text = tempDrug[j];
+                    j++;
+                }
+                j = 0;
+                foreach (ListItem i in BulletedListSurgery.Items)
+                {
+                    i.Text = tempSurg[j];
+                    j++;
+                }
+
+            }
         }
 
         protected void ButtonPatientHistorySubmit_Click(object sender, EventArgs e)

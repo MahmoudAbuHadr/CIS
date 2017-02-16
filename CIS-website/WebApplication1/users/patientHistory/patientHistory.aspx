@@ -111,8 +111,8 @@
                 <label id="LabelPatientHistoryGender" class="control-label col-sm-2" for="TextboxPatientHistoryMobile">Gender:</label>
                 <div class="col-sm-10">
                     <asp:RadioButtonList ID="RadioButtonListPatientHistoryGender" runat="server" RepeatDirection="Horizontal" RepeatLayout="Table">
-                            <asp:ListItem Text="Male" Value="Male" />
-                            <asp:ListItem Text="Female" Value="Female" />
+                            <asp:ListItem ID="RadioButtonListPatientHistoryGenderMale" Text="Male" Value="Male" />
+                            <asp:ListItem ID="RadioButtonListPatientHistoryGenderFemale" Text="Female" Value="Female" />
                     </asp:RadioButtonList>
                 
 
