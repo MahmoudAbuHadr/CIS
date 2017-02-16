@@ -44,7 +44,7 @@ namespace WebApplication1.scripts
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "insert into bill (id,bDate,value,paid) Values ('" + bill.getID().ToString() + "','" + bill.getBDate() + "','" + bill.getValue() + "','" + bill.getPaid() + "')  ;  ";
+            myCommand.CommandText = "insert into bill (id,date,value,paid) Values ('" + bill.getID().ToString() + "','" + bill.getBDate() + "','" + bill.getValue() + "','" + bill.getPaid() + "')  ;  ";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
@@ -57,7 +57,7 @@ namespace WebApplication1.scripts
             bill bill = new bill();
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "UPDATE bill SET id =" + id + ",billNumber ='" + bill.getBillNumber().ToString() + "',bDate ='" + bill.getBDate() + "', value ='" + bill.getValue().ToString() + "', paid = '" +bill.getPaid().ToString() + "' WHERE ID = " + id + ";";
+            myCommand.CommandText = "UPDATE bill SET id =" + id + ",billNumber ='" + bill.getBillNumber().ToString() + "',date ='" + bill.getBDate() + "', value ='" + bill.getValue().ToString() + "', paid = '" +bill.getPaid().ToString() + "' WHERE ID = " + id + ";";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
