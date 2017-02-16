@@ -44,7 +44,7 @@ namespace WebApplication1.scripts
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "insert into bill (id,billNumber,bDate,value,paid) Values ('" + bill.getID().ToString() + "','" + bill.getBillNumber() + "','" + bill.getBDate() + "','" + bill.getValue() + "','" + bill.getPaid() + "')  ;  ";
+            myCommand.CommandText = "insert into bill (id,bDate,value,paid) Values ('" + bill.getID().ToString() + "','" + bill.getBDate() + "','" + bill.getValue() + "','" + bill.getPaid() + "')  ;  ";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
@@ -52,7 +52,15 @@ namespace WebApplication1.scripts
 
         public void updateBillByID(int id)
         {
-            throw new NotImplementedException();
+            string connectionString = @"Data Source=NABSTER\SQLEXPRESS; Initial Catalog=CIS; Integrated Security=SSPI";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            bill bill = new bill();
+            myConnection.Open();
+            SqlCommand myCommand = new SqlCommand();
+            myCommand.CommandText = "UPDATE bill SET id =" + id + ",billNumber ='" + bill.getBillNumber().ToString() + "',bDate ='" + bill.getBDate() + "', value ='" + bill.getValue().ToString() + "', paid = '" +bill.getPaid().ToString() + "' WHERE ID = " + id + ";";
+            myCommand.Connection = myConnection;
+            myCommand.ExecuteNonQuery();
+            myConnection.Close();
         }
         
     }
