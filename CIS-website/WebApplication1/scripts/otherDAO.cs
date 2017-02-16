@@ -19,16 +19,16 @@ namespace WebApplication1.scripts
             myCommand.CommandText = "Select * from otherDisease where id = '" + id + "';";
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
-
+            
+            other dis = new other();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    int ID = reader.GetInt32(0);
-                    string disease = Convert.ToString(reader[1]);
-                    other dis = new other();
-                    dis.setDis_id(ID); dis.setOther_dis(disease);
-                    myList.Add(Convert.ToString(dis));
+                    string disease = Convert.ToString(reader[1]);   
+                    dis.setDis_id(id);
+                    dis.setOther_dis(disease);
+                    myList.Add(disease);
                 }
             }
             reader.Close();
@@ -49,15 +49,14 @@ namespace WebApplication1.scripts
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
 
+            other drug = new other();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    int ID = reader.GetInt32(0);
                     string drugs = Convert.ToString(reader[1]);
-                    other drug = new other();
-                    drug.setDrug_id(ID); drug.setOther_drug(drugs);
-                    myList.Add(Convert.ToString(drug));
+                    drug.setDrug_id(id); drug.setOther_drug(drugs);
+                    myList.Add(drugs);
                 }
             }
             reader.Close();
@@ -77,16 +76,15 @@ namespace WebApplication1.scripts
             myCommand.CommandText = "Select * from otherSurgery where id = '" + id + "';";
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
+            other surg = new other();
 
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    int ID = reader.GetInt32(0);
                     string surgery = Convert.ToString(reader[1]);
-                    other surg = new other();
-                    surg.setSurg_id(ID); surg.setOther_surg(surgery);
-                    myList.Add(Convert.ToString(surg));
+                    surg.setSurg_id(id); surg.setOther_surg(surgery);
+                    myList.Add(Convert.ToString(surgery));
                 }
             }
             reader.Close();

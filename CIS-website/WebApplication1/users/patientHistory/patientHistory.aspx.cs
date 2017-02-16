@@ -12,7 +12,6 @@ namespace WebApplication1.users
         string drug;
         string surgery;
         string otherDisease;
-        int j;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,7 +25,6 @@ namespace WebApplication1.users
                 int id = (int)Session["id"];
                 WebApplication1.scripts.personalData data = new scripts.personalData();
                 WebApplication1.scripts.personalDataDAO dataDAO = new scripts.personalDataDAO();
-                WebApplication1.scripts.other other = new scripts.other();
                 WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
 
                 List<string> tempDis = new List<string>();
@@ -51,26 +49,19 @@ namespace WebApplication1.users
                 if (gender == "Male")   { RadioButtonListPatientHistoryGenderMale.Selected   = true; }
                 else                    { RadioButtonListPatientHistoryGenderFemale.Selected = true; }
 
-                j = 0;
-                foreach (ListItem i in BulletedListDisease.Items)
-                {                   
-                    i.Text = tempDis[j];
-                    j++;         
+                for (int i = 0; i < tempDis.Count; i++)
+                {
+                    BulletedListDisease.Items.Add(new ListItem(tempDis[i]));
                 }
 
-                j = 0;
-                foreach (ListItem i in BulletedListDrug.Items)
+                for (int i = 0; i < tempDrug.Count; i++)
                 {
-                    i.Text = tempDrug[j];
-                    j++;
+                    BulletedListDrug.Items.Add(new ListItem(tempDrug[i]));
                 }
 
-
-                j = 0;
-                foreach (ListItem i in BulletedListSurgery.Items)
+                for (int i = 0; i < tempSurg.Count; i++)
                 {
-                    i.Text = tempSurg[j];
-                    j++;
+                    BulletedListSurgery.Items.Add(new ListItem(tempSurg[i]));
                 }
 
             }
@@ -116,9 +107,9 @@ namespace WebApplication1.users
                     }
                     index++;
                 }
-                WebApplication1.scripts.diseases dis = new WebApplication1.scripts.diseases(id, diseases[0], diseases[1], diseases[2], diseases[3], diseases[4], diseases[5], diseases[6], diseases[7], diseases[8], diseases[9], diseases[10] );
-WebApplication1.scripts.diseasesDAO dieseasesDao = new WebApplication1.scripts.diseasesDAO();
-dieseasesDao.insertDiseases(dis);
+            WebApplication1.scripts.diseases dis = new WebApplication1.scripts.diseases(id, diseases[0], diseases[1], diseases[2], diseases[3], diseases[4], diseases[5], diseases[6], diseases[7], diseases[8], diseases[9], diseases[10] );
+            WebApplication1.scripts.diseasesDAO dieseasesDao = new WebApplication1.scripts.diseasesDAO();
+            dieseasesDao.insertDiseases(dis);
 
             WebApplication1.scripts.other other = new scripts.other();
             WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();

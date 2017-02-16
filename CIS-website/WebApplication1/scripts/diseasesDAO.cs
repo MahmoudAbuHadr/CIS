@@ -35,21 +35,22 @@ namespace WebApplication1.scripts
 
             if (reader.HasRows)
             {
-                reader.Read();
-                dis.setId (reader.GetInt32(0));
-                dis.setAnemia(Convert.ToBoolean(reader[1]));
-                dis.setAsthma(Convert.ToBoolean(reader[2]));
-                dis.setEpilipsy(Convert.ToBoolean(reader[3]));
-                dis.setDepression(Convert.ToBoolean(reader[4]));
-                dis.setDiabetes(Convert.ToBoolean(reader[5]));
-                dis.setDiarrhea(Convert.ToBoolean(reader[6]));
-                dis.setHeartAttack(Convert.ToBoolean(reader[7]));
-                dis.setHepatitis( Convert.ToBoolean(reader[8]));
-                dis.setRheumatism(Convert.ToBoolean(reader[9]));
-                dis.SetScarletFever(Convert.ToBoolean(reader[10]));
-                dis.setStd( Convert.ToBoolean(reader[11]));
-               
-                
+                while (reader.Read())
+                {
+                    dis.setId(reader.GetInt32(0));
+                    dis.setAnemia(Convert.ToBoolean(reader[1]));
+                    dis.setAsthma(Convert.ToBoolean(reader[2]));
+                    dis.setEpilipsy(Convert.ToBoolean(reader[3]));
+                    dis.setDepression(Convert.ToBoolean(reader[4]));
+                    dis.setDiabetes(Convert.ToBoolean(reader[5]));
+                    dis.setDiarrhea(Convert.ToBoolean(reader[6]));
+                    dis.setHeartAttack(Convert.ToBoolean(reader[7]));
+                    dis.setHepatitis(Convert.ToBoolean(reader[8]));
+                    dis.setRheumatism(Convert.ToBoolean(reader[9]));
+                    dis.SetScarletFever(Convert.ToBoolean(reader[10]));
+                    dis.setStd(Convert.ToBoolean(reader[11]));
+
+                }
                 
 
             }
