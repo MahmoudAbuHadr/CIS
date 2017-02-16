@@ -237,14 +237,13 @@
            <div class="form-group">
                <div class="col-sm-offset-2 col-sm-10">
 	      			<p> To the best of my knowledge, the questions on this form have been accurately answered. I understand that providing incorrect information can be dangerous to my patient's health. It is my responsibility to inform the office of any changes in medical status.</p><br>
-	      			<input type="checkbox" runat="server" Text="I Agree" Value="Agree" ID="CheckboxPatientHistoryAgree"/>
-                    <asp:Label ID="LabelAgree" runat="server" Text="I Agree"></asp:Label> 
+                   <asp:CheckBox ID="CheckboxPatientHistoryAgree" runat="server" Text="I Agree" Value="Agree" OnCheckedChanged="CheckboxPatientHistoryAgree_CheckedChanged" AutoPostBack="True"/> 
                </div>
       	    </div>
 
            <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonPatientHistorySubmit_Click"/>
+                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonPatientHistorySubmit_Click" Enabled="False"/>
                 </div>
             </div>
 
