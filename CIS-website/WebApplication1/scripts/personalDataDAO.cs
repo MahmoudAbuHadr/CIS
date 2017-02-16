@@ -21,15 +21,17 @@ namespace WebApplication1.scripts
             SqlDataReader reader = myCommand.ExecuteReader();
             if (reader.HasRows)
             {
-                while (reader.Read()) ;
-                data.setId(reader.GetInt32(reader.GetOrdinal("ID")));
-                data.setFname(Convert.ToString(reader[1]));
-                data.setLname(Convert.ToString(reader[2]));
-                data.setMobile(Convert.ToString(reader[3]));
-                data.setGender(Convert.ToString(reader[4]));
-                data.setBirthday(Convert.ToString(reader[5]));
-                data.setHeight(float.Parse(Convert.ToString(reader[6])));
-                data.setWeight(float.Parse(Convert.ToString(reader[7])));
+                while (reader.Read())
+                {
+                    data.setId(reader.GetInt32(reader.GetOrdinal("ID")));
+                    data.setFname(Convert.ToString(reader[1]));
+                    data.setLname(Convert.ToString(reader[2]));
+                    data.setMobile(Convert.ToString(reader[3]));
+                    data.setGender(Convert.ToString(reader[4]));
+                    data.setBirthday(Convert.ToString(reader[5]));
+                    data.setHeight(float.Parse(Convert.ToString(reader[6])));
+                    data.setWeight(float.Parse(Convert.ToString(reader[7])));
+                }
 
             }
 

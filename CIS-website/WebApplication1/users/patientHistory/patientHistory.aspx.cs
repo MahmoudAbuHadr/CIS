@@ -57,12 +57,15 @@ namespace WebApplication1.users
                     i.Text = tempDis[j];
                     j++;         
                 }
+
                 j = 0;
                 foreach (ListItem i in BulletedListDrug.Items)
                 {
                     i.Text = tempDrug[j];
                     j++;
                 }
+
+
                 j = 0;
                 foreach (ListItem i in BulletedListSurgery.Items)
                 {
