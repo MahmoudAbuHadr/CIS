@@ -19,6 +19,7 @@ namespace WebApplication1.scripts
             myCommand.CommandText = "Select * from personalData where id = '" + id + "';";
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
+            data.setId(0);
             if (reader.HasRows)
             {
                 while (reader.Read())

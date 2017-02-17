@@ -32,6 +32,7 @@ namespace WebApplication1.scripts
             myCommand.CommandText = "Select * from diseases where id = '" + id + "';";
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
+            dis.setId(0);
 
             if (reader.HasRows)
             {

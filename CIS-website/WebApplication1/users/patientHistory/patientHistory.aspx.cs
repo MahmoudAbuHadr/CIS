@@ -107,6 +107,10 @@ namespace WebApplication1.users
         {
             
                 int id = (int)Session["id"];
+                 bool isExist = true;
+               
+
+
                 string fname = this.TextboxPatientHistoryFirstname.Text;
                 string lname = this.TextboxPatientHistoryLastname.Text;
                 string mobile = this.TextboxPatientHistoryMobile.Text;
@@ -118,6 +122,8 @@ namespace WebApplication1.users
                 WebApplication1.scripts.personalData data = new scripts.personalData();
                 WebApplication1.scripts.personalDataDAO dataDao = new scripts.personalDataDAO();
 
+              if (dataDao.getDataByID(id).getId() == 0) isExist = false;
+
                 data.setId(id);
                 data.setFname(fname);
                 data.setLname(lname);
@@ -127,9 +133,20 @@ namespace WebApplication1.users
                 data.setHeight(height);
                 data.setWeight(weight);
 
-                dataDao.insertData(data);
 
-               bool[] diseases = new bool[12];
+            if (isExist)
+            {
+                dataDao.updateData(data);
+            }
+            else
+            {
+                dataDao.insertData(data);
+            }
+
+
+            isExist = true;     
+
+               bool[] diseases = new bool[11];
                 int index = 0;
                 foreach (ListItem i in CheckBoxListDisease.Items)
                 {
@@ -143,9 +160,15 @@ namespace WebApplication1.users
                     }
                     index++;
                 }
+
+
             WebApplication1.scripts.diseases dis = new WebApplication1.scripts.diseases(id, diseases[0], diseases[1], diseases[2], diseases[3], diseases[4], diseases[5], diseases[6], diseases[7], diseases[8], diseases[9], diseases[10] );
             WebApplication1.scripts.diseasesDAO dieseasesDao = new WebApplication1.scripts.diseasesDAO();
-            dieseasesDao.insertDiseases(dis);
+            if (dieseasesDao.getDisease(id).getId() == 0) { isExist = false; }
+
+            if (isExist) { dieseasesDao.updateDiseases(dis); }
+            else { dieseasesDao.insertDiseases(dis); }
+            isExist = true;
 
             WebApplication1.scripts.other other = new scripts.other();
             WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
@@ -155,6 +178,8 @@ namespace WebApplication1.users
                 otherDisease = i.Text;
                 other.setOther_dis(otherDisease);
             }
+
+            //////////////ana hna 
 
             foreach (ListItem i in BulletedListDrug.Items)
             {
