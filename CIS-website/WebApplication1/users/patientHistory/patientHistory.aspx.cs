@@ -169,37 +169,74 @@ namespace WebApplication1.users
             if (isExist) { dieseasesDao.updateDiseases(dis); }
             else { dieseasesDao.insertDiseases(dis); }
             isExist = true;
-
-            WebApplication1.scripts.other other = new scripts.other();
-            WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
-
-            foreach(ListItem i in BulletedListDisease.Items)
             {
-                otherDisease = i.Text;
-                other.setOther_dis(otherDisease);
+                List<WebApplication1.scripts.other> otherList = new List<scripts.other>();
+                WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
+                int j = 0;
+                foreach (ListItem i in BulletedListDisease.Items)
+                {
+                    otherDisease = i.Text;
+                    otherList[j].setOther_dis(otherDisease);
+                    otherList[j].setDis_id(id);
+                    j++;
+                }
+
+                if (otherDAO.getDisByID(id).Count == 0) isExist = false;
+                if (isExist) { for (int i = 0; i < otherList.Count; i++) { otherDAO.updateOther_dis(otherList[i]); } }
+                else
+                {
+                    for (int i = 0; i < otherList.Count; i++) { otherDAO.insertOther_dis(otherList[i]); }
+                }
             }
 
-            //////////////ana hna 
-
-            foreach (ListItem i in BulletedListDrug.Items)
+            isExist = true;
             {
-                drug = i.Text;
-                other.setOther_drug(drug);
+                List<WebApplication1.scripts.other> otherList = new List<scripts.other>();
+                WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
+                int j = 0;
+                foreach (ListItem i in BulletedListDrug.Items)
+                {
+                    drug = i.Text;
+                    otherList[j].setOther_drug(drug);
+                    otherList[j].setDrug_id(id);
+                    j++;
+                }
+
+                if (otherDAO.getDrugByID(id).Count == 0) isExist = false;
+
+                if (isExist) { for (int i = 0; i < otherList.Count; i++) { otherDAO.updateOther_drug(otherList[i]); } }
+                else
+                {
+                    for (int i = 0; i < otherList.Count; i++) { otherDAO.insertOther_drug(otherList[i]); }
+                }
+
             }
 
-            foreach (ListItem i in BulletedListSurgery.Items)
+            isExist = true;
             {
-                surgery = i.Text;
-                other.setOther_surg(surgery);
+                List<WebApplication1.scripts.other> otherList = new List<scripts.other>();
+                WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
+                int j = 0;
+                foreach (ListItem i in BulletedListSurgery.Items)
+                {
+                    surgery = i.Text;
+                    otherList[j].setOther_surg(surgery);
+                    otherList[j].setSurg_id(id);
+                    j++;
+                }
+
+                if (otherDAO.getSurgByID(id).Count == 0) isExist = false;
+
+                if (isExist) { for (int i = 0; i < otherList.Count; i++) { otherDAO.updateOther_surg(otherList[i]); } }
+                else
+                {
+                    for (int i = 0; i < otherList.Count; i++) { otherDAO.insertOther_surg(otherList[i]); }
+                }
+
             }
 
-            other.setDis_id(id);
-            other.setDrug_id(id);            
-            other.setSurg_id(id);                                  
 
-            otherDAO.insertOther_dis(other);
-            otherDAO.insertOther_drug(other);
-            otherDAO.insertOther_surg(other);
+            
            
         }
 
