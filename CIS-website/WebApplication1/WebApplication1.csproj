@@ -100,6 +100,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="doctor\account\login.aspx" />
+    <Content Include="doctor\account\signup.aspx" />
     <Content Include="doctor\doctorHome.aspx" />
     <Content Include="doctor\patients_files\patients_files.aspx" />
     <Content Include="doctor\reservations\reservations.aspx" />
@@ -149,6 +151,20 @@
     </Compile>
     <Compile Include="account\signout.aspx.designer.cs">
       <DependentUpon>signout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor\account\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor\account\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor\account\signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor\account\signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
     </Compile>
     <Compile Include="doctor\doctorHome.aspx.cs">
       <DependentUpon>doctorHome.aspx</DependentUpon>

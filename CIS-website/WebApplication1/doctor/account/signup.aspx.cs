@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication1
+namespace WebApplication1.doctor.account
 {
     public partial class signup : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((int)Session["id"] != 0) { Response.Redirect(Page.ResolveClientUrl("../users/book/book.aspx")); }
+
         }
 
         protected void ButtonSignupSubmit_Click(object sender, EventArgs e)
@@ -29,7 +29,6 @@ namespace WebApplication1
                 acc.setEmail(email);
                 acc.setPassword(password);
                 acc.setPNumber(phone);
-                acc.setFees(100);/////
                 WebApplication1.scripts.doctorDAO dao = new scripts.doctorDAO();
                 if (dao.getAccountByPhone(phone).getID() == -1)
                 {
