@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signup.aspx.cs" Inherits="WebApplication1.signup" %>
+﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="true" CodeBehind="signup.aspx.cs" Inherits="WebApplication1.signup" %>
 
 <!DOCTYPE html>
 
@@ -137,7 +137,7 @@
             <div class="form-group">
                 <label id="LabelSignupConfirmPassword" class="control-label col-sm-2" for="TextboxSignupConfirmPassword">Confirm Password:</label>
                 <div class="col-sm-10"> 
-                    <asp:TextBox runat="server" id="TextboxConfirmPassword" type="password" class="form-control" placeholder="Rewrite Your Password"/>
+                    <asp:TextBox runat="server" id="TextboxSignupConfirmPassword" type="password" class="form-control" placeholder="Rewrite Your Password"/>
                 
 
                     <asp:RequiredFieldValidator id="RequiredFieldValidatorConfirmPassword" runat="server"

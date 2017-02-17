@@ -27,7 +27,7 @@ namespace WebApplication1.users
                 WebApplication1.scripts.personalDataDAO dataDAO = new scripts.personalDataDAO();
                 WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
 
-                List<string> tempDis = new List<string>();
+                List<string> tempDis =  new List<string>();
                 List<string> tempDrug = new List<string>();
                 List<string> tempSurg = new List<string>();
 

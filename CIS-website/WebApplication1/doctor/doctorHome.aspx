@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="doctorHome.aspx.cs" Inherits="WebApplication1.doctor.doctorHome" %>
+﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="true" CodeBehind="doctorHome.aspx.cs" Inherits="WebApplication1.doctor.doctorHome" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">

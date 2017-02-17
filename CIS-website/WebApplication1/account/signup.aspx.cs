@@ -16,7 +16,7 @@ namespace WebApplication1
 
         protected void ButtonSignupSubmit_Click(object sender, EventArgs e)
         {
-            if (TextboxSignupPassword.Text == TextboxConfirmPassword.Text)
+            if (TextboxSignupPassword.Text == TextboxSignupConfirmPassword.Text)
             {
                 string fName = this.TextboxSignupFirstname.Text;
                 string lName = this.TextboxSignupLastname.Text;
@@ -54,11 +54,7 @@ namespace WebApplication1
             }
             else
             {
-                ClientScriptManager cs = Page.ClientScript;
-                Type cstype = this.GetType();
-
-                String alert = "alert('Password doesn't match the confirm password');";
-                cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
+                Response.Write("<script language=javascript>alert('password and confirm password does not match');</script>");
             }
         }
     }

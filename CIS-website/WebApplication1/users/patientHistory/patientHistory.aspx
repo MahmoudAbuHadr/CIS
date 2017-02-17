@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="patientHistory.aspx.cs" Inherits="WebApplication1.users.patientHistory" %>
+﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="false" CodeBehind="patientHistory.aspx.cs" Inherits="WebApplication1.users.patientHistory" %>
 
 
 <!DOCTYPE html>
@@ -187,7 +187,7 @@
                     <asp:TextBox runat="server" id="TextboxDiseaseOther" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonDiseaseOther" class="btn btn-default" Text="Add" OnClick="ButtonDiseaseOther_Click" OnClientClick="False" />
+                    <asp:Button runat="server" id="ButtonDiseaseOther" class="btn btn-default" Text="Add" OnClick="ButtonDiseaseOther_Click"/>
                     </div>
             </div>
 
@@ -206,7 +206,7 @@
                     <asp:TextBox runat="server" id="TextboxAddDrug" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddDrug" class="btn btn-default" Text="Add" OnClick="ButtonAddDrug_Click" OnClientClick="False" />
+                    <asp:Button runat="server" id="ButtonAddDrug" class="btn btn-default" Text="Add" OnClick="ButtonAddDrug_Click"/>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListDrug" runat="server">
@@ -223,7 +223,7 @@
                     <asp:TextBox runat="server" id="TextboxAddSurgery" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddSurgery" class="btn btn-default" Text="Add" OnClick="ButtonAddSurgery_Click" OnClientClick="False" />
+                    <asp:Button runat="server" id="ButtonAddSurgery" class="btn btn-default" Text="Add" OnClick="ButtonAddSurgery_Click"/>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListSurgery" runat="server">
@@ -244,7 +244,7 @@
                     <asp:TextBox runat="server" id="TextboxFamilyHistoryDisease" class="form-control"/>
                     </div>
                     <div class="col-sm-2">
-                    <asp:Button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" Text="Add" OnClick="ButtonFamilyHistoryAdd_Click" OnClientClick="False" />
+                    <asp:Button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" Text="Add" OnClick="ButtonFamilyHistoryAdd_Click" />
                     </div>
                 <div class="col-sm-12" style="display:inline">
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="book.aspx.cs" Inherits="WebApplication1.users.book" %>
+﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="true" CodeBehind="book.aspx.cs" Inherits="WebApplication1.users.book" %>
 
 <!DOCTYPE html>
 
