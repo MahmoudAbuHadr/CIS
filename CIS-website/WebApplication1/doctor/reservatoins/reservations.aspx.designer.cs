@@ -13,12 +13,12 @@ namespace WebApplication1.doctor.reservatoins {
     public partial class reservations {
         
         /// <summary>
-        /// tableBill control.
+        /// tableReservation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tableBill;
+        protected global::System.Web.UI.WebControls.Table tableReservation;
     }
 }

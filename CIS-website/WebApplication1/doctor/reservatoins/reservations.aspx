@@ -67,12 +67,12 @@
          <div class="form-group">
 
          <div class="col-sm-12">
-             <asp:Table ID="tableBill" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
+             <asp:Table ID="tableReservation" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
             <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="OliveDrab" Font-Bold="true">
-                <asp:TableHeaderCell>Bill Numbrer</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Date</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Value</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Paid</asp:TableHeaderCell>
+                <asp:TableHeaderCell>First Name</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Last Name</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Day</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Time</asp:TableHeaderCell>
             </asp:TableHeaderRow>
 
            
