@@ -29,7 +29,7 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <li><a href="../../index.aspx">Home</a></li>
+                <li><a href="../index.aspx">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
@@ -46,9 +46,9 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="./patients_files/patiens_files.aspx"><span class="glyphicon glyphicon-book"></span> Patients files </a></li>
-                <li><a href="./reservations/reservations.aspx"><span class="glyphicon glyphicon-folder-close"></span> Reservations </a></li>
-                <li><a href="../../account/signout.aspx""><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>            
+                <li><a href="patients_files/patiens_files.aspx"><span class="glyphicon glyphicon-book"></span> Patients files </a></li>
+                <li><a href="reservations/reservations.aspx"><span class="glyphicon glyphicon-folder-close"></span> Reservations </a></li>
+                <li><a href="../account/signout.aspx""><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>            
             </ul>
         </div>
     </nav>
