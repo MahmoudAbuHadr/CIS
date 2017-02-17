@@ -181,20 +181,20 @@
                     </asp:CheckBoxList>
                 </div>
             </div>
-                    <asp:ScriptManager runat="server" ID="sm"></asp:ScriptManager>
+                 
+                  <asp:ScriptManager runat="server" ID="sm"></asp:ScriptManager>
                     <asp:updatepanel runat="server">
                     <ContentTemplate>
-
                 <label id="LabelPatientHistoryDiseaseOther" class="control-label col-sm-2" for="TextboxAddDiseaseOther">Other:</label>
                 <div class="col-sm-7">
-
                     <asp:TextBox runat="server" id="TextboxDiseaseOther" class="form-control"/>
-                    
+                 </div>  
+
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonDiseaseOther" class="btn btn-default" Text="Add" OnClick="ButtonDiseaseOther_Click"/>
+                    <asp:Button runat="server" id="ButtonDiseaseOther" class="btn btn-default" Text="Add" OnClick="ButtonDiseaseOther_Click" UseSubmitBehavior="false"/>
                     </div>
 
-            </div>
+            
 
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListDisease" runat="server">
@@ -212,7 +212,7 @@
                     <asp:TextBox runat="server" id="TextboxAddDrug" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddDrug" class="btn btn-default" Text="Add" OnClick="ButtonAddDrug_Click"/>
+                    <asp:Button runat="server" id="ButtonAddDrug" class="btn btn-default" Text="Add" OnClick="ButtonAddDrug_Click" UseSubmitBehavior="false"/>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListDrug" runat="server">
@@ -230,7 +230,7 @@
                     <asp:TextBox runat="server" id="TextboxAddSurgery" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddSurgery" class="btn btn-default" Text="Add" OnClick="ButtonAddSurgery_Click"/>
+                    <asp:Button runat="server" id="ButtonAddSurgery" class="btn btn-default" Text="Add" OnClick="ButtonAddSurgery_Click" UseSubmitBehavior="false"/>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListSurgery" runat="server">
@@ -252,13 +252,13 @@
                     <asp:TextBox runat="server" id="TextboxFamilyHistoryDisease" class="form-control"/>
                     </div>
                     <div class="col-sm-2">
-                    <asp:Button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" Text="Add" OnClick="ButtonFamilyHistoryAdd_Click" />
+                    <asp:Button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" Text="Add" OnClick="ButtonFamilyHistoryAdd_Click" UseSubmitBehavior="false"/>
                     </div>
                 <div class="col-sm-12" style="display:inline">
 
          <div class="col-sm-12">
-             <asp:Table ID="tableFamilyHistory" runat="server" class="col-sm-offset-2" Width="750" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
-            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="OliveDrab" Font-Bold="true">
+             <asp:Table ID="tableFamilyHistory" runat="server" class="col-sm-offset-2" Width="750" Font-Names="Palatino" BackColor="#ffffff" BorderColor="#000000" BorderWidth="2" ForeColor="#000000" CellPadding="7" CellSpacing="7">
+            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="#858585" Font-Bold="true">
                 <asp:TableHeaderCell>Relative</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Disease</asp:TableHeaderCell>
             </asp:TableHeaderRow>
@@ -285,6 +285,7 @@
                     <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonPatientHistorySubmit_Click" Enabled="False"/>
                 </div>
             </div>
+                       
                         </ContentTemplate>
                         </asp:updatepanel>
 
