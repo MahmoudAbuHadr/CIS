@@ -16,14 +16,14 @@ namespace WebApplication1.scripts
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
 
-            myCommand.CommandText = "Select * from personalData where ID = '" + id + "';";
+            myCommand.CommandText = "Select * from personalData where id = '" + id + "';";
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    data.setId(reader.GetInt32(reader.GetOrdinal("ID")));
+                    data.setId(reader.GetInt32(reader.GetOrdinal("id")));
                     data.setFname(Convert.ToString(reader[1]));
                     data.setLname(Convert.ToString(reader[2]));
                     data.setMobile(Convert.ToString(reader[3]));
@@ -61,7 +61,7 @@ namespace WebApplication1.scripts
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "UPDATE personalData SET id =" + data.getId().ToString() + ",firstName ='" + data.getFname() + "',lastName ='" + data.getLname() + "', mobile ='" + data.getMobile() + "', gender = '" + data.getGender() + "', birthday = '" + data.getBirthday() + "', height = '" + data.getHeight().ToString() + "', weight = '" + data.getWeight().ToString() + "' WHERE ID = " + data.getId() + ";";
+            myCommand.CommandText = "UPDATE personalData SET id =" + data.getId().ToString() + ",firstName ='" + data.getFname() + "',lastName ='" + data.getLname() + "', mobile ='" + data.getMobile() + "', gender = '" + data.getGender() + "', birthday = '" + data.getBirthday() + "', height = '" + data.getHeight().ToString() + "', weight = '" + data.getWeight().ToString() + "' WHERE id = " + data.getId() + ";";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
