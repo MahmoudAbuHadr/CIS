@@ -20,7 +20,7 @@ namespace WebApplication1.doctor.reservatoins
             for(int i = 0; i < appointments.Count; i++)
             {
                 TableRow row = new TableRow();
-                TableCell idCell = new TableCell();
+                TableCell phoneCell = new TableCell();
                 TableCell fNameCell = new TableCell();
                 TableCell lNameCell = new TableCell();
                 TableCell dayCell = new TableCell();
@@ -28,13 +28,15 @@ namespace WebApplication1.doctor.reservatoins
 
                 WebApplication1.scripts.AccountCredentials patient = new scripts.AccountCredentials();
                 patient = accDao.getAccountById(appointments[i].getId());
-                idCell.Text = patient.getID().ToString();
+                phoneCell.Text = patient.getPhoneNumber().ToString();
                 fNameCell.Text=patient.getFName();
                 lNameCell.Text=patient.getLName();
                 dayCell.Text=appointments[i].getDay();
                 timeCell.Text=appointments[i].getTime();
+                
                 row.Cells.Add(fNameCell);
                 row.Cells.Add(lNameCell);
+                row.Cells.Add(phoneCell);
                 row.Cells.Add(dayCell);
                 row.Cells.Add(timeCell);
                 tableBill.Rows.Add(row);
