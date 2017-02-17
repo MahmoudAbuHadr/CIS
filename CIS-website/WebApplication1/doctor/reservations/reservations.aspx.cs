@@ -35,7 +35,7 @@ namespace WebApplication1.doctor.reservatoins
                 row.Cells.Add(lNameCell);
                 row.Cells.Add(dayCell);
                 row.Cells.Add(timeCell);
-                tableReservation.Rows.Add(row);
+                tableBill.Rows.Add(row);
 
 
             }
