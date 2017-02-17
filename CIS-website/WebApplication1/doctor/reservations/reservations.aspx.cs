@@ -28,8 +28,7 @@ namespace WebApplication1.doctor.reservatoins
                 TableCell timeCell = new TableCell();
                 TableCell filesCell = new TableCell();
 
-                System.Web.UI.WebControls.HyperLink files = new HyperLink();
-                files.Text = "see files";
+               System.Web.UI.WebControls.HyperLink files = new HyperLink();
 
 
                 WebApplication1.scripts.AccountCredentials patient = new scripts.AccountCredentials();
@@ -39,7 +38,11 @@ namespace WebApplication1.doctor.reservatoins
                 lNameCell.Text=patient.getLName();
                 dayCell.Text=appointments[i].getDay();
                 timeCell.Text=appointments[i].getTime();
-                filesCell.Text = appointments[i].getTime();
+                // see files
+                files.Text = "see files";
+                files.Attributes.Add("href", "/doctor/patients_files/patients_files.aspx?phone=" + patient.getPhoneNumber());
+                filesCell.Controls.Add(files);
+
 
 
                 row.Cells.Add(fNameCell);
@@ -47,6 +50,7 @@ namespace WebApplication1.doctor.reservatoins
                 row.Cells.Add(phoneCell);
                 row.Cells.Add(dayCell);
                 row.Cells.Add(timeCell);
+                row.Cells.Add(filesCell);
                 tableBill.Rows.Add(row);
 
 
