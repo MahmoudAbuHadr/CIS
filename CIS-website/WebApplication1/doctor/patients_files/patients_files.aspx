@@ -20,8 +20,9 @@
 
 
 <body>
- <div id="wrapper">
-     <div id="header">
+ <div id="wrapper" class="container container-fluid">
+
+        <div id="header">
         <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -53,7 +54,6 @@
         </div>
     </nav>
          </div>
-
         <div id="container" style="margin-top:100px;">
              <form runat="server" class="form-horizontal">
 
@@ -87,7 +87,7 @@
                     <asp:label runat="server" id="LabelPatientHistory_Gender" class="control-label"/>
                 </div>                
                 </div>
-            </div>
+            
 
             <div class="form-group">
                 <label id="LabelPatientHistoryBirthday" class="control-label col-sm-2" for="TextboxPatientHistoryBirthday">Birthday:</label>
@@ -152,7 +152,7 @@
                     <asp:TextBox runat="server" id="TextboxDiseaseOther" class="form-control"/>
                     
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonDiseaseOther" class="btn btn-default" Text="Add" OnClick="ButtonDiseaseOther_Click"/>
+                    <asp:Button runat="server" id="ButtonDiseaseOther" class="btn btn-default" Text="Add"/>
                     </div>
 
             </div>
@@ -173,7 +173,7 @@
                     <asp:TextBox runat="server" id="TextboxAddDrug" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddDrug" class="btn btn-default" Text="Add" OnClick="ButtonAddDrug_Click"/>
+                    <asp:Button runat="server" id="ButtonAddDrug" class="btn btn-default" Text="Add"/>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListDrug" runat="server">
@@ -191,7 +191,7 @@
                     <asp:TextBox runat="server" id="TextboxAddSurgery" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddSurgery" class="btn btn-default" Text="Add" OnClick="ButtonAddSurgery_Click"/>
+                    <asp:Button runat="server" id="ButtonAddSurgery" class="btn btn-default" Text="Add"/>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListSurgery" runat="server">
@@ -213,7 +213,7 @@
                     <asp:TextBox runat="server" id="TextboxFamilyHistoryDisease" class="form-control"/>
                     </div>
                     <div class="col-sm-2">
-                    <asp:Button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" Text="Add" OnClick="ButtonFamilyHistoryAdd_Click" />
+                    <asp:Button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" Text="Add"/>
                     </div>
                 <div class="col-sm-12" style="display:inline">
 
@@ -237,26 +237,22 @@
            <div class="form-group">
                <div class="col-sm-offset-2 col-sm-10">
 	      			<p> To the best of my knowledge, the questions on this form have been accurately answered. I understand that providing incorrect information can be dangerous to my patient's health. It is my responsibility to inform the office of any changes in medical status.</p><br>
-                   <asp:CheckBox ID="CheckboxPatientHistoryAgree" runat="server" Text="I Agree" Value="Agree" OnCheckedChanged="CheckboxPatientHistoryAgree_CheckedChanged" AutoPostBack="True"/> 
+                   <asp:CheckBox ID="CheckboxPatientHistoryAgree" runat="server" Text="I Agree" Value="Agree" AutoPostBack="True"/> 
                </div>
       	    </div>
 
            <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonPatientHistorySubmit_Click" Enabled="False"/>
+                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" Enabled="False"/>
                 </div>
             </div>
                         </ContentTemplate>
                         </asp:updatepanel>
 
        </form>
-
-
         </div>
-     
 
-
-     <div id="footer"></div>
+        <div id="footer"></div>
      </div>
     
 </body>
