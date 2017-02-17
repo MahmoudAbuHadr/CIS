@@ -10,7 +10,6 @@ namespace WebApplication1.scripts
     {
         public List<bill> getBillByID(int id)
         {
-            bill bill = new bill();
             List<bill> bills = new List<bill>();
             string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
@@ -25,6 +24,7 @@ namespace WebApplication1.scripts
             if (reader.HasRows) {
                 while (reader.Read())
                 {
+                    bill bill = new bill();
                     bill.setID(reader.GetInt32(0));
                     bill.setBillNumber(reader.GetInt32(1));
                     bill.setBDate(Convert.ToString(reader[2]));
