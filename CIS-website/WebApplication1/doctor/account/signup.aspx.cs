@@ -16,19 +16,20 @@ namespace WebApplication1.doctor.account
 
         protected void ButtonSignupSubmit_Click(object sender, EventArgs e)
         {
-            if (TextboxSignupPassword.Text == TextboxSignupConfirmPassword.Text)
-            {
+            
                 string fName = this.TextboxSignupFirstname.Text;
                 string lName = this.TextboxSignupLastname.Text;
                 string email = this.TextboxSignupEmail.Text;
                 string password = this.TextboxSignupPassword.Text;
                 string phone = this.TextboxSignupMobile.Text;
+                int fees = Convert.ToInt32(this.TextboxFees.Text);
                 WebApplication1.scripts.doctor acc = new scripts.doctor();
                 acc.setFname(fName);
                 acc.setLname(lName);
                 acc.setEmail(email);
                 acc.setPassword(password);
                 acc.setPNumber(phone);
+                acc.setFees(fees);
                 WebApplication1.scripts.doctorDAO dao = new scripts.doctorDAO();
                 if (dao.getAccountByPhone(phone).getID() == -1)
                 {
@@ -39,7 +40,7 @@ namespace WebApplication1.doctor.account
 
                     String alert = "alert('registeration completed');";
                     cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
-                    Response.Redirect(Page.ResolveClientUrl("login.aspx"));
+                    Response.Redirect(Page.ResolveClientUrl("/doctor/account/login.aspx"));
 
                 }
                 else
@@ -51,11 +52,7 @@ namespace WebApplication1.doctor.account
                     cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
                 }
 
-            }
-            else
-            {
-                Response.Write("<script language=javascript>alert('password and confirm password does not match');</script>");
-            }
+            
         }
     }
 }

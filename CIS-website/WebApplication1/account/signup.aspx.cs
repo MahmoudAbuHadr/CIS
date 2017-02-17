@@ -58,5 +58,10 @@ namespace WebApplication1
                 Response.Write("<script language=javascript>alert('password and confirm password does not match');</script>");
             }
         }
+
+        protected void ButtonSignupSubmit_Click1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

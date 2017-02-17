@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebApplication1.home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="doctorIndex.aspx.cs" Inherits="WebApplication1.home" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -38,7 +38,7 @@
 
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="/doctor/doctorIndex.aspx">For Doctors</a></li>
+                <li><a href="../index.aspx">For Patients</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
 
@@ -69,7 +69,7 @@
         <div class="container">
           <div class="row">
             <div class="slide-copy col-xs-5">
-              <h1>You woke up sick</h1>
+              <h1>You have no patients</h1>
               <p>It's a single place to discover, collect and share the news you care about.  Add your favorite social networks, publications and blogs to stay connected to the topics and people closest to you.</p>
               
               <ul class="get-app">
@@ -81,7 +81,7 @@
             </div>
             <div class="slide-img col-xs-7">
                 <!--first pic-->
-              <img src="https://img.clipartfest.com/56a25e68391900e0cbdb3cbb0a127376_sick-sick_670-503.jpeg" width="540px">
+              <img src="https://vectortoons.com/wp-content/uploads/2014/05/VectorToons-04292014-0103.jpg" width="540px" height="450px">
             </div>
           </div>
         </div>      
@@ -104,14 +104,14 @@
         <div class="container">
           <div class="row">
             <div class="slide-copy col-xs-5">
-              <h1>See your doctor</h1>
+              <h1>Now you have many patients</h1>
               <h2>on the Web</h2>
               <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines on any topic imaginable. Now magazines created by our readers, from Dali to End Trafficking, can be shared and enjoyed on the Web by anyone, anywhere.</p>
               
             </div>
             <div class="slide-img col-xs-7">
                 <!--third pic-->
-              <img src="https://thumbs.dreamstime.com/x/medical-examination-4160655.jpg">
+              <img src="http://static8.depositphotos.com/1292351/803/v/950/depositphotos_8033220-stock-illustration-cartoon-doctor-attending-a-young.jpg" width="540px" height="450px">
             </div>
           </div>
         </div>      
@@ -122,7 +122,7 @@
         <div class="container">
           <div class="row">
             <div class="slide-copy col-xs-5">
-              <h1>You are well again</h1>
+              <h1>You are rich !!</h1>
               <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines. Now you can promote the ones you create or think are awesome.</p>
               
               <ul class="get-app">
@@ -134,7 +134,7 @@
             </div>
             <div class="slide-img col-xs-7">
                 <!--fourth pic-->
-              <img src="http://clipartix.com/wp-content/uploads/2016/04/Thumbs-up-clipart-3.png" width="450px">
+              <img src="http://comps.canstockphoto.com/can-stock-photo_csp19210044.jpg" width="450px" height="450px">
             </div>
           </div>
         </div>      

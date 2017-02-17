@@ -121,6 +121,24 @@ namespace WebApplication1.doctor.account {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorConfirmPassword;
         
         /// <summary>
+        /// TextboxFees control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxFees;
+        
+        /// <summary>
+        /// RequiredFieldValidatorSignupFees control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorSignupFees;
+        
+        /// <summary>
         /// ButtonSignupSubmit control.
         /// </summary>
         /// <remarks>

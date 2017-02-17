@@ -102,9 +102,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="doctor\account\login.aspx" />
     <Content Include="doctor\account\signup.aspx" />
-    <Content Include="doctor\doctorHome.aspx" />
+    <Content Include="doctor\doctorIndex.aspx" />
+    <Content Include="doctor\JavaScript1.js" />
     <Content Include="doctor\patients_files\patients_files.aspx" />
     <Content Include="doctor\reservations\reservations.aspx" />
+    <Content Include="doctor\StyleSheet1.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="JavaScript1.js" />
     <Content Include="javascript\JavaScript1.js" />
@@ -166,12 +168,12 @@
     <Compile Include="doctor\account\signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="doctor\doctorHome.aspx.cs">
-      <DependentUpon>doctorHome.aspx</DependentUpon>
+    <Compile Include="doctor\doctorIndex.aspx.cs">
+      <DependentUpon>doctorIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="doctor\doctorHome.aspx.designer.cs">
-      <DependentUpon>doctorHome.aspx</DependentUpon>
+    <Compile Include="doctor\doctorIndex.aspx.designer.cs">
+      <DependentUpon>doctorIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="doctor\patients_files\patients_files.aspx.cs">
       <DependentUpon>patients_files.aspx</DependentUpon>

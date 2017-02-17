@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1.doctor {
+namespace WebApplication1 {
     
     
-    public partial class doctorHome {
+    public partial class home {
     }
 }

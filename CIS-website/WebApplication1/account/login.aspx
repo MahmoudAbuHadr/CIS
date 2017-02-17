@@ -32,7 +32,7 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <li><a href="../home.aspx">Home</a></li>
+                <li><a href="../index.aspx">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>

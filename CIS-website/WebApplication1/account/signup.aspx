@@ -32,7 +32,7 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <li><a href="../home.aspx">Home</a></li>
+                <li><a href="../index.aspx">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
@@ -150,7 +150,7 @@
 
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonSignupSubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonSignupSubmit_Click"/>
+                    <asp:Button runat="server" id="ButtonSignupSubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonSignupSubmit_Click1"/>
                 </div>
             </div>
        </form>

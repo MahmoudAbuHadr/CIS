@@ -57,7 +57,7 @@ namespace WebApplication1.scripts
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "UPDATE personalData SET PNumber ='" + doc.getPNumber() + "',Email ='" + doc.getEmail() + "', Password ='" + doc.getPassword() + "', FName = '" + doc.getFname() + "', LName = '" + doc.getLname() + "', fees = '" + doc.getFees().ToString() + "'  WHERE id = " + doc.getID() + ";";
+            myCommand.CommandText = "UPDATE doctorAccounts SET PNumber ='" + doc.getPNumber() + "',Email ='" + doc.getEmail() + "', Password ='" + doc.getPassword() + "', FName = '" + doc.getFname() + "', LName = '" + doc.getLname() + "', fees = '" + doc.getFees().ToString() + "'  WHERE id = " + doc.getID() + ";";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
@@ -72,6 +72,7 @@ namespace WebApplication1.scripts
             myCommand.CommandText = "Select * from doctorAccounts where PNumber = '" + phone + "';";
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
+            doc.setID (-1);
             if (reader.HasRows)
             {
                 while (reader.Read())
