@@ -11,5 +11,6 @@ namespace WebApplication1.scripts
         void insertData(doctor doc);
         void updateData(doctor doc);
         doctor getDataByID(int id);
+        doctor getAccountByPhone(string phone);
     }
 }

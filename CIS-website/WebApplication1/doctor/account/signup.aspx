@@ -165,7 +165,11 @@
 
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
+<<<<<<< HEAD
                     <asp:Button runat="server" id="ButtonSignupSubmit" type="submit" class="btn btn-default" Text="Submit"/>
+=======
+                    <asp:Button runat="server" id="ButtonSignupSubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonSignupSubmit_Click" />
+>>>>>>> origin/master
                 </div>
             </div>
        </form>
