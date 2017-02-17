@@ -70,6 +70,8 @@
                 <asp:TableHeaderCell>Last Name</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Day</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Time </asp:TableHeaderCell>
+                <asp:TableHeaderCell> Patient Files</asp:TableHeaderCell>
+
 
             </asp:TableHeaderRow>
 

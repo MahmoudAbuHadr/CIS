@@ -20,11 +20,17 @@ namespace WebApplication1.doctor.reservatoins
             for(int i = 0; i < appointments.Count; i++)
             {
                 TableRow row = new TableRow();
+
                 TableCell phoneCell = new TableCell();
                 TableCell fNameCell = new TableCell();
                 TableCell lNameCell = new TableCell();
                 TableCell dayCell = new TableCell();
                 TableCell timeCell = new TableCell();
+                TableCell filesCell = new TableCell();
+
+                System.Web.UI.WebControls.HyperLink files = new HyperLink();
+                files.Text = "see files";
+
 
                 WebApplication1.scripts.AccountCredentials patient = new scripts.AccountCredentials();
                 patient = accDao.getAccountById(appointments[i].getId());
@@ -33,7 +39,9 @@ namespace WebApplication1.doctor.reservatoins
                 lNameCell.Text=patient.getLName();
                 dayCell.Text=appointments[i].getDay();
                 timeCell.Text=appointments[i].getTime();
-                
+                filesCell.Text = appointments[i].getTime();
+
+
                 row.Cells.Add(fNameCell);
                 row.Cells.Add(lNameCell);
                 row.Cells.Add(phoneCell);
