@@ -26,7 +26,7 @@ namespace WebApplication1.users
                 WebApplication1.scripts.personalData data = new scripts.personalData();
                 WebApplication1.scripts.personalDataDAO dataDAO = new scripts.personalDataDAO();
                 WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
-                List<WebApplication1.scripts.diseases> dis = new List<scripts.diseases>();
+                WebApplication1.scripts.diseases dis = new scripts.diseases();
                 WebApplication1.scripts.diseasesDAO disDAO = new scripts.diseasesDAO();
 
                 List<string> tempDis =  new List<string>();
@@ -53,19 +53,21 @@ namespace WebApplication1.users
 
 
                 bool[] diseases = new bool[11];
-                
 
-                diseases[0] = dis[0].getAnemia();
-                diseases[1] = dis[0].getAsthma();
-                diseases[2] = dis[0].getEpilipsy();
-                diseases[3] = dis[0].getDepression();
-                diseases[4] = dis[0].getDiabetes();
-                diseases[5] = dis[0].getDiarrhea();
-                diseases[6] = dis[0].getHeartAttack();
-                diseases[7] = dis[0].getHepatitis();
-                diseases[8] = dis[0].getRheumatism();
-                diseases[9] = dis[0].getScarletFever();
-                diseases[10] = dis[0].getSTD();
+
+                dis = disDAO.getDisease(id);
+
+                diseases[0] = dis.getAnemia();
+                diseases[1] = dis.getAsthma();
+                diseases[2] = dis.getEpilipsy();
+                diseases[3] = dis.getDepression();
+                diseases[4] = dis.getDiabetes();
+                diseases[5] = dis.getDiarrhea();
+                diseases[6] = dis.getHeartAttack();
+                diseases[7] = dis.getHepatitis();
+                diseases[8] = dis.getRheumatism();
+                diseases[9] = dis.getScarletFever();
+                diseases[10] = dis.getSTD();
 
                 int index = 0;
                 foreach (ListItem i in CheckBoxListDisease.Items)
