@@ -102,7 +102,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="doctor\doctorHome.aspx" />
     <Content Include="doctor\patients_files\patients_files.aspx" />
-    <Content Include="doctor\reservatoins\reservations.aspx" />
+    <Content Include="doctor\reservations\reservations.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="JavaScript1.js" />
     <Content Include="javascript\JavaScript1.js" />
@@ -164,11 +164,11 @@
     <Compile Include="doctor\patients_files\patients_files.aspx.designer.cs">
       <DependentUpon>patients_files.aspx</DependentUpon>
     </Compile>
-    <Compile Include="doctor\reservatoins\reservations.aspx.cs">
+    <Compile Include="doctor\reservations\reservations.aspx.cs">
       <DependentUpon>reservations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="doctor\reservatoins\reservations.aspx.designer.cs">
+    <Compile Include="doctor\reservations\reservations.aspx.designer.cs">
       <DependentUpon>reservations.aspx</DependentUpon>
     </Compile>
     <Compile Include="scripts\AccountCredentials.cs" />
