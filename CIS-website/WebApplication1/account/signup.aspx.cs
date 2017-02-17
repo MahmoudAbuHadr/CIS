@@ -29,10 +29,10 @@ namespace WebApplication1
                 acc.setEmail(email);
                 acc.setPassword(password);
                 acc.setPhoneNumber(phone);
-                WebApplication1.scripts.AccountDAO dao = new scripts.AccountDAO();
-                if (dao.getIdByPhoneNumber(phone) == -1)
+                WebApplication1.scripts.doctorDAO dao = new scripts.doctorDAO();
+                if (dao.getAccountByPhone(phone).getID() == -1)
                 {
-                    dao.insertAccount(acc);
+                    dao.insertData(acc);
 
                     ClientScriptManager cs = Page.ClientScript;
                     Type cstype = this.GetType();
