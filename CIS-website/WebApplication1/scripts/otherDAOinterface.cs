@@ -16,5 +16,9 @@ namespace WebApplication1.scripts
         List<string> getDrugByID(int id);
         List<string> getSurgByID(int id);
 
+        void updateOther_drug(other drug);
+        void updateOther_dis(other dis);
+        void updateOther_surg(other surg);
+
     }
 }

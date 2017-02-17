@@ -62,7 +62,7 @@ namespace WebApplication1.scripts
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "UPDATE personalData SET id ='" + data.getId() + "',firstName ='" + data.getFname() + "',lastName ='" + data.getLname() + "', mobile ='" + data.getMobile() + "', gender = '" + data.getGender() + "', birthday = '" + data.getBirthday() + "', height = '" + data.getHeight().ToString() + "', weight = '" + data.getWeight().ToString() + "' WHERE id = " + data.getId() + ";";
+            myCommand.CommandText = "UPDATE personalData SET firstName ='" + data.getFname() + "',lastName ='" + data.getLname() + "', mobile ='" + data.getMobile() + "', gender = '" + data.getGender() + "', birthday = '" + data.getBirthday() + "', height = '" + data.getHeight().ToString() + "', weight = '" + data.getWeight().ToString() + "' WHERE id = " + data.getId() + ";";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();

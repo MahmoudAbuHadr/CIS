@@ -131,5 +131,41 @@ namespace WebApplication1.scripts
             myCommand.ExecuteNonQuery();
             myConnection.Close();
         }
+
+        public void updateOther_dis(other dis)
+        {
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            myConnection.Open();
+            SqlCommand myCommand = new SqlCommand();
+            myCommand.CommandText = "UPDATE otherDisease SET id =" + dis.getDis_id().ToString() + ",disease ='" + dis.getOther_dis() + "' WHERE id = " + dis.getDis_id().ToString() + ";";
+            myCommand.Connection = myConnection;
+            myCommand.ExecuteNonQuery();
+            myConnection.Close();
+        }
+
+        public void updateOther_drug(other drug)
+        {
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            myConnection.Open();
+            SqlCommand myCommand = new SqlCommand();
+            myCommand.CommandText = "UPDATE otherDrugs SET id =" + drug.getDrug_id().ToString() + ",drugs ='" + drug.getOther_drug() + "' WHERE id = " + drug.getDrug_id().ToString() + ";";
+            myCommand.Connection = myConnection;
+            myCommand.ExecuteNonQuery();
+            myConnection.Close();
+        }
+
+        public void updateOther_surg(other surg)
+        {
+            string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            myConnection.Open();
+            SqlCommand myCommand = new SqlCommand();
+            myCommand.CommandText = "UPDATE otherSurgery SET id =" + surg.getSurg_id().ToString() + ",surgery ='" + surg.getOther_surg() + "' WHERE id = " + surg.getSurg_id().ToString() + ";";
+            myCommand.Connection = myConnection;
+            myCommand.ExecuteNonQuery();
+            myConnection.Close();
+        }
     }
 }
