@@ -16,7 +16,7 @@ namespace WebApplication1.users
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if ((int)Session["id"] == 0)
+            /*if ((int)Session["id"] == 0)
             {
                 Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
             }
@@ -64,7 +64,7 @@ namespace WebApplication1.users
                     BulletedListSurgery.Items.Add(new ListItem(tempSurg[i]));
                 }
 
-            }
+            }*/
         }
 
         protected void ButtonPatientHistorySubmit_Click(object sender, EventArgs e)
@@ -144,20 +144,20 @@ namespace WebApplication1.users
 
         protected void ButtonAddDrug_Click(object sender, EventArgs e)
         {
-            drug = TextboxAddDrug.Text;
-            BulletedListDrug.Items.Add(drug);
+            string textDrug = TextboxAddDrug.Text;
+            BulletedListDrug.Items.Add(textDrug);
         }
 
         protected void ButtonAddSurgery_Click(object sender, EventArgs e)
         {
-             surgery = TextboxAddSurgery.Text;
-            BulletedListSurgery.Items.Add(surgery);
+            string textSurgery = TextboxAddSurgery.Text;
+            BulletedListSurgery.Items.Add(textSurgery);
         }
 
         protected void ButtonDiseaseOther_Click(object sender, EventArgs e)
         {
-             otherDisease = TextboxDiseaseOther.Text;
-            BulletedListDisease.Items.Add(otherDisease);
+            string textOtherDisease = TextboxDiseaseOther.Text;
+            BulletedListDisease.Items.Add(textOtherDisease);
         }
 
         protected void CheckboxPatientHistoryAgree_CheckedChanged(object sender, EventArgs e)
@@ -170,6 +170,20 @@ namespace WebApplication1.users
             {
                 ButtonPatientHistorySubmit.Enabled = false;
             }
+        }
+
+        protected void ButtonFamilyHistoryAdd_Click(object sender, EventArgs e)
+        {
+            TableRow row = new TableRow();
+            TableCell relativeCell = new TableCell();
+            TableCell diseaseCell = new TableCell();
+
+            relativeCell.Text = TextboxFamilyHistoryRelative.Text;
+            diseaseCell.Text = TextboxFamilyHistoryDisease.Text;
+
+            row.Cells.Add(relativeCell);
+            row.Cells.Add(diseaseCell);
+            tableFamilyHistory.Rows.Add(row);
         }
 
     }

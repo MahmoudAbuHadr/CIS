@@ -229,6 +229,38 @@
                     <asp:BulletedList ID="BulletedListSurgery" runat="server">
                     </asp:BulletedList>
                 </div>
+            </div><br/>
+
+            <!-- Family History-->
+		<h1 style= "color:#858585") >5- Family History</h1>
+            
+            <div class="form-group">            
+                <label id="LabelPatientHistoryFamilyHistoryRelative" class="control-label col-sm-2" for="TextboxAddRelative">Write Your Relative:</label>
+                <div class="col-sm-3">
+                    <asp:TextBox runat="server" id="TextboxFamilyHistoryRelative" class="form-control"/>
+                    </div>
+                <label id="LabelPatientHistoryFamilyHistoryDisease" class="control-label col-sm-2" for="TextboxAddFamilyHistoryDisease">Write His Disease:</label>
+                <div class="col-sm-3">
+                    <asp:TextBox runat="server" id="TextboxFamilyHistoryDisease" class="form-control"/>
+                    </div>
+                    <div class="col-sm-2">
+                    <asp:Button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" Text="Add" OnClick="ButtonFamilyHistoryAdd_Click"/>
+                    </div>
+                <div class="col-sm-12" style="display:inline">
+
+         <div class="col-sm-12">
+             <asp:Table ID="tableFamilyHistory" runat="server" class="col-sm-offset-2" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
+            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="OliveDrab" Font-Bold="true">
+                <asp:TableHeaderCell>Relative</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Disease</asp:TableHeaderCell>
+            </asp:TableHeaderRow>
+
+           
+
+         </asp:Table>
+                </div>
+                </div>
+
             </div>
 
 
