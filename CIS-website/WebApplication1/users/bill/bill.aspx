@@ -20,7 +20,7 @@
 
 
 <body>
- <div id="wrapper">
+ <div id="wrapper" class="container container-fluid">
      <div id="header">
         <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
@@ -61,12 +61,12 @@
 
 
          <div class="col-sm-12">
-             <asp:Table ID="tableBill" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
-            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="OliveDrab" Font-Bold="true">
-                <asp:TableHeaderCell>Bill Numbrer</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Date</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Value</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Paid</asp:TableHeaderCell>
+             <asp:Table ID="tableBill" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="750" Font-Names="Palatino" BackColor="#ffffff" BorderColor="#000000" BorderWidth="2" ForeColor="#000000" CellPadding="7" CellSpacing="7">
+            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="#858585" Font-Bold="true">
+                <asp:TableHeaderCell style ="align-items:center">Bill Number</asp:TableHeaderCell>
+                <asp:TableHeaderCell style ="align-items:center">Date</asp:TableHeaderCell>
+                <asp:TableHeaderCell style ="align-content:center">Value</asp:TableHeaderCell>
+                <asp:TableHeaderCell style ="align-content:center">Paid</asp:TableHeaderCell>
             </asp:TableHeaderRow>
 
            

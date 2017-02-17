@@ -13,8 +13,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <script type="text/javascript" src="patientHistory.js"></script>
-
 
     <!-- footer -->
 
@@ -259,7 +257,7 @@
                 <div class="col-sm-12" style="display:inline">
 
          <div class="col-sm-12">
-             <asp:Table ID="tableFamilyHistory" runat="server" class="col-sm-offset-2" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
+             <asp:Table ID="tableFamilyHistory" runat="server" class="col-sm-offset-2" Width="750" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
             <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="OliveDrab" Font-Bold="true">
                 <asp:TableHeaderCell>Relative</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Disease</asp:TableHeaderCell>

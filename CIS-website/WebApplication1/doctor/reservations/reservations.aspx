@@ -21,7 +21,7 @@
 
 
 <body>
- <div id="wrapper">
+ <div id="wrapper" class="container container-fluid">
      <div id="header">
         <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
@@ -47,8 +47,6 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../doctorIndex.aspx"><span class="glyphicon glyphicon-book"></span> Doctor Home </a></li>
-                <li><a href="../patients_files/patients_files.aspx"><span class="glyphicon glyphicon-folder-close"></span> Patient Files </a></li>
                 <li><a href="../../account/signout.aspx""><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>            
             </ul>
         </div>
@@ -62,15 +60,14 @@
 
 
          <div class="col-sm-12">
-             <asp:Table ID="tableBill" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
-            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="OliveDrab" Font-Bold="true">
-            
-                <asp:TableHeaderCell>ID </asp:TableHeaderCell>
+             <asp:Table ID="tableBill" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="1000" Font-Names="Palatino" BackColor="#ffffff" BorderColor="#000000" BorderWidth="2" ForeColor="#000000" CellPadding="7" CellSpacing="7">
+            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="#858585" Font-Bold="true">     
                 <asp:TableHeaderCell>First Name</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Last Name</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Phone</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Day</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Time </asp:TableHeaderCell>
-
+                <asp:TableHeaderCell>Patient Files</asp:TableHeaderCell>
             </asp:TableHeaderRow>
 
            
