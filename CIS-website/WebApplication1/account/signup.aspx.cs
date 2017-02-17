@@ -23,12 +23,13 @@ namespace WebApplication1
                 string email = this.TextboxSignupEmail.Text;
                 string password = this.TextboxSignupPassword.Text;
                 string phone = this.TextboxSignupMobile.Text;
-                WebApplication1.scripts.AccountCredentials acc = new scripts.AccountCredentials();
-                acc.setFName(fName);
-                acc.setLName(lName);
+                WebApplication1.scripts.doctor acc = new scripts.doctor();
+                acc.setFname(fName);
+                acc.setLname(lName);
                 acc.setEmail(email);
                 acc.setPassword(password);
-                acc.setPhoneNumber(phone);
+                acc.setPNumber(phone);
+                acc.setFees(100);/////
                 WebApplication1.scripts.doctorDAO dao = new scripts.doctorDAO();
                 if (dao.getAccountByPhone(phone).getID() == -1)
                 {

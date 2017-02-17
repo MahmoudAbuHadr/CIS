@@ -23,16 +23,16 @@ namespace WebApplication1.doctor.account
                 string email = this.TextboxSignupEmail.Text;
                 string password = this.TextboxSignupPassword.Text;
                 string phone = this.TextboxSignupMobile.Text;
-                WebApplication1.scripts.doctor acc = new scripts.AccountCredentials();
+                WebApplication1.scripts.doctor acc = new scripts.doctor();
                 acc.setFname(fName);
                 acc.setLname(lName);
                 acc.setEmail(email);
                 acc.setPassword(password);
                 acc.setPNumber(phone);
                 WebApplication1.scripts.doctorDAO dao = new scripts.doctorDAO();
-                if (dao.getDataByID(phone) == -1)
+                if (dao.getAccountByPhone(phone).getID() == -1)
                 {
-                    dao.insertAccount(acc);
+                    dao.insertData(acc);
 
                     ClientScriptManager cs = Page.ClientScript;
                     Type cstype = this.GetType();
