@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="false" CodeBehind="patientHistory.aspx.cs" Inherits="WebApplication1.users.patientHistory" %>
+﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="true" CodeBehind="patientHistory.aspx.cs" Inherits="WebApplication1.users.patientHistory" %>
 
 
 <!DOCTYPE html>
@@ -181,26 +181,34 @@
                         <asp:ListItem runat="server" class="col-sm-12" Text="Scarlet Fever" Value="Scarlet Fever"></asp:ListItem>
                         <asp:ListItem runat="server" class="col-sm-12" Text="STD" Value="STD"></asp:ListItem>
                     </asp:CheckBoxList>
+                </div>
+            </div>
+                    <asp:ScriptManager runat="server" ID="sm"></asp:ScriptManager>
+                    <asp:updatepanel runat="server">
+                    <ContentTemplate>
 
                 <label id="LabelPatientHistoryDiseaseOther" class="control-label col-sm-2" for="TextboxAddDiseaseOther">Other:</label>
                 <div class="col-sm-7">
+
                     <asp:TextBox runat="server" id="TextboxDiseaseOther" class="form-control"/>
-                    </div>
+                    
                     <div class="col-sm-3">
                     <asp:Button runat="server" id="ButtonDiseaseOther" class="btn btn-default" Text="Add" OnClick="ButtonDiseaseOther_Click"/>
                     </div>
+
             </div>
 
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListDisease" runat="server">
                     </asp:BulletedList>
                 </div>
-                </div><br/>
 
+                <br/>
         <!-- Drugs-->
-		<h1 style= "color:#858585") >3- Drugs</h1>
-            
-            <div class="form-group">            
+		<h1 style= "color:#858585") >3- Drugs</h1>            
+            <div class="form-group">
+
+                                                    
                 <label id="LabelPatientHistoryDrugs" class="control-label col-sm-2" for="TextboxAddDrug">Write Your Drugs One By One:</label>
                 <div class="col-sm-7">
                     <asp:TextBox runat="server" id="TextboxAddDrug" class="form-control"/>
@@ -212,12 +220,13 @@
                     <asp:BulletedList ID="BulletedListDrug" runat="server">
                     </asp:BulletedList>
                 </div>
+
             </div><br/>
-            
         <!-- Surgery-->
 		<h1 style= "color:#858585") >4- Surgery</h1>
-            
-            <div class="form-group">            
+            <div class="form-group">  
+  
+                                                  
                 <label id="LabelPatientHistorySurgery" class="control-label col-sm-2" for="TextboxAddSurgery">Write Your Surgery One By One:</label>
                 <div class="col-sm-7">
                     <asp:TextBox runat="server" id="TextboxAddSurgery" class="form-control"/>
@@ -229,12 +238,13 @@
                     <asp:BulletedList ID="BulletedListSurgery" runat="server">
                     </asp:BulletedList>
                 </div>
-            </div><br/>
 
+            </div><br/>
             <!-- Family History-->
 		<h1 style= "color:#858585") >5- Family History</h1>
-            
-            <div class="form-group">            
+            <div class="form-group">   
+
+                                                 
                 <label id="LabelPatientHistoryFamilyHistoryRelative" class="control-label col-sm-2" for="TextboxAddRelative">Write Your Relative:</label>
                 <div class="col-sm-3">
                     <asp:TextBox runat="server" id="TextboxFamilyHistoryRelative" class="form-control"/>
@@ -255,6 +265,7 @@
                 <asp:TableHeaderCell>Disease</asp:TableHeaderCell>
             </asp:TableHeaderRow>
 
+
            
 
          </asp:Table>
@@ -262,9 +273,8 @@
                 </div>
 
             </div>
-
-
-
+                        </ContentTemplate>
+                        </asp:updatepanel>
             <br/><br/><br/>
            <div class="form-group">
                <div class="col-sm-offset-2 col-sm-10">

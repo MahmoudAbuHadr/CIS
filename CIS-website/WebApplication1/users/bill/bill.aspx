@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="false" CodeBehind="bill.aspx.cs" Inherits="WebApplication1.users.bill.WebForm1" %>
+﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="true" CodeBehind="bill.aspx.cs" Inherits="WebApplication1.users.bill.WebForm1" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -57,6 +57,8 @@
      <div id="container" style="margin-top:100px;">
          <form runat="server" class="form-horizontal">
          <div class="form-group">
+
+
 
          <div class="col-sm-12">
              <asp:Table ID="tableBill" runat="server" class="col-sm-offset-2" Font-Size="X-Large" Width="550" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">

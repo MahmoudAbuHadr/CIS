@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="true" CodeBehind="book.aspx.cs" Inherits="WebApplication1.users.book" %>
+﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="false" CodeBehind="book.aspx.cs" Inherits="WebApplication1.users.book" %>
 
 <!DOCTYPE html>
 
@@ -74,7 +74,11 @@
                     <asp:TextBox runat="server" id="TextboxBookTime" type="time" class="form-control"/>
                 </div>
             </div>
-                     
+
+                    <asp:ScriptManager runat="server" ID="ScriptManager3"></asp:ScriptManager>
+                    <asp:updatepanel runat="server">
+                    <ContentTemplate> 
+                                                              
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
                     <div class="p">
@@ -95,7 +99,8 @@
                     <asp:Button runat="server" id="ButtonBookSubmit" type="submit" class="btn btn-default" Text="Book" OnClick="ButtonBookSubmit_Click"/>
                 </div>
             </div>
-            
+                        </ContentTemplate>
+                        </asp:updatepanel>
                  
        </form>
 
