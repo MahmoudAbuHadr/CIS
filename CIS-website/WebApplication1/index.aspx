@@ -38,7 +38,7 @@
 
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="/doctor/doctorHome.aspx">For Doctors</a></li>
+                <li><a href="/doctor/doctorIndex.aspx">For Doctors</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
 

@@ -54,5 +54,10 @@ namespace WebApplication1.doctor.account
 
             }
         }
+
+        protected void ButtonLoginSubmit_Click1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
