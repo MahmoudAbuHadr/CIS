@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebApplication1.home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="doctorIndex.aspx.cs" Inherits="WebApplication1.home" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -38,7 +38,7 @@
 
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="/doctor/doctorHome.aspx">For Doctors</a></li>
+                <li><a href="../index.aspx">For Patients</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
 

@@ -46,7 +46,7 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../doctorHome.aspx"><span class="glyphicon glyphicon-book"></span>Doctor Home </a></li>
+                <li><a href="../doctorIndex.aspx"><span class="glyphicon glyphicon-book"></span>Doctor Home </a></li>
                 <li><a href="../reservations/reservations.aspx"><span class="glyphicon glyphicon-folder-close"></span> Reservations </a></li>
                 <li><a href="../../account/signout.aspx""><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>            
             </ul>

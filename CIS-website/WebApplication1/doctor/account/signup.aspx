@@ -33,7 +33,7 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <li><a href="../home.aspx">Home</a></li>
+                <li><a href="../doctorIndex.aspx">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
@@ -57,7 +57,7 @@
         </div>
     </nav>
     </div>
-     <div id="container">
+     <div id="container" style="margin-top:100px;">
         <form runat="server" class="form-horizontal">
 
             <div class="form-group">
@@ -149,9 +149,27 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <label id="LabelSignupFees" class="control-label col-sm-2" for="TextboxSignupFees">Fees:</label>
+                <div class="col-sm-10"> 
+                    <asp:TextBox runat="server" id="TextboxFees" type="Number" class="form-control" placeholder="Rewrite Your Fees"/>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorSignupFees" runat="server"
+                        ControlToValidate="TextboxSignupConfirmPassword"
+                        ErrorMessage="TextboxFees."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                </div>
+            </div>
+
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
+<<<<<<< HEAD
+                    <asp:Button runat="server" id="ButtonSignupSubmit" type="submit" class="btn btn-default" Text="Submit"/>
+=======
                     <asp:Button runat="server" id="ButtonSignupSubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonSignupSubmit_Click" />
+>>>>>>> origin/master
                 </div>
             </div>
        </form>

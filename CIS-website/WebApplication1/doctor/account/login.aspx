@@ -32,7 +32,7 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <li><a href="../home.aspx">Home</a></li>
+                <li><a href="../doctorIndex.aspx">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
@@ -49,14 +49,14 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/doctor/account/login.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="signup.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </nav>
          </div>
      
-     <div id="container">
+     <div id="container" style="margin-top:100px;">
         <form runat="server" class="form-horizontal">
             
             <div class="form-group">
@@ -101,7 +101,7 @@
 
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonLoginSubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonLoginSubmit_Click"/>
+                    <asp:Button runat="server" id="ButtonLoginSubmit" type="submit" class="btn btn-default" Text="Submit"/>
                 </div>
             </div>
        </form>
