@@ -273,8 +273,7 @@
                 </div>
 
             </div>
-                        </ContentTemplate>
-                        </asp:updatepanel>
+
             <br/><br/><br/>
            <div class="form-group">
                <div class="col-sm-offset-2 col-sm-10">
@@ -288,6 +287,8 @@
                     <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonPatientHistorySubmit_Click" Enabled="False"/>
                 </div>
             </div>
+                        </ContentTemplate>
+                        </asp:updatepanel>
 
        </form>
 
