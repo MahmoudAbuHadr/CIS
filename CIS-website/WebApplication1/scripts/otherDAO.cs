@@ -20,11 +20,12 @@ namespace WebApplication1.scripts
             myCommand.Connection = myConnection;
             SqlDataReader reader = myCommand.ExecuteReader();
             
-            other dis = new other();
+            
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
+                    other dis = new other();
                     string disease = Convert.ToString(reader[1]);   
                     dis.setDis_id(id);
                     dis.setOther_dis(disease);

@@ -189,6 +189,9 @@
     <Compile Include="scripts\diseases.cs" />
     <Compile Include="scripts\diseasesDAO.cs" />
     <Compile Include="scripts\diseasesDAOinterface.cs" />
+    <Compile Include="scripts\doctor.cs" />
+    <Compile Include="scripts\doctorDAO.cs" />
+    <Compile Include="scripts\doctorDAOinterface.cs" />
     <Compile Include="scripts\other.cs" />
     <Compile Include="scripts\otherDAO.cs" />
     <Compile Include="scripts\otherDAOinterface.cs" />
