@@ -47,7 +47,7 @@ namespace WebApplication1.doctor.account
                 {
                     //access granted
                     Session["pID"] = id;
-                    Response.Redirect(Page.ResolveClientUrl("/doctor/doctorHome.aspx"));
+                    Response.Redirect(Page.ResolveClientUrl("/doctor/reservations/reservations.aspx"));
 
 
                 }
@@ -55,9 +55,6 @@ namespace WebApplication1.doctor.account
             }
         }
 
-        protected void ButtonLoginSubmit_Click1(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
