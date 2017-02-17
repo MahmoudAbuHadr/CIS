@@ -150,7 +150,7 @@
 
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonSignupSubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonSignupSubmit_Click"/>
+                    <asp:Button runat="server" id="ButtonSignupSubmit" type="submit" class="btn btn-default" Text="Submit"/>
                 </div>
             </div>
        </form>
