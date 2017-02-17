@@ -16,37 +16,50 @@ namespace WebApplication1
 
         protected void ButtonSignupSubmit_Click(object sender, EventArgs e)
         {
-            string fName = this.TextboxSignupFirstname.Text;
-            string lName = this.TextboxSignupLastname.Text;
-            string email = this.TextboxSignupEmail.Text;
-            string password = this.TextboxSignupPassword.Text;
-            string phone = this.TextboxSignupMobile.Text;
-            WebApplication1.scripts.AccountCredentials acc = new scripts.AccountCredentials();
-            acc.setFName(fName);
-            acc.setLName(lName);
-            acc.setEmail(email);
-            acc.setPassword(password);
-            acc.setPhoneNumber(phone);
-            WebApplication1.scripts.AccountDAO dao = new scripts.AccountDAO();
-            if (dao.getIdByPhoneNumber(phone) == -1) {
-                dao.insertAccount(acc);
+            if (TextboxSignupPassword.Text == TextboxConfirmPassword.Text)
+            {
+                string fName = this.TextboxSignupFirstname.Text;
+                string lName = this.TextboxSignupLastname.Text;
+                string email = this.TextboxSignupEmail.Text;
+                string password = this.TextboxSignupPassword.Text;
+                string phone = this.TextboxSignupMobile.Text;
+                WebApplication1.scripts.AccountCredentials acc = new scripts.AccountCredentials();
+                acc.setFName(fName);
+                acc.setLName(lName);
+                acc.setEmail(email);
+                acc.setPassword(password);
+                acc.setPhoneNumber(phone);
+                WebApplication1.scripts.AccountDAO dao = new scripts.AccountDAO();
+                if (dao.getIdByPhoneNumber(phone) == -1)
+                {
+                    dao.insertAccount(acc);
 
+                    ClientScriptManager cs = Page.ClientScript;
+                    Type cstype = this.GetType();
+
+                    String alert = "alert('registeration completed');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
+                    Response.Redirect(Page.ResolveClientUrl("login.aspx"));
+
+                }
+                else
+                {
+                    ClientScriptManager cs = Page.ClientScript;
+                    Type cstype = this.GetType();
+
+                    String alert = "alert('this phone number is already registered ');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
+                }
+
+            }
+            else
+            {
                 ClientScriptManager cs = Page.ClientScript;
                 Type cstype = this.GetType();
 
-                String alert = "alert('registeration completed');";
-                cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
-                Response.Redirect(Page.ResolveClientUrl("login.aspx"));
-
-            }
-            else {
-                ClientScriptManager cs = Page.ClientScript;
-                Type cstype = this.GetType();
-
-                String alert = "alert('this phone number is already registered ');";
+                String alert = "alert('Password doesn't match the confirm password');";
                 cs.RegisterStartupScript(cstype, "PopupScript", alert, true);
             }
-
         }
     }
 }

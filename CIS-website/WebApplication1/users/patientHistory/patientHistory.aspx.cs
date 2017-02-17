@@ -16,7 +16,7 @@ namespace WebApplication1.users
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            /*if ((int)Session["id"] == 0)
+            if ((int)Session["id"] == 0)
             {
                 Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
             }
@@ -64,7 +64,7 @@ namespace WebApplication1.users
                     BulletedListSurgery.Items.Add(new ListItem(tempSurg[i]));
                 }
 
-            }*/
+            }
         }
 
         protected void ButtonPatientHistorySubmit_Click(object sender, EventArgs e)

@@ -123,7 +123,7 @@
             <div class="form-group">
                 <label id="LabelSignupPassword" class="control-label col-sm-2" for="TextboxSignupPassword">Password:</label>
                 <div class="col-sm-10"> 
-                    <asp:TextBox runat="server" id="TextboxSignupPassword" type="password" class="form-control" placeholder="Enter Your Password"/>
+                    <asp:TextBox runat="server" id="TextboxSignupPassword" type="password" class="form-control" placeholder="Write Your Password"/>
                 
 
                     <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxSignupPassword" runat="server"
@@ -134,6 +134,19 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <label id="LabelSignupConfirmPassword" class="control-label col-sm-2" for="TextboxSignupConfirmPassword">Confirm Password:</label>
+                <div class="col-sm-10"> 
+                    <asp:TextBox runat="server" id="TextboxConfirmPassword" type="password" class="form-control" placeholder="Rewrite Your Password"/>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorConfirmPassword" runat="server"
+                        ControlToValidate="TextboxSignupConfirmPassword"
+                        ErrorMessage="ConfirmPassword is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                </div>
+            </div>
 
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
