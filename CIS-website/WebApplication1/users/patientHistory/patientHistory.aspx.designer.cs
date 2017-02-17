@@ -229,6 +229,42 @@ namespace WebApplication1.users {
         protected global::System.Web.UI.WebControls.BulletedList BulletedListSurgery;
         
         /// <summary>
+        /// TextboxFamilyHistoryRelative control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxFamilyHistoryRelative;
+        
+        /// <summary>
+        /// TextboxFamilyHistoryDisease control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxFamilyHistoryDisease;
+        
+        /// <summary>
+        /// ButtonFamilyHistoryAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonFamilyHistoryAdd;
+        
+        /// <summary>
+        /// tableFamilyHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tableFamilyHistory;
+        
+        /// <summary>
         /// CheckboxPatientHistoryAgree control.
         /// </summary>
         /// <remarks>
