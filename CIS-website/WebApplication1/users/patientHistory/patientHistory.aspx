@@ -191,7 +191,7 @@
                  </div>  
 
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonDiseaseOther" class="btn btn-default" Text="Add" OnClick="ButtonDiseaseOther_Click" UseSubmitBehavior="false"/>
+                    <button runat="server" id="ButtonDiseaseOther" class="btn btn-default" onserverclick="ButtonDiseaseOther_Click"> Add </button>                    
                     </div>
 
             
@@ -212,7 +212,7 @@
                     <asp:TextBox runat="server" id="TextboxAddDrug" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddDrug" class="btn btn-default" Text="Add" OnClick="ButtonAddDrug_Click" UseSubmitBehavior="false"/>
+                    <button runat="server" id="ButtonAddDrug" class="btn btn-default" onserverclick="ButtonAddDrug_Click"> Add </button>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListDrug" runat="server">
@@ -230,7 +230,7 @@
                     <asp:TextBox runat="server" id="TextboxAddSurgery" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddSurgery" class="btn btn-default" Text="Add" OnClick="ButtonAddSurgery_Click" UseSubmitBehavior="false"/>
+                    <button runat="server" id="ButtonAddSurgery" class="btn btn-default" onserverclick="ButtonAddSurgery_Click"> Add </button>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListSurgery" runat="server">
@@ -252,7 +252,7 @@
                     <asp:TextBox runat="server" id="TextboxFamilyHistoryDisease" class="form-control"/>
                     </div>
                     <div class="col-sm-2">
-                    <asp:Button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" Text="Add" OnClick="ButtonFamilyHistoryAdd_Click" UseSubmitBehavior="false"/>
+                    <button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" onserverclick="ButtonFamilyHistoryAdd_Click"> Add </button>
                     </div>
                 <div class="col-sm-12" style="display:inline">
 
