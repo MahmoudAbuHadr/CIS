@@ -46,7 +46,7 @@ namespace WebApplication1.doctor.account
                 else
                 {
                     //access granted
-                    Session["pID"] = id;
+                    Session["dID"] = id;
                     Response.Redirect(Page.ResolveClientUrl("/doctor/reservations/reservations.aspx"));
 
 
