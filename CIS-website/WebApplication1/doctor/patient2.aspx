@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="true" CodeBehind="patientHistory.aspx.cs" Inherits="WebApplication1.users.patientHistory" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="patient2.aspx.cs" Inherits="WebApplication1.doctor.patient2" %>
 
 <!DOCTYPE html>
 
@@ -67,7 +66,7 @@
                 <label id="LabelPatientHistoryFirstname" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">First Name:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxPatientHistoryFirstname" type="text" class="form-control"/>
-                  
+        
                
                 </div>
             </div>
@@ -76,7 +75,12 @@
                 <label id="LabelPatientHistoryLastname" class="control-label col-sm-2" for="TextboxPatientHistoryLastname">Last Name:</label>
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxPatientHistoryLastname" type="text" class="form-control"/>
-
+                   
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorPatientHistoryLastname" runat="server"
+                        ControlToValidate="TextboxPatientHistoryLastname"
+                        ErrorMessage="Last Name is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                
                 </div>
             </div>
@@ -86,6 +90,11 @@
                 <div class="col-sm-10">
                     <asp:TextBox runat="server" id="TextboxPatientHistoryMobile" type="tel" class="form-control"/>
                     
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxPatientHistoryMobile" runat="server"
+                        ControlToValidate="TextboxPatientHistoryMobile"
+                        ErrorMessage="Mobile is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 
                 </div>
             </div>
@@ -98,6 +107,12 @@
                             <asp:ListItem ID="RadioButtonListPatientHistoryGenderFemale" Text="Female" Value="Female" />
                     </asp:RadioButtonList>
                 
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorRadioButtonListGender" runat="server"
+                        ControlToValidate="RadioButtonListPatientHistoryGender"
+                        ErrorMessage="Gender is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
 
@@ -106,6 +121,11 @@
                 <div class="col-sm-10">
                 <asp:TextBox runat="server" id="TextboxPatientHistoryBirthday" type="date" class="form-control"/>
 
+                    <asp:RequiredFieldValidator id="RequiredFieldTextboxPatientHistoryBirthday" runat="server"
+                        ControlToValidate="TextboxPatientHistoryBirthday"
+                        ErrorMessage="Birthday is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
                   
@@ -165,7 +185,7 @@
                  </div>  
 
                     <div class="col-sm-3">
-                    <button runat="server" id="ButtonDiseaseOther" class="btn btn-default" onserverclick="ButtonDiseaseOther_Click"> Add </button>                    
+                    <button runat="server" id="ButtonDiseaseOther" class="btn btn-default"> Add </button>                    
                     </div>
 
             
@@ -186,7 +206,7 @@
                     <asp:TextBox runat="server" id="TextboxAddDrug" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <button runat="server" id="ButtonAddDrug" class="btn btn-default" onserverclick="ButtonAddDrug_Click"> Add </button>
+                    <button runat="server" id="ButtonAddDrug" class="btn btn-default"> Add </button>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListDrug" runat="server">
@@ -204,7 +224,7 @@
                     <asp:TextBox runat="server" id="TextboxAddSurgery" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <button runat="server" id="ButtonAddSurgery" class="btn btn-default" onserverclick="ButtonAddSurgery_Click"> Add </button>
+                    <button runat="server" id="ButtonAddSurgery" class="btn btn-default"> Add </button>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListSurgery" runat="server">
@@ -226,7 +246,7 @@
                     <asp:TextBox runat="server" id="TextboxFamilyHistoryDisease" class="form-control"/>
                     </div>
                     <div class="col-sm-2">
-                    <button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" onserverclick="ButtonFamilyHistoryAdd_Click"> Add </button>
+                    <button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default"> Add </button>
                     </div>
                 <div class="col-sm-12" style="display:inline">
 
@@ -256,7 +276,7 @@
 
            <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" OnClick="ButtonPatientHistorySubmit_Click" />
+                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" />
                 </div>
             </div>
                        
