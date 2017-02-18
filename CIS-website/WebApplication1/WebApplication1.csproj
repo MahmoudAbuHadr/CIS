@@ -220,6 +220,7 @@
     <Compile Include="scripts\bill.cs" />
     <Compile Include="scripts\billDAO.cs" />
     <Compile Include="scripts\billDAOinterface.cs" />
+    <Compile Include="scripts\otherSurgeryDao.cs" />
     <Compile Include="scripts\diseases.cs" />
     <Compile Include="scripts\diseasesDAO.cs" />
     <Compile Include="scripts\diseasesDAOinterface.cs" />
@@ -231,6 +232,9 @@
     <Compile Include="scripts\familyHistoryDAOinteraface.cs" />
     <Compile Include="scripts\otherDisease.cs" />
     <Compile Include="scripts\otherDiseaseDao.cs" />
+    <Compile Include="scripts\otherDrugDao.cs" />
+    <Compile Include="scripts\otherDrugs.cs" />
+    <Compile Include="scripts\otherSurgery.cs" />
     <Compile Include="scripts\personalData.cs" />
     <Compile Include="scripts\personalDataDAO.cs" />
     <Compile Include="scripts\personalDataDAOinterface.cs" />

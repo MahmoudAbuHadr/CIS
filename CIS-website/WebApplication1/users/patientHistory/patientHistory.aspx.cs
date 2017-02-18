@@ -180,6 +180,33 @@ namespace WebApplication1.users
             }
 
 
+            WebApplication1.scripts.otherDrugDao otherDrDao = new scripts.otherDrugDao();
+            foreach (ListItem i in BulletedListDrug.Items)
+            {
+                WebApplication1.scripts.otherDrugs otherDis = new scripts.otherDrugs();
+                string hamada = i.Text;
+                otherDis.setDrug(hamada);
+                otherDis.setId(id);
+                otherDrDao.insertDrug(otherDis);
+
+            }
+
+
+            WebApplication1.scripts.otherSurgeryDao otherSurgDao = new scripts.otherSurgeryDao();
+            foreach (ListItem i in BulletedListSurgery.Items)
+            {
+                WebApplication1.scripts.otherSurgery otherDis = new scripts.otherSurgery();
+                otherDisease = i.Text;
+                otherDis.setSurgery(otherDisease);
+                otherDis.setId(id);
+                otherSurgDao.insertSurgery(otherDis);
+
+            }
+
+
+
+
+
 
         }
 
