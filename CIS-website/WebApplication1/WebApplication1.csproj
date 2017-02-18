@@ -104,6 +104,7 @@
     <Content Include="doctor\account\signup.aspx" />
     <Content Include="doctor\doctorIndex.aspx" />
     <Content Include="doctor\JavaScript1.js" />
+    <Content Include="doctor\patient2.aspx" />
     <Content Include="doctor\patients_files\patients_files.aspx" />
     <Content Include="doctor\reservations\reservations.aspx" />
     <Content Include="doctor\StyleSheet1.css" />
@@ -174,6 +175,13 @@
     </Compile>
     <Compile Include="doctor\doctorIndex.aspx.designer.cs">
       <DependentUpon>doctorIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor\patient2.aspx.cs">
+      <DependentUpon>patient2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor\patient2.aspx.designer.cs">
+      <DependentUpon>patient2.aspx</DependentUpon>
     </Compile>
     <Compile Include="doctor\patients_files\patients_files.aspx.cs">
       <DependentUpon>patients_files.aspx</DependentUpon>

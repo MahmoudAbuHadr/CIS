@@ -22,15 +22,6 @@ namespace WebApplication1.users {
         protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryFirstname;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
         /// TextboxPatientHistoryLastname control.
         /// </summary>
         /// <remarks>
@@ -40,15 +31,6 @@ namespace WebApplication1.users {
         protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryLastname;
         
         /// <summary>
-        /// RequiredFieldValidatorPatientHistoryLastname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPatientHistoryLastname;
-        
-        /// <summary>
         /// TextboxPatientHistoryMobile control.
         /// </summary>
         /// <remarks>
@@ -56,15 +38,6 @@ namespace WebApplication1.users {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryMobile;
-        
-        /// <summary>
-        /// RequiredFieldValidatorTextboxPatientHistoryMobile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxPatientHistoryMobile;
         
         /// <summary>
         /// RadioButtonListPatientHistoryGender control.
@@ -94,15 +67,6 @@ namespace WebApplication1.users {
         protected global::System.Web.UI.WebControls.ListItem RadioButtonListPatientHistoryGenderFemale;
         
         /// <summary>
-        /// RequiredFieldValidatorRadioButtonListGender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorRadioButtonListGender;
-        
-        /// <summary>
         /// TextboxPatientHistoryBirthday control.
         /// </summary>
         /// <remarks>
@@ -110,15 +74,6 @@ namespace WebApplication1.users {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryBirthday;
-        
-        /// <summary>
-        /// RequiredFieldTextboxPatientHistoryBirthday control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldTextboxPatientHistoryBirthday;
         
         /// <summary>
         /// TextboxPatientHistoryHeight control.

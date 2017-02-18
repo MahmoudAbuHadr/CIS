@@ -20,7 +20,7 @@ namespace WebApplication1.users
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (reload == 0)
+            /*if (reload == 0)
             {
                 int id = (int)Session["id"];
                 WebApplication1.scripts.personalData data = new scripts.personalData();
@@ -102,7 +102,7 @@ namespace WebApplication1.users
                 }
 
 
-            }
+            }*/
         }
 
 
@@ -119,7 +119,7 @@ namespace WebApplication1.users
 
 
 
-            string fname = this.TextboxPatientHistoryFirstname.Text;
+            /*string fname = this.TextboxPatientHistoryFirstname.Text;
             string lname = this.TextboxPatientHistoryLastname.Text;
             string mobile = this.TextboxPatientHistoryMobile.Text;
             string gender = this.RadioButtonListPatientHistoryGender.Text;
@@ -151,7 +151,7 @@ namespace WebApplication1.users
                 dataDao.insertData(data);
             }
 
-
+            */
             isExist = true;
 
             bool[] diseases = new bool[11];

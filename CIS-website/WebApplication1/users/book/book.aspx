@@ -50,7 +50,8 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../bill/bill.aspx"><span class="glyphicon glyphicon-euro"></span> Bill</a></li>
-                <li><a href="../patientHistory/patientHistory.aspx"><span class="glyphicon glyphicon-folder-close"></span> Patient History</a></li>
+                <li><a href="../../doctor/patient2.aspx"><span class="glyphicon glyphicon-folder-close"></span> Patient History Restore</a></li>
+                <li><a href="../patientHistory/patientHistory.aspx"><span class="glyphicon glyphicon-folder-close"></span> Patient History Edit</a></li>                
                 <li><a href="../../account/signout.aspx"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
             </ul>
         </div>
@@ -74,10 +75,7 @@
                     <asp:TextBox runat="server" id="TextboxBookTime" type="time" class="form-control"/>
                 </div>
             </div>
-
-                    <asp:ScriptManager runat="server" ID="ScriptManager3"></asp:ScriptManager>
-                    <asp:updatepanel runat="server">
-                    <ContentTemplate> 
+ 
                                                               
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
@@ -99,9 +97,7 @@
                     <asp:Button runat="server" id="ButtonBookSubmit" type="submit" class="btn btn-default" Text="Book" OnClick="ButtonBookSubmit_Click"/>
                 </div>
             </div>
-                        </ContentTemplate>
-                        </asp:updatepanel>
-                 
+ 
        </form>
 
 
