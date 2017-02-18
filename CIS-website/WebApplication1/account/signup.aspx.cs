@@ -11,7 +11,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((int)Session["id"] != 0) { Response.Redirect(Page.ResolveClientUrl("../users/book/book.aspx")); }
+            if (Session["id"] !=null && (int)Session["id"] != 0) { Response.Redirect(Page.ResolveClientUrl("../users/book/book.aspx")); }
         }
 
         protected void ButtonSignupSubmit_Click(object sender, EventArgs e)
@@ -23,17 +23,16 @@ namespace WebApplication1
                 string email = this.TextboxSignupEmail.Text;
                 string password = this.TextboxSignupPassword.Text;
                 string phone = this.TextboxSignupMobile.Text;
-                WebApplication1.scripts.doctor acc = new scripts.doctor();
-                acc.setFname(fName);
-                acc.setLname(lName);
+                WebApplication1.scripts.AccountCredentials acc = new scripts.AccountCredentials();
+                acc.setFName(fName);
+                acc.setLName(lName);
                 acc.setEmail(email);
                 acc.setPassword(password);
-                acc.setPNumber(phone);
-                acc.setFees(100);/////
-                WebApplication1.scripts.doctorDAO dao = new scripts.doctorDAO();
-                if (dao.getAccountByPhone(phone).getID() == -1)
+                acc.setPhoneNumber(phone);
+                WebApplication1.scripts.AccountDAO dao = new scripts.AccountDAO();
+                if (dao.getIdByPhoneNumber(phone) == -1)
                 {
-                    dao.insertData(acc);
+                    dao.insertAccount(acc);
 
                     ClientScriptManager cs = Page.ClientScript;
                     Type cstype = this.GetType();
