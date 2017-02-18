@@ -60,19 +60,25 @@
         <div id="container" style="margin-top:100px;">
              <form runat="server" class="form-horizontal">
 
+           <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                    <asp:Button runat="server" id="ButtonRestore" type="submit" class="btn btn-default" Text="Restore Date" OnClick="ButtonRestore_Click"/>
+                </div>
+            </div>
+
         <!-- General Information-->
 		<h1 style= "color:#858585") >1- General Information</h1>
 
             <div class="form-group">
                 <label id="LabelPatientHistoryFirstname" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">First Name:</label>
                 <div class="col-sm-10">
-                    <asp:TextBox runat="server" id="TextboxPatientHistoryFirstname" type="text" class="form-control"/>
-                   
+                    <input type="text" runat="server" id="TextboxPatientHistoryFirstname" class="form-control" required="required"/>
+                   <!--
                     <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
                         ControlToValidate="TextboxPatientHistoryFirstname"
                         ErrorMessage="First Name is a Required Field."
                         ForeColor="Red">
-                    </asp:RequiredFieldValidator>
+                    </asp:RequiredFieldValidator> -->
                
                 </div>
             </div>

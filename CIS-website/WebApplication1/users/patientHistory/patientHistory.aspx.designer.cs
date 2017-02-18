@@ -13,13 +13,22 @@ namespace WebApplication1.users {
     public partial class patientHistory {
         
         /// <summary>
+        /// ButtonRestore control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonRestore;
+        
+        /// <summary>
         /// TextboxPatientHistoryFirstname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryFirstname;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextboxPatientHistoryFirstname;
         
         /// <summary>
         /// RequiredFieldValidator1 control.
