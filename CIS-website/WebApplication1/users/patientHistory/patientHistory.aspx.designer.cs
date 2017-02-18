@@ -172,7 +172,7 @@ namespace WebApplication1.users {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonDiseaseOther;
+        protected global::System.Web.UI.HtmlControls.HtmlButton ButtonDiseaseOther;
         
         /// <summary>
         /// BulletedListDisease control.
@@ -199,7 +199,7 @@ namespace WebApplication1.users {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAddDrug;
+        protected global::System.Web.UI.HtmlControls.HtmlButton ButtonAddDrug;
         
         /// <summary>
         /// BulletedListDrug control.
@@ -226,7 +226,7 @@ namespace WebApplication1.users {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAddSurgery;
+        protected global::System.Web.UI.HtmlControls.HtmlButton ButtonAddSurgery;
         
         /// <summary>
         /// BulletedListSurgery control.
@@ -262,7 +262,7 @@ namespace WebApplication1.users {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonFamilyHistoryAdd;
+        protected global::System.Web.UI.HtmlControls.HtmlButton ButtonFamilyHistoryAdd;
         
         /// <summary>
         /// tableFamilyHistory control.
