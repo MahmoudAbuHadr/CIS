@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="account\login.aspx" />
+    <Content Include="account\patient2.aspx" />
     <Content Include="account\signout.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -148,6 +149,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="account\patient2.aspx.cs">
+      <DependentUpon>patient2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\patient2.aspx.designer.cs">
+      <DependentUpon>patient2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="account\signout.aspx.cs">
       <DependentUpon>signout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
