@@ -1,7 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="patients_files.aspx.cs" Inherits="WebApplication1.doctor.patients_files.patients_files" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
     <title></title>
@@ -10,23 +11,23 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
 
-        <!-- footer -->
+    <!-- footer -->
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"/>
 
 </head>
 
-
 <body>
- <div id="wrapper" class="container container-fluid">
 
+    <div id="wrapper" class="container container-fluid">
         <div id="header">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">WebSiteName</a>
+                <a class="navbar-brand active" href="#">WebSiteName</a>
             </div>
 
             <ul class="nav navbar-nav">
@@ -47,12 +48,14 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../reservations/reservations.aspx"><span class="glyphicon glyphicon-folder-close"></span> Reservations </a></li>
-                <li><a href="../../account/signout.aspx""><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>            
+                <li><a href="../bill/bill.aspx"><span class="glyphicon glyphicon-euro"></span> Bill</a></li>
+                <li><a href="../book/book.aspx"><span class="glyphicon glyphicon-book"></span> Book</a></li>
+                <li><a href="../../account/signout.aspx"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
             </ul>
         </div>
-    </nav>
-         </div>
+    </nav> 
+            </div>
+
         <div id="container" style="margin-top:100px;">
              <form runat="server" class="form-horizontal">
 
@@ -62,43 +65,74 @@
             <div class="form-group">
                 <label id="LabelPatientHistoryFirstname" class="control-label col-sm-2" for="TextboxPatientHistoryFirstname">First Name:</label>
                 <div class="col-sm-10">
-                    <asp:Label runat="server" id="LabelPatientHistory_Firstname" class="control-label"/>
+                    <asp:TextBox runat="server" id="TextboxPatientHistoryFirstname" type="text" class="form-control"/>
+        
+               
                 </div>
             </div>
 
             <div class="form-group">
                 <label id="LabelPatientHistoryLastname" class="control-label col-sm-2" for="TextboxPatientHistoryLastname">Last Name:</label>
                 <div class="col-sm-10">
-                    <asp:Label runat="server" id="LabelPatientHistory_Lastname" class="control-label"/>              
+                    <asp:TextBox runat="server" id="TextboxPatientHistoryLastname" type="text" class="form-control"/>
+                   
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorPatientHistoryLastname" runat="server"
+                        ControlToValidate="TextboxPatientHistoryLastname"
+                        ErrorMessage="Last Name is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+               
                 </div>
             </div>
                                
             <div class="form-group">
                 <label id="LabelPatientHistoryMobile" class="control-label col-sm-2" for="TextboxPatientHistoryMobile">Mobile:</label>
                 <div class="col-sm-10">
-                    <asp:label runat="server" id="LabelPatientHistory_Mobile" class="control-label"/>
+                    <asp:TextBox runat="server" id="TextboxPatientHistoryMobile" type="tel" class="form-control"/>
+                    
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorTextboxPatientHistoryMobile" runat="server"
+                        ControlToValidate="TextboxPatientHistoryMobile"
+                        ErrorMessage="Mobile is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                
                 </div>
             </div>
 
             <div class="form-group">
                 <label id="LabelPatientHistoryGender" class="control-label col-sm-2" for="TextboxPatientHistoryMobile">Gender:</label>
                 <div class="col-sm-10">
-                    <asp:label runat="server" id="LabelPatientHistory_Gender" class="control-label"/>
-                </div>                
+                    <asp:RadioButtonList ID="RadioButtonListPatientHistoryGender" runat="server" RepeatDirection="Horizontal" RepeatLayout="Table">
+                            <asp:ListItem ID="RadioButtonListPatientHistoryGenderMale" Text="Male" Value="Male" />
+                            <asp:ListItem ID="RadioButtonListPatientHistoryGenderFemale" Text="Female" Value="Female" />
+                    </asp:RadioButtonList>
+                
+
+                    <asp:RequiredFieldValidator id="RequiredFieldValidatorRadioButtonListGender" runat="server"
+                        ControlToValidate="RadioButtonListPatientHistoryGender"
+                        ErrorMessage="Gender is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 </div>
-            
+            </div>
 
             <div class="form-group">
                 <label id="LabelPatientHistoryBirthday" class="control-label col-sm-2" for="TextboxPatientHistoryBirthday">Birthday:</label>
                 <div class="col-sm-10">
-                    <asp:label runat="server" id="LabelPatientHistory_Birthday" class="control-label"/>
-                </div>     
+                <asp:TextBox runat="server" id="TextboxPatientHistoryBirthday" type="date" class="form-control"/>
+
+                    <asp:RequiredFieldValidator id="RequiredFieldTextboxPatientHistoryBirthday" runat="server"
+                        ControlToValidate="TextboxPatientHistoryBirthday"
+                        ErrorMessage="Birthday is a Required Field."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                </div>
             </div>
                   
              <div class="form-group">
                 <label id="LabelPatientHistoryHeight" class="control-label col-sm-2" for="TextboxPatientHistoryBirthday">Height:</label>
                 <div class="col-sm-9">
-                <asp:label runat="server" id="LabelPatientHistory_Height" class="control-label"/>
+                <asp:TextBox runat="server" id="TextboxPatientHistoryHeight" type="number" class="form-control"/>
                 </div>
 
                 <div class="col-sm-1">
@@ -110,7 +144,7 @@
              <div class="form-group">
                 <label id="LabelPatientHistoryWeight" class="control-label col-sm-2" for="TextboxPatientHistoryWeight">Weight:</label>
                 <div class="col-sm-9">
-                <asp:Label runat="server" id="LabelPatientHistory_Weight" class="control-label"/>
+                <asp:TextBox runat="server" id="TextboxPatientHistoryWeight" type="number" class="form-control"/>
                 </div>
                 <div class="col-sm-1">
                     <p> Kg</p>
@@ -141,20 +175,20 @@
                     </asp:CheckBoxList>
                 </div>
             </div>
-                    <asp:ScriptManager runat="server" ID="sm"></asp:ScriptManager>
+                 
+                  <asp:ScriptManager runat="server" ID="sm"></asp:ScriptManager>
                     <asp:updatepanel runat="server">
                     <ContentTemplate>
-
                 <label id="LabelPatientHistoryDiseaseOther" class="control-label col-sm-2" for="TextboxAddDiseaseOther">Other:</label>
                 <div class="col-sm-7">
-
                     <asp:TextBox runat="server" id="TextboxDiseaseOther" class="form-control"/>
-                    
+                 </div>  
+
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonDiseaseOther" class="btn btn-default" Text="Add"/>
+                    <button runat="server" id="ButtonDiseaseOther" class="btn btn-default"> Add </button>                    
                     </div>
 
-            </div>
+            
 
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListDisease" runat="server">
@@ -172,7 +206,7 @@
                     <asp:TextBox runat="server" id="TextboxAddDrug" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddDrug" class="btn btn-default" Text="Add"/>
+                    <button runat="server" id="ButtonAddDrug" class="btn btn-default"> Add </button>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListDrug" runat="server">
@@ -190,7 +224,7 @@
                     <asp:TextBox runat="server" id="TextboxAddSurgery" class="form-control"/>
                     </div>
                     <div class="col-sm-3">
-                    <asp:Button runat="server" id="ButtonAddSurgery" class="btn btn-default" Text="Add"/>
+                    <button runat="server" id="ButtonAddSurgery" class="btn btn-default"> Add </button>
                     </div>
                 <div class="col-sm-12 col-sm-offset-2">    
                     <asp:BulletedList ID="BulletedListSurgery" runat="server">
@@ -212,13 +246,13 @@
                     <asp:TextBox runat="server" id="TextboxFamilyHistoryDisease" class="form-control"/>
                     </div>
                     <div class="col-sm-2">
-                    <asp:Button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default" Text="Add"/>
+                    <button runat="server" id="ButtonFamilyHistoryAdd" class="btn btn-default"> Add </button>
                     </div>
                 <div class="col-sm-12" style="display:inline">
 
          <div class="col-sm-12">
-             <asp:Table ID="tableFamilyHistory" runat="server" class="col-sm-offset-2" Width="750" Font-Names="Palatino" BackColor="Orange" BorderColor="DarkRed" BorderWidth="2" ForeColor="Snow" CellPadding="5" CellSpacing="5">
-            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="OliveDrab" Font-Bold="true">
+             <asp:Table ID="tableFamilyHistory" runat="server" class="col-sm-offset-2" Width="750" Font-Names="Palatino" BackColor="#ffffff" BorderColor="#000000" BorderWidth="2" ForeColor="#000000" CellPadding="7" CellSpacing="7">
+            <asp:TableHeaderRow runat="server" ForeColor="Snow" BackColor="#858585" Font-Bold="true">
                 <asp:TableHeaderCell>Relative</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Disease</asp:TableHeaderCell>
             </asp:TableHeaderRow>
@@ -236,23 +270,30 @@
            <div class="form-group">
                <div class="col-sm-offset-2 col-sm-10">
 	      			<p> To the best of my knowledge, the questions on this form have been accurately answered. I understand that providing incorrect information can be dangerous to my patient's health. It is my responsibility to inform the office of any changes in medical status.</p><br>
-                   <asp:CheckBox ID="CheckboxPatientHistoryAgree" runat="server" Text="I Agree" Value="Agree" AutoPostBack="True"/> 
+                   <asp:CheckBox ID="CheckboxPatientHistoryAgree" runat="server" Text="I Agree" Value="Agree" /> 
                </div>
       	    </div>
 
            <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" Enabled="False"/>
+                    <asp:Button runat="server" id="ButtonPatientHistorySubmit" type="submit" class="btn btn-default" Text="Submit" />
                 </div>
             </div>
+                       
                         </ContentTemplate>
                         </asp:updatepanel>
 
        </form>
-        </div>
 
+
+        </div>
+        
         <div id="footer"></div>
-     </div>
+        
     
+    </div>
+
+
+
 </body>
 </html>

@@ -11,6 +11,9 @@ namespace WebApplication1.doctor.patients_files
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string phone = Convert.ToString(Request.QueryString["phone"]);
+            WebApplication1.scripts.AccountDAO accDao = new scripts.AccountDAO();
+            int  id = accDao.getIdByPhoneNumber(phone);
 
 
         }

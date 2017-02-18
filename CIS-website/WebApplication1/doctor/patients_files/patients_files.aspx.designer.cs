@@ -13,67 +13,121 @@ namespace WebApplication1.doctor.patients_files {
     public partial class patients_files {
         
         /// <summary>
-        /// LabelPatientHistory_Firstname control.
+        /// TextboxPatientHistoryFirstname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPatientHistory_Firstname;
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryFirstname;
         
         /// <summary>
-        /// LabelPatientHistory_Lastname control.
+        /// TextboxPatientHistoryLastname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPatientHistory_Lastname;
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryLastname;
         
         /// <summary>
-        /// LabelPatientHistory_Mobile control.
+        /// RequiredFieldValidatorPatientHistoryLastname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPatientHistory_Mobile;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPatientHistoryLastname;
         
         /// <summary>
-        /// LabelPatientHistory_Gender control.
+        /// TextboxPatientHistoryMobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPatientHistory_Gender;
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryMobile;
         
         /// <summary>
-        /// LabelPatientHistory_Birthday control.
+        /// RequiredFieldValidatorTextboxPatientHistoryMobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPatientHistory_Birthday;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTextboxPatientHistoryMobile;
         
         /// <summary>
-        /// LabelPatientHistory_Height control.
+        /// RadioButtonListPatientHistoryGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPatientHistory_Height;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonListPatientHistoryGender;
         
         /// <summary>
-        /// LabelPatientHistory_Weight control.
+        /// RadioButtonListPatientHistoryGenderMale control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPatientHistory_Weight;
+        protected global::System.Web.UI.WebControls.ListItem RadioButtonListPatientHistoryGenderMale;
+        
+        /// <summary>
+        /// RadioButtonListPatientHistoryGenderFemale control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem RadioButtonListPatientHistoryGenderFemale;
+        
+        /// <summary>
+        /// RequiredFieldValidatorRadioButtonListGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorRadioButtonListGender;
+        
+        /// <summary>
+        /// TextboxPatientHistoryBirthday control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryBirthday;
+        
+        /// <summary>
+        /// RequiredFieldTextboxPatientHistoryBirthday control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldTextboxPatientHistoryBirthday;
+        
+        /// <summary>
+        /// TextboxPatientHistoryHeight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryHeight;
+        
+        /// <summary>
+        /// TextboxPatientHistoryWeight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextboxPatientHistoryWeight;
         
         /// <summary>
         /// CheckBoxListDisease control.
@@ -109,7 +163,7 @@ namespace WebApplication1.doctor.patients_files {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonDiseaseOther;
+        protected global::System.Web.UI.HtmlControls.HtmlButton ButtonDiseaseOther;
         
         /// <summary>
         /// BulletedListDisease control.
@@ -136,7 +190,7 @@ namespace WebApplication1.doctor.patients_files {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAddDrug;
+        protected global::System.Web.UI.HtmlControls.HtmlButton ButtonAddDrug;
         
         /// <summary>
         /// BulletedListDrug control.
@@ -163,7 +217,7 @@ namespace WebApplication1.doctor.patients_files {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAddSurgery;
+        protected global::System.Web.UI.HtmlControls.HtmlButton ButtonAddSurgery;
         
         /// <summary>
         /// BulletedListSurgery control.
@@ -199,7 +253,7 @@ namespace WebApplication1.doctor.patients_files {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonFamilyHistoryAdd;
+        protected global::System.Web.UI.HtmlControls.HtmlButton ButtonFamilyHistoryAdd;
         
         /// <summary>
         /// tableFamilyHistory control.
