@@ -11,7 +11,17 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["id"] = 0;
+            if (Session["id"] == null || Session["dId"]==null)
+            {
+                Session["id"] = 0;
+                Session["dId"] = 0;
+            }
+            else if(((int)Session["id"])==0 && ((int)Session["dId"])!=0) { //doctor
+                Response.Redirect(Page.ResolveClientUrl("/doctor/doctorIndex.aspx"));
+
+            }
+
+            
         }
     }
 }

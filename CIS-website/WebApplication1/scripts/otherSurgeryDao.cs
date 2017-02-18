@@ -26,10 +26,10 @@ namespace WebApplication1.scripts
                 {
                     id = reader.GetInt32(0);
                     string surgery = Convert.ToString(reader[1]);
-                    otherSurgery dis = new otherSurgery();
-                    dis.setId(id);
-                    dis.setSurgery(surgery);
-                    myList.Add(dis);
+                    otherSurgery surg = new otherSurgery();
+                    surg.setId(id);
+                    surg.setSurgery(surgery);
+                    myList.Add(surg);
 
 
                 }
@@ -41,14 +41,14 @@ namespace WebApplication1.scripts
 
 
         }
-        public void insertSurgery(otherSurgery dis)
+        public void insertSurgery(otherSurgery surg)
         {
             string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "insert into otherSurgery (id,surgery) Values ('" + dis.getId().ToString() + "','" + dis.getSurgery() + "')  ;  ";
+            myCommand.CommandText = "insert into otherSurgery (id,surgery) Values ('" + surg.getId().ToString() + "','" + surg.getSurgery() + "')  ;  ";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
