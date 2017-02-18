@@ -18,7 +18,7 @@ namespace WebApplication1.users
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            int id = (int)Session["id"];
+           /* int id = (int)Session["id"];
             WebApplication1.scripts.personalData data = new scripts.personalData();
             WebApplication1.scripts.personalDataDAO dataDAO = new scripts.personalDataDAO();
             WebApplication1.scripts.otherDiseaseDao otherDisDao = new scripts.otherDiseaseDao();
@@ -90,11 +90,9 @@ namespace WebApplication1.users
               {
                   BulletedListDrug.Items.Add(new ListItem(tempDrug[i]));
               }
-
               for (int i = 0; i < tempSurg.Count; i++)
               {
                   BulletedListSurgery.Items.Add(new ListItem(tempSurg[i]));
-
               }*/
         }
 
@@ -167,8 +165,6 @@ namespace WebApplication1.users
 
 
             WebApplication1.scripts.otherDiseaseDao otherDisDao = new scripts.otherDiseaseDao();
-
-
             foreach (ListItem i in BulletedListDisease.Items)
             {
                 WebApplication1.scripts.otherDisease otherDis = new scripts.otherDisease();
@@ -179,32 +175,27 @@ namespace WebApplication1.users
 
             }
 
-
             WebApplication1.scripts.otherDrugDao otherDrDao = new scripts.otherDrugDao();
             foreach (ListItem i in BulletedListDrug.Items)
             {
-                WebApplication1.scripts.otherDrugs otherDis = new scripts.otherDrugs();
-                string hamada = i.Text;
-                otherDis.setDrug(hamada);
-                otherDis.setId(id);
-                otherDrDao.insertDrug(otherDis);
+                WebApplication1.scripts.otherDrugs otherDrugg = new scripts.otherDrugs();
+                drug= i.Text;
+                otherDrugg.setDrug(drug);
+                otherDrugg.setId(id);
+                otherDrDao.insertDrug(otherDrugg);
 
             }
 
-
-            WebApplication1.scripts.otherSurgeryDao otherSurgDao = new scripts.otherSurgeryDao();
+            WebApplication1.scripts.otherSurgeryDao otherSurgeryDa = new scripts.otherSurgeryDao();
             foreach (ListItem i in BulletedListSurgery.Items)
             {
-                WebApplication1.scripts.otherSurgery otherDis = new scripts.otherSurgery();
-                otherDisease = i.Text;
-                otherDis.setSurgery(otherDisease);
-                otherDis.setId(id);
-                otherSurgDao.insertSurgery(otherDis);
+                WebApplication1.scripts.otherSurgery otherSurg = new scripts.otherSurgery();
+                surgery = i.Text;
+                otherSurg.setSurgery(drug);
+                otherSurg.setId(id);
+                otherSurgeryDa.insertSurgery(otherSurg);
 
             }
-
-
-
 
 
 
@@ -254,4 +245,4 @@ namespace WebApplication1.users
             tableFamilyHistory.Rows.Add(row);
         }
     }
-    }
+}

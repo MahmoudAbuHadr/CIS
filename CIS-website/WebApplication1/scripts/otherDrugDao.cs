@@ -41,14 +41,14 @@ namespace WebApplication1.scripts
 
 
         }
-        public void insertDrug(otherDrugs dis)
+        public void insertDrug(otherDrugs drug)
         {
             string connectionString = @"Data Source=cdb.c1lbyzt9l8fn.us-west-2.rds.amazonaws.com,1433;" + "Initial Catalog=cis;" + "User id=sonaaaa;" + "Password=mo7senzzzz;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             myConnection.Open();
             SqlCommand myCommand = new SqlCommand();
-            myCommand.CommandText = "insert into otherDrugs (id,drugs) Values ('" + dis.getId().ToString() + "','" + dis.getDrug() + "')  ;  ";
+            myCommand.CommandText = "insert into otherDrugs (id,drugs) Values ('" + drug.getId().ToString() + "','" + drug.getDrug() + "')  ;  ";
             myCommand.Connection = myConnection;
             myCommand.ExecuteNonQuery();
             myConnection.Close();
