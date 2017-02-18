@@ -11,13 +11,7 @@ namespace WebApplication1.doctor.reservatoins
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["dId"] != null)
-            {
-                if (((int)Session["dId"]) == 0) { Response.Redirect(Page.ResolveClientUrl("/index.aspx")); }
-            }
-
-            else
-            {
+            
                 WebApplication1.scripts.AppointmentDAO appDao = new scripts.AppointmentDAO();
                 List<WebApplication1.scripts.Appointment> appointments = new List<scripts.Appointment>();
                 WebApplication1.scripts.AccountDAO accDao = new scripts.AccountDAO();
@@ -69,4 +63,3 @@ namespace WebApplication1.doctor.reservatoins
 
         }
     }
-}
