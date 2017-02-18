@@ -13,125 +13,126 @@ namespace WebApplication1.users
         string surgery;
         string otherDisease;
 
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if ((int)Session["id"] == 0)
+            int id = (int)Session["id"];
+            WebApplication1.scripts.personalData data = new scripts.personalData();
+            WebApplication1.scripts.personalDataDAO dataDAO = new scripts.personalDataDAO();
+            WebApplication1.scripts.otherDiseaseDao otherDisDao = new scripts.otherDiseaseDao();
+            WebApplication1.scripts.diseases dis = new scripts.diseases();
+            WebApplication1.scripts.diseasesDAO disDAO = new scripts.diseasesDAO();
+
+            List<WebApplication1.scripts.otherDisease> tempDis = new List<scripts.otherDisease>();
+            //List<string> tempDrug = new List<string>();
+            //List<string> tempSurg = new List<string>();
+
+            tempDis = otherDisDao.getDiseaseById(id);
+            // tempDrug = otherDAO.getDrugByID(id);
+            // tempSurg = otherDAO.getSurgByID(id);
+
+            WebApplication1.scripts.personalData temp = new scripts.personalData();
+            temp = dataDAO.getDataByID(id);
+
+            TextboxPatientHistoryFirstname.Text = temp.getFname();
+            TextboxPatientHistoryLastname.Text = temp.getLname();
+            TextboxPatientHistoryMobile.Text = temp.getMobile();
+            TextboxPatientHistoryBirthday.Text = temp.getBirthday();
+            TextboxPatientHistoryHeight.Text = Convert.ToString(temp.getHeight());
+            TextboxPatientHistoryWeight.Text = Convert.ToString(temp.getWeight());
+            string gender = temp.getGender();
+
+            if (gender == "Male") { RadioButtonListPatientHistoryGenderMale.Selected = true; }
+            else { RadioButtonListPatientHistoryGenderFemale.Selected = true; }
+
+
+            bool[] diseases = new bool[11];
+
+
+            dis = disDAO.getDisease(id);
+
+            diseases[0] = dis.getAnemia();
+            diseases[1] = dis.getAsthma();
+            diseases[2] = dis.getEpilipsy();
+            diseases[3] = dis.getDepression();
+            diseases[4] = dis.getDiabetes();
+            diseases[5] = dis.getDiarrhea();
+            diseases[6] = dis.getHeartAttack();
+            diseases[7] = dis.getHepatitis();
+            diseases[8] = dis.getRheumatism();
+            diseases[9] = dis.getScarletFever();
+            diseases[10] = dis.getSTD();
+
+            int index = 0;
+            foreach (ListItem i in CheckBoxListDisease.Items)
             {
-                Response.Redirect(Page.ResolveClientUrl("../../index.aspx"));
+                if (diseases[index] == true)
+                {
+                    i.Selected = true;
+                }
+                else
+                {
+                    i.Selected = false;
+                }
+                index++;
             }
-            else
+
+
+
+            for (int i = 0; i < tempDis.Count; i++)
             {
-                int id = (int)Session["id"];
-                WebApplication1.scripts.personalData data = new scripts.personalData();
-                WebApplication1.scripts.personalDataDAO dataDAO = new scripts.personalDataDAO();
-                WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
-                WebApplication1.scripts.diseases dis = new scripts.diseases();
-                WebApplication1.scripts.diseasesDAO disDAO = new scripts.diseasesDAO();
-
-                List<string> tempDis =  new List<string>();
-                List<string> tempDrug = new List<string>();
-                List<string> tempSurg = new List<string>();
-
-                tempDis = otherDAO.getDisByID(id);
-                tempDrug = otherDAO.getDrugByID(id);
-                tempSurg = otherDAO.getSurgByID(id);
-
-                WebApplication1.scripts.personalData temp = new scripts.personalData();
-                temp = dataDAO.getDataByID(id);
-
-                TextboxPatientHistoryFirstname.Text = temp.getFname();
-                TextboxPatientHistoryLastname.Text  = temp.getLname();
-                TextboxPatientHistoryMobile.Text    = temp.getMobile();
-                TextboxPatientHistoryBirthday.Text  = temp.getBirthday();
-                TextboxPatientHistoryHeight.Text    = Convert.ToString(temp.getHeight());
-                TextboxPatientHistoryWeight.Text    = Convert.ToString(temp.getWeight());
-                string gender = temp.getGender();   
-                            
-                if (gender == "Male")   { RadioButtonListPatientHistoryGenderMale.Selected   = true; }
-                else                    { RadioButtonListPatientHistoryGenderFemale.Selected = true; }
-
-
-                bool[] diseases = new bool[11];
-
-
-                dis = disDAO.getDisease(id);
-
-                diseases[0] = dis.getAnemia();
-                diseases[1] = dis.getAsthma();
-                diseases[2] = dis.getEpilipsy();
-                diseases[3] = dis.getDepression();
-                diseases[4] = dis.getDiabetes();
-                diseases[5] = dis.getDiarrhea();
-                diseases[6] = dis.getHeartAttack();
-                diseases[7] = dis.getHepatitis();
-                diseases[8] = dis.getRheumatism();
-                diseases[9] = dis.getScarletFever();
-                diseases[10] = dis.getSTD();
-
-                int index = 0;
-                foreach (ListItem i in CheckBoxListDisease.Items)
-                {
-                    if (diseases[index] == true)
-                    {
-                        i.Selected = true;
-                    }
-                    else
-                    {
-                        i.Selected = false;
-                    }
-                    index++;
-                }
-
-
-
-                for (int i = 0; i < tempDis.Count; i++)
-                {
-                    BulletedListDisease.Items.Add(new ListItem(tempDis[i]));
-                }
-
-                for (int i = 0; i < tempDrug.Count; i++)
-                {
-                    BulletedListDrug.Items.Add(new ListItem(tempDrug[i]));
-                }
-
-                for (int i = 0; i < tempSurg.Count; i++)
-                {
-                    BulletedListSurgery.Items.Add(new ListItem(tempSurg[i]));
-                }
-
+                BulletedListDisease.Items.Add(new ListItem(tempDis[i].getDisease()));
             }
+
+            /*  for (int i = 0; i < tempDrug.Count; i++)
+              {
+                  BulletedListDrug.Items.Add(new ListItem(tempDrug[i]));
+              }
+
+              for (int i = 0; i < tempSurg.Count; i++)
+              {
+                  BulletedListSurgery.Items.Add(new ListItem(tempSurg[i]));
+
+              }*/
         }
+
+
+
+
+
+
 
         protected void ButtonPatientHistorySubmit_Click(object sender, EventArgs e)
         {
-            
-                int id = (int)Session["id"];
-                 bool isExist = true;
-               
+
+            int id = (int)Session["id"];
+            bool isExist = true;
 
 
-                string fname = this.TextboxPatientHistoryFirstname.Text;
-                string lname = this.TextboxPatientHistoryLastname.Text;
-                string mobile = this.TextboxPatientHistoryMobile.Text;
-                string gender = this.RadioButtonListPatientHistoryGender.Text;
-                string birthday = this.TextboxPatientHistoryBirthday.Text;
-                float height = float.Parse(this.TextboxPatientHistoryHeight.Text);
-                float weight = float.Parse(this.TextboxPatientHistoryWeight.Text);
 
-                WebApplication1.scripts.personalData data = new scripts.personalData();
-                WebApplication1.scripts.personalDataDAO dataDao = new scripts.personalDataDAO();
+            string fname = this.TextboxPatientHistoryFirstname.Text;
+            string lname = this.TextboxPatientHistoryLastname.Text;
+            string mobile = this.TextboxPatientHistoryMobile.Text;
+            string gender = this.RadioButtonListPatientHistoryGender.Text;
+            string birthday = this.TextboxPatientHistoryBirthday.Text;
+            float height = float.Parse(this.TextboxPatientHistoryHeight.Text);
+            float weight = float.Parse(this.TextboxPatientHistoryWeight.Text);
 
-              if (dataDao.getDataByID(id).getId() == 0) isExist = false;
+            WebApplication1.scripts.personalData data = new scripts.personalData();
+            WebApplication1.scripts.personalDataDAO dataDao = new scripts.personalDataDAO();
 
-                data.setId(id);
-                data.setFname(fname);
-                data.setLname(lname);
-                data.setMobile(mobile);
-                data.setGender(gender);
-                data.setBirthday(birthday);
-                data.setHeight(height);
-                data.setWeight(weight);
+            if (dataDao.getDataByID(id).getId() == 0) isExist = false;
+
+            data.setId(id);
+            data.setFname(fname);
+            data.setLname(lname);
+            data.setMobile(mobile);
+            data.setGender(gender);
+            data.setBirthday(birthday);
+            data.setHeight(height);
+            data.setWeight(weight);
 
 
             if (isExist)
@@ -144,63 +145,42 @@ namespace WebApplication1.users
             }
 
 
-            isExist = true;     
-
-               bool[] diseases = new bool[11];
-                int index = 0;
-                foreach (ListItem i in CheckBoxListDisease.Items)
-                {
-                    if (i.Selected == true)
-                    {
-                        diseases[index] = true;
-                    }
-                    else
-                    {
-                        diseases[index] = false;
-                    }
-                    index++;
-                }
-
-
-            WebApplication1.scripts.diseases dis = new WebApplication1.scripts.diseases(id, diseases[0], diseases[1], diseases[2], diseases[3], diseases[4], diseases[5], diseases[6], diseases[7], diseases[8], diseases[9], diseases[10] );
-            WebApplication1.scripts.diseasesDAO dieseasesDao = new WebApplication1.scripts.diseasesDAO();
-            if (dieseasesDao.getDisease(id).getId() == 0) { isExist = false; }
-
-            if (isExist) { dieseasesDao.updateDiseases(dis); }
-            else { dieseasesDao.insertDiseases(dis); }
             isExist = true;
 
-            WebApplication1.scripts.other other = new scripts.other();
-            WebApplication1.scripts.otherDAO otherDAO = new scripts.otherDAO();
-
-            foreach(ListItem i in BulletedListDisease.Items)
+            bool[] diseases = new bool[11];
+            int index = 0;
+            foreach (ListItem i in CheckBoxListDisease.Items)
             {
+                if (i.Selected == true)
+                {
+                    diseases[index] = true;
+                }
+                else
+                {
+                    diseases[index] = false;
+                }
+                index++;
+            }
+
+            /////////////////////////////peace 
+
+
+
+            WebApplication1.scripts.otherDiseaseDao otherDisDao = new scripts.otherDiseaseDao();
+
+
+            foreach (ListItem i in BulletedListDisease.Items)
+            {
+                WebApplication1.scripts.otherDisease otherDis = new scripts.otherDisease();
                 otherDisease = i.Text;
-                other.setOther_dis(otherDisease);
+                otherDis.setDisease(otherDisease);
+                otherDis.setId(id);
+                otherDisDao.insertDisease(otherDis);
+
             }
 
-            //////////////ana hna 
 
-            foreach (ListItem i in BulletedListDrug.Items)
-            {
-                drug = i.Text;
-                other.setOther_drug(drug);
-            }
 
-            foreach (ListItem i in BulletedListSurgery.Items)
-            {
-                surgery = i.Text;
-                other.setOther_surg(surgery);
-            }
-
-            other.setDis_id(id);
-            other.setDrug_id(id);            
-            other.setSurg_id(id);                                  
-
-            otherDAO.insertOther_dis(other);
-            otherDAO.insertOther_drug(other);
-            otherDAO.insertOther_surg(other);
-           
         }
 
         protected void ButtonAddDrug_Click(object sender, EventArgs e)
@@ -246,6 +226,5 @@ namespace WebApplication1.users
             row.Cells.Add(diseaseCell);
             tableFamilyHistory.Rows.Add(row);
         }
-
     }
-}
+    }

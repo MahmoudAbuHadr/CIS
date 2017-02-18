@@ -229,9 +229,8 @@
     <Compile Include="scripts\familyHistory.cs" />
     <Compile Include="scripts\familyHistoryDAO.cs" />
     <Compile Include="scripts\familyHistoryDAOinteraface.cs" />
-    <Compile Include="scripts\other.cs" />
-    <Compile Include="scripts\otherDAO.cs" />
-    <Compile Include="scripts\otherDAOinterface.cs" />
+    <Compile Include="scripts\otherDisease.cs" />
+    <Compile Include="scripts\otherDiseaseDao.cs" />
     <Compile Include="scripts\personalData.cs" />
     <Compile Include="scripts\personalDataDAO.cs" />
     <Compile Include="scripts\personalDataDAOinterface.cs" />
