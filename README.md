@@ -13,5 +13,6 @@ personal data, medical history, diseases, drugs, surgery, family history, etc.
 
 Scheduling System: The client can book an appointment.
 
-Billing: The software offers online payment system for the clients.
+Billing: The software offers online payment system for the clients (not yet ) 
+
 
